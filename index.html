@@ -15,35 +15,48 @@
 <body>
 
     <!--Navbar visible on desktop site -->
-
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div "
-        <div class="container-fluid ">
+        <div class="container-fluid backdrop">
             <div class="row">
-                <div class="col-xs-2 navbar-header ">
-                    <a class="navbar-brand " href="/ ">
-                        <img alt="Logo" class="logo" src="assets/images/logo.png "></img>
-                    </a>
+                <div class="col-xs-2">
+                    <div class="navbar-header ">
+                        <a class="navbar-brand " href="/ ">
+                            <img alt="Logo" class="logo" src="assets/images/logo.png "></img>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-xs-6 navbar-collapse collapse ">
-                    <ul class="nav navbar-nav navigation">
-                        <li><a id="rainbow-text-red" href="/ ">Home</a></li>
-                        <li><a id="rainbow-text-yellow" href="band.html ">The Band</a></li>
-                        <li><a id="rainbow-text-green" href="music.html ">Music</a></li>
-                        <li><a id="rainbow-text-blue" href="booking.html ">Bookings</a></li>
-                        <li><a id="rainbow-text-purple" href="fans.html ">Fans</a></li>
-                    </ul>
+                <div class="">
+                    <div class="col-xs-5 navbar-default hidden-xs hidden-sm hidden-md">
+                        <ul class="nav navbar-nav navigation">
+                            <li><a id="rainbow-text-red" href="/ ">Home</a></li>
+                            <li><a id="rainbow-text-yellow" href="band.html ">The Band</a></li>
+                            <li><a id="rainbow-text-green" href="music.html ">Music</a></li>
+                            <li><a id="rainbow-text-blue" href="booking.html ">Bookings</a></li>
+                            <li><a id="rainbow-text-purple" href="fans.html ">Fans</a></li>
+                        </ul>
+                    </div>
+                    <!--move navbar to right on medium and small screens (to replace social links)-->
+                    <div class="col-xs-8 navbar-right hidden-xs hidden-lg">
+                        <ul class="nav navbar-nav navigation">
+                            <li><a id="rainbow-text-red" href="/ ">Home</a></li>
+                            <li><a id="rainbow-text-yellow" href="band.html ">The Band</a></li>
+                            <li><a id="rainbow-text-green" href="music.html ">Music</a></li>
+                            <li><a id="rainbow-text-blue" href="booking.html ">Bookings</a></li>
+                            <li><a id="rainbow-text-purple" href="fans.html ">Fans</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-xs-3 navbar-collapse collapse">
-                    <ul class="nav navbar-nav list-inline social-links">
-                       <li><a id="rainbow-text-red" target=".blank" href="#"><i class="fa fa-facebook"></i></a></li>
-                       <li><a id="rainbow-text-yellow" target=".blank" href="#"><i class="fa fa-twitter"></i></a></li>
-                       <li><a id="rainbow-text-green" target=".blank" href="#"><i class="fa fa-instagram"></i></a></li>
-                       <li><a id="rainbow-text-blue" target=".blank" href="#"><i class="fa fa-youtube"></i></a></li>
+                <!--remove social links on screens smaller than large-->
+                <div class="col-xs-2 navbar-right">
+                    <ul class="nav navbar-nav hidden-xs hidden-sm hidden-md social-links">
+                        <li><a id="rainbow-text-red" target=".blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a id="rainbow-text-yellow" target=".blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a id="rainbow-text-green" target=".blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a id="rainbow-text-blue" target=".blank" href="#"><i class="fa fa-youtube"></i></a></li>
                     </ul>
                 </div>
             </div>
-        </div>
     </nav>
 </body>
+
 </html>
