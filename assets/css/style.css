@@ -5,11 +5,19 @@ body {
 }
 
 .row {
-    margin: -30;
+ margin:0;
+ padding:0;
 }
 
-.container-fluid {
-    padding: 0;
+
+.nopadding {
+    padding:0;
+    margin:0;
+}
+
+.general-font {
+    font-family: "Caveat Brush", sans-serif;
+    font-size: 2em;
 }
 
 /*    Navbar styles */
@@ -27,11 +35,6 @@ body {
     border-color: black;*/
 }
 
-.navigation-font {
-    font-family: "Luckiest Guy", sans-serif;
-    font-size:1.25em;
-}
-
 .navbar {
     position: absolute;
     margin-bottom: 0;
@@ -43,8 +46,8 @@ body {
     border-color: transparent;
 }
 
-.navbar-main>li  {
-    width:105x;
+.navbar-main>li {
+    width: 95px;
     text-align: center;
 }
 
@@ -85,6 +88,11 @@ body {
     background-color: transparent;
 }
 
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: transparent;
+}
+
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
     background-color: transparent;
@@ -112,9 +120,14 @@ body {
     vertical-align: middle;
     text-align: center;
     border-radius: 50%;
+    transition: 0.25s ease-in-out;
     background-color: #000000;
 }
 
+.navbar-social-links li a i:hover {
+    transition: 0.25s ease-in-out;
+    background-color:#ffffff;
+}
 /*    Navbar - navbar buttons - specific styling */
 
 #navbar-home {
@@ -127,7 +140,7 @@ body {
 }
 
 #navbar-home.hvr-rectangle-out:before {
-    background-color:#ff0000;
+    background-color: #ff0000;
 }
 
 #navbar-band {
@@ -139,7 +152,7 @@ body {
 }
 
 #navbar-band.hvr-rectangle-out:before {
-    background-color:#ffff00;
+    background-color: #ffff00;
 }
 
 #navbar-music {
@@ -151,7 +164,7 @@ body {
 }
 
 #navbar-music.hvr-rectangle-out:before {
-    background-color:#00ff00;
+    background-color: #00ff00;
 }
 
 #navbar-booking {
@@ -163,7 +176,7 @@ body {
 }
 
 #navbar-booking.hvr-rectangle-out:before {
-    background-color:#00CED1;
+    background-color: #00CED1;
 }
 
 #navbar-fans {
@@ -175,36 +188,101 @@ body {
 }
 
 #navbar-fans.hvr-rectangle-out:before {
-    background-color:#DA70D6;
+    background-color: #DA70D6;
 }
 
 /*     Main */
-
-.main {
-    /*margin-top:50px;*/
-    height: 100vh;
+.main-container {
+    height:120vh;
+    background: url(../images/background-flowers.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     align-items: center;
+    position: relative;
+    justify-content: center;
+
+}
+
+.main-statement {
+    padding:0;
+    text-align: center;
+    /*background-image: radial-gradient(rgba(255, 0, 0, 1), rgba(255,255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 206, 209, 0.5), rgba(218, 112, 214, 0.5));*/
+}
+
+.main-statement p {
+    font-size: 2.75em;
+    color: white;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-shadow: 0px 0px 15px  #000000;
+}
+
+.opaque-overlay {
+        position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .backdrop-small {
     width: 100%;
 }
 
-
 /*    Video */
 
+.video-container {
+    height:60%;
+}
+
+.button-flower-book {
+    position: absolute;
+    z-index:3;
+    width:12%;
+    bottom:230px;
+    left:30px;  
+    transition: 0.5s ease-in-out;
+}
+
+.button-flower-book:hover {
+    width:18%;
+    transition: 0.5s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.button-flower-music {
+    position: absolute;
+    z-index:3;
+    width:15%;
+    bottom:20px;
+    left:73px;  
+    transition: 0.5s ease-in-out;
+}
+
+.button-flower-music:hover {
+    width:22%;
+    transition: 0.5s ease-in-out;
+    transform: rotate(-360deg);
+}
+
 #video-background {
-    position: relative;
-    right: 0;
-    top: 0;
+    padding:0;
     min-width: 100%;
-    max-height: 60%;
+    max-height:100%;
     width: auto;
     height: auto;
-    z-index: -100;
 }
 
 /*    Footer styles */
+.footer-home {
+    max-height:10vh;
+    background-color: #ff0000;
+    min-height:50px;
+}
+
 
 /*    Media queries */
 
@@ -225,12 +303,23 @@ body {
     .navbar-default .navbar-nav>li {
         /* color: #777; */
         font-size: 0.75em;
-        max-width:60%
-        
+        max-width: 60%;
+        text-align: left;
     }
-    
-       .navbar-default .navbar-nav  {
+
+    .navbar-default .navbar-nav {
         /* color: #777; */
-        margin-top:15px;
-    } 
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+  .main-statement p {
+    font-size: 1.25em;
+    color: white;
+    padding-top:20px;
+    padding-bottom:20px;
+    text-shadow: 0px 0px 10px  #000000;
+}
+  
 }

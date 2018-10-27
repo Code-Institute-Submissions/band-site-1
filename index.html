@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 </head>
@@ -30,11 +31,11 @@
             </div>
 
             <div class="navbar-collapse collapse" id="navbar">
-                <ul class="nav navbar-nav navigation-font navbar-main">
+                <ul class="nav navbar-nav general-font navbar-main">
                     <li><a href="/ " class="hvr-rectangle-out navbar-active" id="navbar-home">Home</a></li>
                     <li><a href="band.html" class="hvr-rectangle-out navbar-inactive" id="navbar-band">Band</a></li>
                     <li><a href="music.html" class="hvr-rectangle-out navbar-inactive" id="navbar-music">Music</a></li>
-                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive" id="navbar-booking">Bookings</a></li>
+                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive" id="navbar-booking">Booking</a></li>
                     <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive" id="navbar-fans">Fans</a></li>
                 </ul>
 
@@ -53,33 +54,48 @@
         </div>
     </nav>
 
-    <article>
-        <div class="container-fluid main">
+        <div class="container-fluid main-container nopadding">
+                    <div class="opaque-overlay">&nbsp;</div>
+
             <div class="row">
                 <!-- video background - hide on medium or smaller screen - replace with image -->
-                <div class="col-xs-12 hidden-xs">
+                <div class="col-xs-12 hidden-xs nopadding">
+                    <section class="video-container">
                     <video autoplay loop id="video-background" plays-inline poster="assets/images/band.jpg">
                         <source src="assets/videos/daydream.mp4" type="video/mp4">
+                    
                     </video>
+                    <a href="booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="purple flower"></img></a>
+                    <a href="booking.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="purple flower"></img></a>
+                    </section>
                 </div>
                 <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                     <img class="backdrop-small" src="assets/images/band-small.jpg" alt="The Monkees">
                 </div>
-
             </div>
-
+            <div class="row">
+                <!--call to action-->
+                <div class="col-xs-12  main-statement">
+                    <div class="general-font">
+                        <p>Hey, hey! We're the Monkees!<br> Hit 1960s rock and pop!</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </article>
     <footer>
-                <div class="navbar-header navbar-right hidden-md hidden-lg">
-                    <ul class="nav navbar-nav social-links">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-instagram rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-blue"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-purple"></i></a></li>
-                    </ul>
-                </div>
+        <div class="col-xs-12 footer-home">
+            <div class="hidden-md hidden-lg">
+                <ul class="nav navbar-nav navbar-social-links">
+                    <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                    <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                    <li><a target=".blank" href="#"><i class="fa fa-instagram rainbow-text-green"></i></a></li>
+                    <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-blue"></i></a></li>
+                    <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-purple"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
