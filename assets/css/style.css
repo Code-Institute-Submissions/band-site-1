@@ -11,6 +11,7 @@ body {
 
 .container-fluid {
     padding: 0;
+    margin: 0;
 }
 
 .nopadding {
@@ -19,8 +20,8 @@ body {
 }
 
 .general-font {
-    font-family: "Caveat Brush", sans-serif;
-    font-size: 2.0em;
+    font-family: "Lobster", sans-serif;
+    font-size: 1.75em;
 }
 
 /*    Navbar styles */
@@ -51,7 +52,7 @@ body {
 .navbar-brand {}
 
 .navbar-main>li {
-    width: 105px;
+    width: 110px;
     text-align: center;
 }
 
@@ -95,7 +96,7 @@ body {
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
     border-color: transparent;
-    padding-left:0;
+    padding-left: 0;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -206,21 +207,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;*/
-    background-color: rgba(120, 38, 38, 0.7);
-
-}
-
-.main-statement {
-    padding: 0;
-    text-align: center;
-    /*background-image: radial-gradient(rgba(255, 0, 0, 1), rgba(255,255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 206, 209, 0.5), rgba(218, 112, 214, 0.5));*/
-}
-
-.main-statement p {
-    font-size: 6vw;
-    color: white;
-    padding-top: 15px;
-    text-shadow: 0px 0px 15px #000000;
+    /*background-color: rgba(120, 38, 38, 0.7);*/
 }
 
 .backdrop-small {
@@ -228,29 +215,75 @@ body {
     width: 100%;
 }
 
-/*    Video */
-
 .top-section-container {
     height: 55vw;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    border-bottom: solid;
-    border-width: 10px;
+
+    border-bottom-style: solid;
+    border-width: 5px;
     border-color: #000000;
 }
 
 .middle-section-container {
-       border-bottom-style: solid;
-    border-width:5px;
-    border-color:#000000;
+    background-color: rgba(120, 38, 38, 0.7);
+    border-bottom-style: solid;
+    border-width: 5px;
+    border-color: #000000;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.middle-section-container p {
+    font-size: 4.25vw;
+    color: #f5f5f5;
+    padding-top: 15px;
+    text-shadow: 0px 0px 15px #000000;
+}
+
+.action-container {
+    text-align: center;
+    padding-top: 5px;
 
 }
+
+.bottom-section-container {
+    background-color: rgba(244, 216, 78, 0.7);
+    border-bottom-style: solid;
+    border-width: 5px;
+    border-color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.bottom-section-container h1 {
+    font-size: 4.25vw;
+    color: #f5f5f5;
+    text-shadow: 0px 0px 15px #000000;
+}
+
+.album-container {
+    padding-top: 5px;
+    font-family: "Roboto", sans-serif;
+    height: 150px;
+    line-height: 150px;
+    vertical-align: middle;
+    font-size: 1.6em;
+}
+
+
+
+.album-thumbnail {
+    padding: 25px 0 25px 0;
+    width: 100px;
+}
+
+/*    Video */
 
 #video-background {
 
     padding: 0;
     margin-top: 0px;
+    margin-bottom: 0px;
     border: 0;
     height: 100% !important;
 
@@ -258,15 +291,11 @@ body {
 
 video {
     width: 100% !important;
-    height: auto !important;
-    z-index: -1;
-}
-
-.video-divider {
-    height: 5px;
+    height: 55vw !important;
+    padding: 0;
+    margin: 0;
     border: 0;
-    background-color: #000;
-
+    z-index: -1;
 }
 
 /*    Main-Buttons: */
@@ -302,18 +331,31 @@ video {
     transition: 0.5s ease-in-out;
 }
 
-.action-container {
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 50px;
-}
-
 .button-container {
     padding-top: 25px;
 }
 
+.button-audio {
+    margin: 20px;
+    line-height: 30px;
+    vertical-align: middle;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.5, 1.5);
+}
+
+.button-audio:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.8, 1.8);
+}
+
+.button-audio:active {
+    transition: 0.05s linear;
+
+    transform: scale(1.25, 1.25);
+}
+
 .btn-small {
-    font-family: "Caveat Brush", sans-serif;
+    font-family: "Lobster", sans-serif;
     font-size: 2em;
     color: #f5f5f5;
     width: 250px;
@@ -351,7 +393,7 @@ video {
 }
 
 .footer-home .col-sm-3 i {
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .social-middle {
@@ -376,8 +418,8 @@ video {
 
 .footer-text {
     padding: 0px;
-    font-family: "Caveat Brush", sans-serif;
-    font-size: 28px;
+    font-family: "Lobster", sans-serif;
+    font-size: 20px;
 }
 
 /*    Media queries */
@@ -387,8 +429,8 @@ video {
         margin-left: 20px;
         margin-top: 80px;
     }
-    .main-container{
-        height:100vh;
+    .main-container {
+        height: 100vh;
     }
     .social-list {
         padding-bottom: 25px;
@@ -396,6 +438,26 @@ video {
     .action-container {
         padding-bottom: 25px;
     }
+    
+    .album-container {
+        padding-top: 5px;
+        font-size: 1.25em;
+        height: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+
+    .album-thumbnail {
+        padding: 25px 0 25px 0;
+        width: 50px;
+    }
+
+    .button-audio {
+
+        margin-bottom:0;
+        margin-top:0;
+    }
+
 }
 
 @media (max-width: 479px) {
@@ -417,7 +479,7 @@ video {
     }
 
     .btn-small {
-        font-family: "Caveat Brush", sans-serif;
+        font-family: "Lobster", sans-serif;
         font-size: 1em;
         width: 175px;
         border-radius: 45px;
@@ -425,7 +487,7 @@ video {
         border-style: solid;
         transition: 0.3s ease-in-out;
     }
-    
+
     .button-book {
         background-color: rgba(241, 108, 55, 1);
         border-color: rgba(120, 38, 38, 1);
@@ -440,15 +502,10 @@ video {
         text-align: center;
         padding-top: 5px;
     }
-    
-        .button-container {
-        padding-top:10px;
+
+    .button-container {
+        padding-top: 10px;
     }
 
 }
 
-@media (width: 768px) and (height:1024px) {
-    .main-container {
-        height:95vh;
-    }
-}
