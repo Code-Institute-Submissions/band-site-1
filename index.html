@@ -66,7 +66,7 @@
                     <a href="booking.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="blue flower"></img></a>
 
                 </div>
-                <div class="col-xs-12 nopadding hidden-sm hidden-md hidden-lg">
+                <div class="col-xs-12 nopadding visible-xs">
                     <img class="backdrop-small" src="assets/images/band-small.jpg" alt="The Monkees">
                 </div>
 
@@ -74,14 +74,14 @@
         </section>
         <section class="middle-section-container rainbow-background-red">
             <div class="row">
-                <!--call to action-->
+                <!--tag line-->
                 <div class="col-xs-12 general-font">
                     <p>Hey, hey! We're the Monkees!<br> Hit 1960s rock and pop!</p>
                 </div>
             </div>
             <div class="row">
                 <div class="action-container col-md-6 button-container">
-                    <button type="button" class="btn btn-small button-book" data-toggle="tooltip" data-placement="bottom" title="Follow us on Facebook">Book Us!</button>
+                    <button type="button" class="btn btn-small button-book">Book Us!</button>
                 </div>
                 <div class="action-container col-md-6 button-container">
                     <button type="button" class="btn btn-small button-music">New Releases!</button>
@@ -101,7 +101,7 @@
                 </div>
             </div>
         </section>
-        <section class="bottom-section-container rainbow-background-yellow">
+        <section class="bottom-section-container rainbow-background-green">
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="general-font">Enjoy the sounds of the 60s</h1>
@@ -111,48 +111,48 @@
                 <div class="album-container col-sm-2 col-sm-offset-1 hidden-xs">
                     <img src="assets/images/album1.jpg" class="album-thumbnail" alt="Album - Clarksville">
                 </div>
-                <div class="album-container col-xs-3 col-xs-offset-2 hidden-xs">
+                <div class="album-container col-sm-3 col-sm-offset-2">
                     <span>Clarksville</span>
                 </div>
-                <div class="album-container col-sm-3 col-sm-offset-1 hidden-xs">
-                    <span onclick="document.getElementById('album1').play(); document.getElementById('album2').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album1').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>
-                    <audio id="album1" src=assets/audio/Clarksville.mp3>Your browser does not support the audio element</audio>
+                <div class="album-container col-sm-3 col-sm-offset-1">
+                    <!--<span onclick="document.getElementById('album1').play(); document.getElementById('album2').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
+                    <span onclick="document.getElementById('album1').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>-->
+                    <audio controls style="width:100%; vertical-align:middle" id="album1" src=assets/audio/Clarksville.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
-            <div class="row">
+       <!--     <div class="row">
                 <div class="album-container col-xs-7 col-xs-offset-1 nopadding visible-xs">
                     <span>Clarksville</span>
                 </div>
                 <div class="album-container col-xs-4 nopadding visible-xs ">
-                    <span onclick="document.getElementById('album1').play(); document.getElementById('album2').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album1').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>
-                    <audio id="album1" src=assets/audio/Clarksville.mp3>Your browser does not support the audio element</audio>
+        <!--            <span onclick="document.getElementById('album1').play(); document.getElementById('album2').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
+                    <span onclick="document.getElementById('album1').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span> -->
+     <!--               <audio controls style="width:100%; vertical-align:middle" id="album1" src=assets/audio/Clarksville.mp3>Your browser does not support the audio element</audio>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="album-container col-sm-2 col-sm-offset-1 hidden-xs">
                     <img src="assets/images/album2.jpg" class="album-thumbnail" alt="Album - I am a believer">
                 </div>
-                <div class="album-container col-xs-3 col-xs-offset-2 hidden-xs">
+                <div class="album-container col-sm-3 col-sm-offset-2">
                     <span>I'm A Believer</span>
                 </div>
-                <div class="album-container col-sm-3 col-sm-offset-1 hidden-xs">
-                    <span onclick="document.getElementById('album2').play(); document.getElementById('album1').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album2').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>
-                    <audio id="album2" src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
+                <div class="album-container col-sm-3 col-sm-offset-1">
+               <!--     <span onclick="document.getElementById('album2').play(); document.getElementById('album1').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
+                    <span onclick="document.getElementById('album2').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>-->
+                    <audio controls style="width:100%; vertical-align:middle" id="album2" style="width:100%; vertical-align:middle" controls src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
-            <div class="row">
+   <!--         <div class="row">
                 <div class="album-container col-xs-7 col-xs-offset-1 nopadding visible-xs ">
                     <span>I'm A Believer</span>
                 </div>
                 <div class="album-container col-xs-4 nopadding visible-xs ">
-                    <span onclick="document.getElementById('album2').play(); document.getElementById('album1').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album2').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>
-                    <audio id="album2" src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
+                    <!-- <span onclick="document.getElementById('album2').play(); document.getElementById('album1').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
+                    <span onclick="document.getElementById('album2').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>-->
+               <!--     <audio controls style="width:100%; vertical-align:middle" id="album2" src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
                 </div>
-            </div>
+            </div>-->
         </section>
     </div>
 
