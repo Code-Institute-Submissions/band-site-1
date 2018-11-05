@@ -4,6 +4,12 @@ body {
     background-color: #f5f5f5;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 .row {
     margin: 0;
     padding: 0;
@@ -81,7 +87,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1;
-    background-color: rgba(20,20,20,0.7);
+    background-color: rgba(20, 20, 20, 0.7);
     border-color: transparent;
 }
 
@@ -97,7 +103,7 @@ body {
 }
 
 .navbar-active {
-    background-color: rgba(100,100,100,0.7);
+    background-color: rgba(100, 100, 100, 0.7);
 }
 
 .navbar-toggle {
@@ -210,22 +216,27 @@ body {
 }
 
 .top-section-container {
-    height: 55vw;
-    width: 100%;
+    height: 55vh;
+    position: relative;
     background-image: url("/assets/images/background-flowers-b-and-w.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
     border-bottom-style: solid;
     border-width: 5px;
     border-color: #333333;
 }
 
+.band-container {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
 .middle-section-container {
-    min-height:30vw;
+    min-height: 30vw;
     border-bottom-style: solid;
     border-width: 5px;
     border-color: #333333;
@@ -241,7 +252,7 @@ body {
 }
 
 .bottom-section-container {
-    min-height:30vh;
+    min-height: 30vh;
     border-bottom-style: solid;
     border-width: 5px;
     border-color: #333333;
@@ -265,7 +276,7 @@ body {
 /*    Main - Index: */
 
 .backdrop-small {
-    height: 100vw;
+    height: 90vh;
     width: 100%;
 }
 
@@ -278,14 +289,19 @@ body {
 .album-container {
     padding-top: 5px;
     font-family: "Roboto", sans-serif;
-    height: 150px;
+    font-size: 2em;
+    color: #333333;
+    text-shadow: none;
+}
+
+.album-container-songname {
     line-height: 150px;
     vertical-align: middle;
-    font-size: 1.6em;
 }
 
 .album-thumbnail {
     padding: 25px 0 25px 0;
+    margin: 0;
     width: 100px;
 }
 
@@ -293,29 +309,42 @@ body {
 /*    Main - Band */
 
 .band-splash-container {
-    height:55vw;
-    padding-left:20px;
-    padding-right:20px;
+    height: 55vw;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .band-splash {
-    top:55%;
-    transform:translate(0,-50%);    position: relative;
     background-color: #f5f5f5;
     border: solid 5px;
     border-color: rgba(244, 216, 78, 1);
     overflow: hidden;
-    border-radius:10%;
+    border-radius: 10%;
     padding: 0;
 }
 
+.band-splash-arrow {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    vertical-align: center;
+}
+
+.band-splash-arrow button {
+    font-size: 3em;
+    padding: 0 5px 0 5px;
+    border: 5px solid;
+    border-color: #333333;
+    border-radius: 25%;
+    background-color: rgba(244, 216, 78, 1);
+}
 
 .band-splash-image {
-    max-height:40vw;
+    max-height: 40vw;
 }
 
 .band-splash-text {
-    height:40vw;
+    height: 70%;
 }
 
 .band-splash-image img {
@@ -326,29 +355,29 @@ body {
 }
 
 #band-name {
-    margin-top:5px;
-    padding-left:20px;
-    padding-top:15px;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-top: 15px;
 }
 
 #band-info {
     font-family: "Roboto", sans-serif;
     font-size: 1.25em;
-    padding-top:0px;
+    padding-top: 0px;
     padding-left: 20px;
-    padding-right:20px;
-    border-radius:10%; 
+    padding-right: 20px;
+    border-radius: 10%;
 }
 
 .band-images-container {
-    padding-top:20px;
+    padding-top: 20px;
 }
 
 .band-image {
-    width:10vw;
-    min-width:100px;
-    margin:10px;
-    min-height:100px;
+    width: 10vw;
+    min-width: 100px;
+    margin: 10px;
+    min-height: 100px;
     border: solid 5px;
     border-radius: 20%;
 }
@@ -361,37 +390,34 @@ body {
     border-color: rgba(120, 38, 38, 1);
 }
 
-.band-navigation {
-    font-size:2.5em;
+.band-navigation-button {
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    transition: 0.25s ease-in-out;
+    outline: none;
 }
 
-.band-navigation button {
-    padding:0;
-    margin:0;
-    background-color:transparent;
-    border:none;
+.band-navigation-button :hover {
     transition: 0.25s ease-in-out;
-    outline:none;
+    color: #f5f5f5;
 }
 
-.band-navigation button :hover{
+.band-navigation-button :active :before {
     transition: 0.25s ease-in-out;
-    color:#f5f5f5;
+    color: #000000;
 }
 
-.band-navigation button :active :before{
+.band-navigation button :active :after {
     transition: 0.25s ease-in-out;
-    color:#000000;
-}
-
-.band-navigation button :active :after{
-    transition: 0.25s ease-in-out;
-    color:#f5f5f5;
+    color: #f5f5f5;
 }
 
 .band-navigation i {
-    line-height:100px;
-    vertical-align:middle;
+    line-height: 100px;
+    vertical-align: middle;
 }
 
 
@@ -454,9 +480,10 @@ video {
 }
 
 .button-audio {
-    margin: 20px;
-    line-height: 30px;
-    vertical-align: middle;
+    outline: none;
+    background-color: transparent;
+    border-style: none;
+    height: 150px;
     transition: 0.3s ease-in-out;
     transform: scale(1.5, 1.5);
 }
@@ -468,7 +495,6 @@ video {
 
 .button-audio:active {
     transition: 0.05s linear;
-
     transform: scale(1.25, 1.25);
 }
 
@@ -535,23 +561,44 @@ video {
 .footer-text {
     padding: 0px;
     font-family: "Lobster", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    display: inline;
+    padding-right: 5px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #333333;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links li a:hover {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: 0.3s ease-in-out;
 }
 
 /*    Media queries */
 
 @media (max-width: 767px) {
     .navbar {
-        background-color:transparent;
+        background-color: transparent;
     }
-    
+
     .navbar-default .navbar-nav {
         margin-left: 20px;
         margin-top: 55px;
-        width:110px;
-        background-color: rgba(10,10,10,0.9);
+        width: 110px;
+        background-color: rgba(10, 10, 10, 0.9);
     }
-    
+
     .navbar-default .navbar-nav>li {
         /* color: #777; */
         font-size: 0.75em;
@@ -559,9 +606,6 @@ video {
         text-align: left;
     }
 
-    .main-container {
-        height: 100vh;
-    }
     .social-list {
         padding-bottom: 25px;
     }
@@ -571,62 +615,73 @@ video {
 
     .album-container {
         padding-top: 5px;
-        font-size: 1.25em;
-        height: 30px;
-        line-height: 30px;
+        font-size: 3vw;
+        height: 50px;
+        line-height: 50px;
         vertical-align: middle;
     }
 
-    .album-thumbnail {
-        padding: 25px 0 25px 0;
-        width: 50px;
+    .album-container-songname {
+        line-height: 50px;
+        vertical-align: middle;
     }
 
     .button-audio {
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-    
-    .top-section-container {
-        height:100vw;
-        padding: 0;
-    }
-    
-    .band-splash-image {
-        width:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-    }
-    
-     .band-splash-text {
-        width:100%;
-        transform:translate(0,-25%);
-    }   
-    
-    #band-name-image {
-        height:30vw;
+        height: 50px;
     }
 
-    #band-name {
-        font-size:1.25em;
+    .top-section-container {
+        height: 90vh;
+        padding: 0;
+    }
+
+    .band-container {
+        height: 45vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .band-splash-text {
+        height: 40vh;
+    }
+
+    .band-splash-arrow {
+        font-size: 0.5em;
     }
     
-    #band-info {
-        
-        padding-top:5px;
-        font-size:1em;
-    }    
+    #band-name-xs {
+        margin-top: 5px;
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+
+    #band-info-xs {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.25em;
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10%;
+    }
     
     .band-images-container {
-        padding-top:0;
+        padding-top: 0;
     }
-    
+
     .middle-section-container {
         padding-bottom: 25px;
     }
-    
-    
-    
+
+    .bottom-section-container {
+        padding-bottom: 0px;
+    }
+
+    .footer-text {
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width: 479px) {
@@ -634,29 +689,15 @@ video {
         /* color: #777; */
         margin-top: 15px;
     }
-    
+
     .logo {
         max-width: 50%;
     }
 
     .btn-small {
-        font-family: "Lobster", sans-serif;
         font-size: 1em;
         width: 175px;
-        border-radius: 45px;
-        border: 5px;
-        border-style: solid;
-        transition: 0.3s ease-in-out;
-    }
 
-    .button-book {
-        background-color: rgba(241, 108, 55, 1);
-        border-color: rgba(120, 38, 38, 1);
-    }
-
-    .button-music {
-        background-color: rgba(115, 168, 52, 1);
-        border-color: rgba(120, 38, 38, 1);
     }
 
     .action-container {
@@ -669,21 +710,23 @@ video {
     }
 
     .album-container {
-        font-size: 0.9em;
+        font-size: 2.9vw;
     }
-    
-    .bottom-section-container {
-        padding-bottom: 25px;
+
+    #band-name-xs {
+        font-size:1.25em;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
     }
-    #band-name {
-        margin-top:10px;
-        padding-top:0px;
-        font-size:1.0em;
+
+    #band-info-xs {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.15em;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10%;
     }
-    
-    #band-info {
-        
-        padding-top:0px;
-        font-size:0.75em;
-    }
+
 }

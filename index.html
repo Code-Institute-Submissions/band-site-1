@@ -16,7 +16,7 @@
 
 <body>
 
-    <!--Navbar visible on desktop site -->
+    <!--Navbar visible on all above xs screen -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -28,17 +28,17 @@
                     <i class="fa fa-navicon"></i>
                 </button>
             </div>
-
+            <!-- collapse nav bar on xs screen and hide use burger button -->
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav general-font navbar-main">
-                    <li><a href="/ " class="hvr-rectangle-out navbar-active" id="navbar-home">Home</a></li>
+                    <li><a href="/" class="hvr-rectangle-out navbar-active" id="navbar-home">Home</a></li>
                     <li><a href="band.html" class="hvr-rectangle-out navbar-inactive" id="navbar-band">Band</a></li>
                     <li><a href="music.html" class="hvr-rectangle-out navbar-inactive" id="navbar-music">Music</a></li>
                     <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive" id="navbar-booking">Booking</a></li>
                     <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive" id="navbar-fans">Fans</a></li>
                 </ul>
 
-                <!--remove social links on small screens-->
+                <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
                         <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
@@ -49,22 +49,22 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </nav>
 
     <div class="container-fluid">
         <section class="top-section-container">
             <div class="row">
-                <!-- video background - hide on medium or smaller screen - replace with image -->
+
+                <!-- video background - hide on xs screen - replace with image -->
                 <div class="col-xs-12 hidden-xs nopadding">
 
-                    <video controls="volume" id="video-background" plays-inline poster="assets/images/band-colour.jpg" style="object-fit:cover;" class="nopadding">
-                        <source src="assets/videos/daydream.mp4" type="video/mp4">
+                    <video controls="volume" controlslist="nofullscreen nodownload noremoteplayback" id="video-background" plays-inline poster="assets/images/band-colour.jpg" style="object-fit:cover;" class="nopadding">
+                        <source src="assets/videos/daydream.webm" type="video/webm">
                     </video>
                     <a href="booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="blue flower"></img></a>
                     <a href="booking.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="blue flower"></img></a>
-
+                    <!-- create custom video control? -->
                 </div>
                 <div class="col-xs-12 nopadding visible-xs">
                     <img class="backdrop-small" src="assets/images/band-small.jpg" alt="The Monkees">
@@ -72,13 +72,17 @@
 
             </div>
         </section>
+
+        <!--tag line and call to action-->
+
         <section class="middle-section-container rainbow-background-red">
             <div class="row">
-                <!--tag line-->
                 <div class="col-xs-12 general-font">
                     <p>Hey, hey! We're the Monkees!<br> Hit 1960s rock and pop!</p>
                 </div>
             </div>
+
+            <!-- call to action buttons -->
             <div class="row">
                 <div class="action-container col-md-6 button-container">
                     <button type="button" class="btn btn-small button-book">Book Us!</button>
@@ -88,7 +92,7 @@
                 </div>
             </div>
 
-            <!--- social links container on xs --->
+            <!--- social media links container on xs screens --->
             <div class="row hidden-sm hidden-md hidden-lg">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
@@ -101,70 +105,114 @@
                 </div>
             </div>
         </section>
+
+        <!-- taster music section -->
         <section class="bottom-section-container rainbow-background-green">
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="general-font">Enjoy the sounds of the 60s</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="album-container col-sm-2 col-sm-offset-1 hidden-xs">
-                    <img src="assets/images/album1.jpg" class="album-thumbnail" alt="Album - Clarksville">
-                </div>
-                <div class="album-container col-sm-3 col-sm-offset-2">
-                    <span>Clarksville</span>
-                </div>
-                <div class="album-container col-sm-3 col-sm-offset-1">
-                    <!--<span onclick="document.getElementById('album1').play(); document.getElementById('album2').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album1').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>-->
-                    <audio controls style="width:100%; vertical-align:middle" id="album1" src=assets/audio/Clarksville.mp3>Your browser does not support the audio element</audio>
+            <div class="row visible-xs">
+                <div class="col-xs-12 nopadding">
+                    <p><span class="glyphicon glyphicon-heart rainbow-text-orange"></span></p>
                 </div>
             </div>
-       <!--     <div class="row">
-                <div class="album-container col-xs-7 col-xs-offset-1 nopadding visible-xs">
+            <!-- remove album artwork on xs screens -->
+            <div class="row album-container">
+                <div class="col-sm-2 col-sm-offset-2 hidden-xs">
+                    <img src="assets/images/album1.jpg" class="album-thumbnail" alt="Song - Clarksville">
+                </div>
+                <div class="col-xs-4 visible-xs">
+                    <!--- to provide spacing on xs screens -->
+                </div>
+                <div class="col-xs-4 album-container-songname">
                     <span>Clarksville</span>
                 </div>
-                <div class="album-container col-xs-4 nopadding visible-xs ">
-        <!--            <span onclick="document.getElementById('album1').play(); document.getElementById('album2').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album1').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span> -->
-     <!--               <audio controls style="width:100%; vertical-align:middle" id="album1" src=assets/audio/Clarksville.mp3>Your browser does not support the audio element</audio>
-                </div>
-            </div> -->
-            <div class="row">
-                <div class="album-container col-sm-2 col-sm-offset-1 hidden-xs">
-                    <img src="assets/images/album2.jpg" class="album-thumbnail" alt="Album - I am a believer">
-                </div>
-                <div class="album-container col-sm-3 col-sm-offset-2">
-                    <span>I'm A Believer</span>
-                </div>
-                <div class="album-container col-sm-3 col-sm-offset-1">
-               <!--     <span onclick="document.getElementById('album2').play(); document.getElementById('album1').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album2').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>-->
-                    <audio controls style="width:100%; vertical-align:middle" id="album2" style="width:100%; vertical-align:middle" controls src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
+                <div class="col-xs-1">
+                    <button class="button-audio" onclick="playPause(1)"><i id="playButton1" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <audio id="album1" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
-   <!--         <div class="row">
-                <div class="album-container col-xs-7 col-xs-offset-1 nopadding visible-xs ">
+            <div class="row album-container">
+                <div class="col-sm-2 col-sm-offset-2 hidden-xs">
+                    <img src="assets/images/album2.jpg" class="album-thumbnail" alt="Song - I'm A Believer">
+                </div>
+                <div class="col-xs-4 visible-xs">
+                    <!--- to provide spacing on xs screens -->
+                </div>
+                <div class="col-xs-4 album-container-songname">
                     <span>I'm A Believer</span>
                 </div>
-                <div class="album-container col-xs-4 nopadding visible-xs ">
-                    <!-- <span onclick="document.getElementById('album2').play(); document.getElementById('album1').pause(); document.getElementById('video-background').pause()"><i class="fa fa-play-circle button-audio rainbow-text-green"></i></span>
-                    <span onclick="document.getElementById('album2').pause()"><i class="fa fa-pause-circle button-audio rainbow-text-red"></i></span>-->
-               <!--     <audio controls style="width:100%; vertical-align:middle" id="album2" src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
+                <div class="col-xs-1">
+                    <button class="button-audio" onclick="playPause(2)"><i id="playButton2" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <audio id="album2" src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
                 </div>
-            </div>-->
+            </div>
+            <div class="row album-container">
+                <div class="col-sm-2 col-sm-offset-2 hidden-xs">
+                    <img src="assets/images/album3.jpg" class="album-thumbnail" alt="Song - Stepping Stone">
+                </div>
+                <div class="col-xs-4 visible-xs">
+                    <!--- to provide spacing on xs screens -->
+                </div>
+                <div class="col-xs-4 album-container-songname">
+                    <span>Stepping Stone</span>
+                </div>
+                <div class="col-xs-1">
+                    <button class="button-audio" onclick="playPause(3)"><i id="playButton3" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <audio id="album3" src=assets/audio/steppingstone.mp3>Your browser does not support the audio element</audio>
+                </div>
+            </div>
+            <div class="row album-container visible-xs">
+                <div class="col-xs-4 visible-xs">
+                    <!--- to provide spacing on xs screens -->
+                </div>
+                <div class="col-xs-4 album-container-songname">
+                    <span>Daydream Believer</span>
+                </div>
+                <div class="col-xs-1">
+                    <button class="button-audio" onclick="playPause(4)"><i id="playButton4" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <audio id="album4" src=assets/audio/daydreambeliever.mp3>Your browser does not support the audio element</audio>
+                </div>
+            </div>
+            <div class="row visible-xs">
+                <div class="col-xs-12">
+                    <p><span class="glyphicon glyphicon-music rainbow-text-orange"></span></p>
+                </div>
+            </div>
         </section>
     </div>
 
-    </article>
     <footer>
         <div class="container-fluid">
             <div class="row container-footer rainbow-background-red">
-                <div class="col-sm-3">
-                    <i class="fa fa-copyright fa-sm"></i>
-                    <span class="footer-text">The Monkees</span>
+                <div class="col-xs-7 hidden-xs">
+                    <ul class="footer-text footer-links">
+                        <li><i class="fa fa-copyright fa-sm"></i>
+                            <span class="footer-text">The Monkees</span></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/band.html">Band</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Bookings</a></li>
+                        <li><a href="#">Fans</a></li>
+                    </ul>
                 </div>
-                <div class="col-sm-5 col-sm-offset-4 social-right social-links hidden-xs hidden-md hidden-lg">
+                
+                <div class="col-xs-12 visible-xs">
+                    <ul class="footer-text footer-links">
+                        <li><i class="fa fa-copyright fa-sm"></i>
+                            <span class="footer-text">The Monkees</span></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/band.html">Band</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Bookings</a></li>
+                        <li><a href="#">Fans</a></li>
+                    </ul>
+                </div>
+                
+    <!-- on sm screens show social media links in the footer -->
+                <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
                         <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
                         <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
@@ -179,7 +227,36 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        var currentTrack = 0;
 
+        function playPause(track) {
+            var song = document.getElementById("album" + track);
+            var i = 0;
+            /*check if the current track is already playing, if it is pause it, and reset currentTrack */
+            if (currentTrack == track) {
+                song.pause();
+                document.getElementById("playButton" + track).classList = "fa fa-play-circle rainbow-text-red";
+                currentTrack = 0;
+            }
+            else {
+                /* stop the video, if playing */
+                document.getElementById('video-background').pause();
+                /* stop any other track playing and change the button icons*/
+                for (i = 1; i <= 4; i++) {
+                    if (i != track) {
+                        document.getElementById("album" + i).pause();
+                        document.getElementById("playButton" + i).classList = "fa fa-play-circle rainbow-text-red";
+                    }
+                }
+                /* play the selected track and change the button icon */
+                document.getElementById("playButton" + track).classList = "fa fa-pause-circle rainbow-text-red";
+                song.play();
+                currentTrack = track;
+                /* set the current track to the one selected */
+            }
+        }
+    </script>
 
 </body>
 

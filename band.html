@@ -54,22 +54,38 @@
     </nav>
 
     <div class="container-fluid">
+
         <section class="top-section-container">
 
-            <div class="row  band-splash-container">
-                <div class="col-sm-4  col-sm-offset-1 band-splash band-splash-image">
-                    <img src="assets/images/band2.jpg" id="band-name-image" alt="The band">
-                </div>
-
-                <div class="col-sm-5 col-sm-offset-1 band-splash band-splash-text">
-                    <h1 class="general-font" id="band-name">The Band</h1>
-                    <p id="band-info">The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider for the American
+                <div class="row band-container">
+                    <div class="col-xs-1 band-splash-arrow">
+                        <button class="band-navigation-button" onmousedown="changeBand(-1)"><i class="fa fa-arrow-left"></i></button>
+                    </div>
+                    <div class="col-xs-4 col-xs-offset-1 band-splash band-splash-image">
+                        <img src="assets/images/band2.jpg" id="band-name-image" alt="The band">
+                    </div>
+                    <div class="col-sm-5 col-xs-offset-1 band-splash band-splash-text hidden-xs">
+                        <h1 class="general-font" id="band-name">The Band<span style="text-align:middle"></h1>
+                        <p id="band-info">The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider for the American
                         television series The Monkees.
-                    </p>
-                </div>
-            </div>
+                        </p>
+                    </div>
+                    <div class="col-xs-1 col-xs-offset-1 band-splash-arrow">
+                        <button class="band-navigation-button" onmousedown="changeBand(6)"><i class="fa fa-arrow-right"></i></button>
+                    </div>                
+                </div>  
+
+                    <div class="row visible-xs">
+                        <div class="col-xs-10 col-xs-offset-1 band-splash band-splash-text">
+                            <h1 class="general-font" id="band-name-xs">The Band<span style="text-align:middle"></h1>
+                            <p id="band-info-xs">The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider for the American
+                                television series The Monkees.
+                            </p>
+                        </div>
+                    </div>
 
         </section>
+        
         <section class="middle-section-container rainbow-background-yellow">
             <div class="row">
                 <!--title-->
@@ -79,14 +95,14 @@
             </div>
             <!-- selectable band icons - displays icon and info in top-section -->
             <div class="row">
-                <div class="col-xs-12 band-images-container band-navigation">
-                    <button onmousedown="changeBand(-1)"><i class="fa fa-arrow-left hidden-xs"></i></button>
+                <div class="col-xs-12 band-images-container">
+                    <button class="band-navigation-button" onmousedown="changeBand(-1)"><i class="fa fa-arrow-left hidden-xs"></i></button>
                     <img src="assets/images/band2.jpg" class="band-image band-image-active" id="band-image-1" onmousedown="changeBand(1)" alt="The Band">
                     <img src="assets/images/dj.jpg" class="band-image band-image-inactive" id="band-image-2" onmousedown="changeBand(2)" alt="Davy Jones">
                     <img src="assets/images/md.jpg" class="band-image band-image-inactive" id="band-image-3" onmousedown="changeBand(3)" alt="Mickey Dolenz">
                     <img src="assets/images/mn.jpg" class="band-image band-image-inactive" id="band-image-4" onmousedown="changeBand(4)" alt="Michael Nesmith">
                     <img src="assets/images/pt.jpg" class="band-image band-image-inactive" id="band-image-5" onmousedown="changeBand(5)" alt="Peter Tork">
-                    <button onmousedown="changeBand(6)"><i class="fa fa-arrow-right hidden-xs"></i></button>
+                    <button class="band-navigation-button" onmousedown="changeBand(6)"><i class="fa fa-arrow-right hidden-xs"></i></button>
                 </div>
             </div>
 
@@ -123,85 +139,117 @@
         </section>
     </div>
 
-    </article>
     <footer>
         <div class="container-fluid">
             <div class="row container-footer rainbow-background-yellow">
-                <div class="col-sm-3">
-                    <i class="fa fa-copyright fa-sm"></i>
-                    <span class="footer-text">The Monkees</span>
-                </div>
-                <div class="col-sm-5 col-sm-offset-4 social-right social-links hidden-xs hidden-md hidden-lg">
-                    <ul class="social-list">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-instagram rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-orange"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-blue"></i></a></li>
-                    </ul>
+                <div class="col-xs-7 hidden-xs">
+                    <ul class="footer-text footer-links">
+                        <li><i class="fa fa-copyright fa-sm"></i>
+                            <span class="footer-text">The Monkees</span></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/band.html">Band</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Bookings</a></li>
+                            <li><a href="#">Fans</a></li>
+                            </ul>
+                    </div>
+
+                    <div class="col-xs-12 visible-xs">
+                        <ul class="footer-text footer-links">
+                            <li><i class="fa fa-copyright fa-sm"></i>
+                                <span class="footer-text">The Monkees</span></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/band.html">Band</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Bookings</a></li>
+                            <li><a href="#">Fans</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- on sm screens show social media links in the footer -->
+                    <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
+                        <ul class="social-list">
+                            <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                            <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                            <li><a target=".blank" href="#"><i class="fa fa-instagram rainbow-text-green"></i></a></li>
+                            <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-orange"></i></a></li>
+                            <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-blue"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+            </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!--   <script type="text/javascript" src="../assets/js/script.js"></script>-->
-    <script>
-    var currentMember=1;
-        function changeBand(member) {
-            var bandName = document.getElementById("band-name");
-            var bandInfo = document.getElementById("band-info");
-            var bandImage = document.getElementById("band-name-image");
-            if(member==-1 && currentMember>1)
-            {
-                member=currentMember-1;
-            }
-            else if(member==6 && currentMember<5)
-            {
-                member=currentMember+1;    
-            }
-            var clickedImage = "band-image-" + member;
-            var clickedBandImage = document.getElementById(clickedImage);
-            clickedBandImage.className = "band-image band-image-active";
 
-            currentMember=member;
-            switch (member) {
-                case 1:
-                    bandName.innerHTML = "The Band";
-                    bandInfo.innerHTML = "The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider for the American television series The Monkees.";
-                    bandImage.src = "assets/images/band2.jpg";
-                    break;
-                case 2:
-                    bandName.innerHTML = "Davy Jones";
-                    bandInfo.innerHTML = "The lead vocalist for the Monkees who also took the lead in the 1970s TV series 'The Monkees'. Davy's TV debut was on Coronation street in 1961.";
-                    bandImage.src = "assets/images/dj.jpg";
-                    break;
-                case 3:
-                    bandName.innerHTML = "Micky Dolenz";
-                    bandInfo.innerHTML = "The vocalist and drummer and also actor, television director, radio personality and theatre director. Micky started his musical career in his own band, 'Micky and the One-Nighters' and went on to co-star in the TV series 'The Monkees'.";
-                    bandImage.src = "assets/images/md.jpg";
-                    break;
-                case 4:
-                    bandName.innerHTML = "Michael Nesmith";
-                    bandInfo.innerHTML = "Bass player and co-star of the TV series 'The Monkees'. He is a songwriter, actor, producer, novelist, businessman and philanthropist. His song writing credits include 'Different Drum'.";
-                    bandImage.src = "assets/images/mn.jpg";
-                    break;
-                case 5:
-                    bandName.innerHTML = "Peter Tork";
-                    bandInfo.innerHTML = "Lead guitar and co-star of the TV series 'The Monkees'. He described himself as playing 'third chair guitar'. Recording and producing as a group was Tork's major interest.";
-                    bandImage.src = "assets/images/pt.jpg";
-                    break;
-            }
-            var i = 0;
-            for (i = 1; i <= 5; i++) {
-                if (i != member) {
-                    document.getElementById("band-image-" + i).classList = "band-image band-image-inactive";
+
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <!--   <script type="text/javascript" src="../assets/js/script.js"></script>-->
+            <script>
+                var currentMember = 1;
+
+                function changeBand(member) {
+                    var bandNameElement = document.getElementById("band-name");
+                    var bandNameXSElement = document.getElementById("band-name-xs");
+                    var bandInfoElement = document.getElementById("band-info");
+                    var bandInfoXSElement= document.getElementById("band-info-xs");
+                    var bandImage = document.getElementById("band-name-image");
+                    var bandName;
+                    var bandInfo;
+                    
+                    if (member == -1 && currentMember > 1) {
+                        member = currentMember - 1;
+                    }
+                    else if (member == 6 && currentMember < 5) {
+                        member = currentMember + 1;
+                    }
+                    
+                    var clickedImage = "band-image-" + member;
+                    var clickedBandImage = document.getElementById(clickedImage);
+                    clickedBandImage.className = "band-image band-image-active";
+
+                    currentMember = member;
+                    switch (member) {
+                        case 1:
+                            bandName = "The Band";
+                            bandInfo = "The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider for the American television series The Monkees.";
+                            bandImage.src = "assets/images/band2.jpg";
+                            break;
+                        case 2:
+                            bandName = "Davy Jones";
+                            bandInfo = "The lead vocalist for the Monkees who also took the lead in the 1970s TV series 'The Monkees'. Davy's TV debut was on Coronation street in 1961.";
+                            bandImage.src = "assets/images/dj.jpg";
+                            break;
+                        case 3:
+                            bandName = "Micky Dolenz";
+                            bandInfo = "The vocalist and drummer and also actor, television director, radio personality and theatre director. Micky started his musical career in his own band, 'Micky and the One-Nighters' and went on to co-star in the TV series 'The Monkees'.";
+                            bandImage.src = "assets/images/md.jpg";
+                            break;
+                        case 4:
+                            bandName = "Michael Nesmith";
+                            bandInfo = "Bass player and co-star of the TV series 'The Monkees'. He is a songwriter, actor, producer, novelist, businessman and philanthropist. His song writing credits include 'Different Drum'.";
+                            bandImage.src = "assets/images/mn.jpg";
+                            break;
+                        case 5:
+                            bandName = "Peter Tork";
+                            bandInfo = "Lead guitar and co-star of the TV series 'The Monkees'. He described himself as playing 'third chair guitar'. Recording and producing as a group was Tork's major interest.";
+                            bandImage.src = "assets/images/pt.jpg";
+                            break;
+                    }
+                    bandNameElement.innerHTML=bandName;
+                    bandNameXSElement.innerHTML=bandName;
+                    bandInfoElement.innerHTML=bandInfo;
+                    bandInfoXSElement.innerHTML=bandInfo;
+
+                    var i = 0;
+                    for (i = 1; i <= 5; i++) {
+                        if (i != member) {
+                            document.getElementById("band-image-" + i).classList = "band-image band-image-inactive";
+                        }
+                    }
+                    window.scrollTo(0, 0);
                 }
-            }
-            window.scrollTo(0, 0);
-        }
-    </script>
+            </script>
 
 </body>
 
