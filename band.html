@@ -53,9 +53,10 @@
     </nav>
 
     <div class="container-fluid">
-
         <section class="top-section">
+            
             <!-- visible on all screens above xs-->
+            
             <div class="row top-section-container hidden-xs">
                 <div class="col-xs-1">
                     <button class="btn btn-block top-section-navbutton" onmousedown="changeBand(-1)"><i class="fa fa-arrow-circle-left rainbow-text-red rainbow-background-yellow"></i></button>
@@ -63,7 +64,7 @@
                 <div class="col-xs-4">
                     <img class="main-image rainbow-border-yellow" src="assets/images/band2.jpg" id="band-name-image" alt="The band">
                 </div>
-                <div class="col-sm-5 main-textbox rainbow-border-yellow">
+                <div class="col-sm-5 main-textbox-container rainbow-border-yellow">
                     <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
                     <div class="scrollbar-container">
                         <h1 class="general-font" id="main-header">The Band</h1>
@@ -79,17 +80,17 @@
 
             <!-- only for xs screen size -->
             <div class="row top-section-container visible-xs">
-                <div class="col-xs-12 text-center">
-                    <img src="assets/images/band2.jpg" class="main-image rainbow-border-yellow" id="band-name-image-xs" onmousedown="changeBand(1)" alt="The Band">
+                <div class="col-xs-12 text-center main-image-container">
+                    <img class="main-image rainbow-border-yellow" src="assets/images/band2.jpg" id="band-name-image-xs" onmousedown="changeBand(1)" alt="The Band">
                 </div>
                 <!-- empty spacer row -->
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-12 top-section-spacer">
                         <p></p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 main-textbox rainbow-border-yellow">
+                    <div class="col-xs-12 main-textbox-container rainbow-border-yellow">
                         <div class="row">
                             <div class="col-xs-2">
                                 <button class="btn btn-block top-section-navbutton" onmousedown="changeBand(-1)"><i class="fa fa-arrow-left rainbow-text-red"></i></button>
@@ -103,8 +104,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 nopadding">
-                                <p id="band-info-xs" class="scrollbar-container">The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider
+                            <div class="col-xs-12 main-textbox">
+                                <p id="band-info-xs">The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider
                                     for the American television series The Monkees.
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut sint eos molestias facere ipsam iste iure in obcaecati provident esse tempore reprehenderit similique earum magnam officia fugit quae veniam, debitis quod ipsum suscipit. Tempore amet, sequi libero numquam unde dicta velit. Deserunt commodi doloremque maxime nisi, debitis dolorem nam alias officiis. Id debitis, reprehenderit aut commodi tenetur fugiat est hic amet, voluptatem veritatis nulla nihil ad a ex placeat ea nemo nostrum illum laudantium. Repudiandae asperiores eveniet distinctio placeat, laudantium dicta quia molestiae officiis expedita, odio dolorum porro optio quas. Dolore sit explicabo unde repellendus quisquam laboriosam, itaque iste ipsam iusto officiis harum voluptates quibusdam, animi fuga error odio similique aliquid nobis sequi quis. Libero eos aliquam adipisci debitis laborum, eius atque cupiditate quibusdam harum aut perspiciatis qui quaerat quam nobis neque mollitia temporibus voluptatum pariatur quod? Eos voluptas adipisci alias iusto consequuntur est pariatur repellat voluptates sint labore facere praesentium mollitia illo aliquam amet quaerat cumque dolorem quae laborum, temporibus voluptate. Necessitatibus aliquam iusto tempora blanditiis quod quia voluptas possimus, nam? Cupiditate magnam, tempore labore beatae ab excepturi laudantium laborum nisi eligendi placeat maiores harum vero quia nemo, dolorum iusto. Alias facere ducimus, vel maiores, eaque nihil eveniet.
                                 </p>
