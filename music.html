@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Monkees</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+
+<body>
+
+    <!--Navbar visible on desktop site -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand " href="home.html">
+                    <img alt="Logo" class="logo" src="assets/images/logo.png"></img> 
+                </a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only ">Toggle navigation</span>
+                    <i class="fa fa-navicon"></i>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav general-font navbar-main">
+                    <li><a href="index.html" class="hvr-rectangle-out navbar-inactive" id="navbar-home">Home</a></li>
+                    <li><a href="band.html" class="hvr-rectangle-out navbar-inactive" id="navbar-band">Band</a></li>
+                    <li><a href="/.html" class="hvr-rectangle-out navbar-active" id="navbar-music">Music</a></li>
+                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive" id="navbar-booking">Booking</a></li>
+                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive" id="navbar-fans">Fans</a></li>
+                </ul>
+
+                <!--remove social links on small screens-->
+                <div class="navbar-header navbar-right hidden-sm hidden-xs">
+                    <ul class="nav navbar-nav social-links">
+                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <section class="top-section">
+
+            <div class="row top-section-container">
+                <div class="col-xs-1 band-splash-arrow">
+                    <button class="band-navigation-button rainbow-background-green" onmousedown="changeBand(-1)"><i class="fa fa-arrow-left rainbow-text-blue"></i></button>
+                </div>
+                <div class="col-xs-4 col-xs-offset-1 band-splash band-splash-image rainbow-border-green">
+                    <img src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="band-name-image" alt="The band">
+                </div>
+                <div class="col-sm-5 col-xs-offset-1 band-splash band-splash-text rainbow-border-green hidden-xs">
+                    <!-- scrollbar div to ensure scrollbar does not fall outside rounded border -->
+                    <div class="scrollbar-div">
+                        <h1 class="general-font" id="band-name">Daydream Believer<span style="text-align:middle"></h1>
+                        <p id="band-info">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?<br>You once thought of me<br>As a white knight on his steed<br>Now you know how happy I can be<br>Oh, our good time starts and ends<br>Without all I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…"
+                    </p>
+                    <div class="floating-button">
+                        <button class="button-audio" onclick="playPause(0)"><i id="playButton" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    </div>  
+                    </div>
+                </div>
+                <div class="col-xs-1 col-xs-offset-1 band-splash-arrow ">
+                    <button class="band-navigation-button rainbow-background-green" onmousedown="changeBand(6)"><i class="fa fa-arrow-right rainbow-text-blue"></i></button>
+                </div>                
+            </div>  
+
+            <div class="row visible-xs">
+                <div class="col-xs-10 col-xs-offset-1 band-splash band-splash-text rainbow-border-green">
+                <!-- scrollbar div to ensure scrollbar does not fall outside rounded border -->
+                    <div class="scrollbar-div">
+                        <h1 class="general-font" id="band-name-xs">Daydream Believer<span style="text-align:middle"></h1>
+                        <p id="band-info-xs">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?<br>You once thought of me<br>As a white knight on his steed<br>Now you know how happy I can be<br>Oh, our good time starts and ends<br>Without all I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…"
+                        </p>
+                        <div class="floating-button">
+                            <button class="button-audio" onclick="playPause(0)"><i id="playButton-xs" class="fa fa-play-circle rainbow-text-red"></i></button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        <!-- hidden audio elements -->
+        <div>
+            <audio id="song" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
+        </div>
+
+        </section>
+        
+        <section class="middle-section-container rainbow-background-green">
+            <div class="row">
+                <!--title-->
+                <div class="col-xs-12 general-font">
+                    <p>All the sounds of the 60s<br>Songs:</p>
+                </div>
+            </div>
+            <!-- selectable band icons - displays icon and info in top-section -->
+            <div class="row">
+                <div class="col-sm-2 band-navigation-container hidden-xs">
+                    <button class="band-navigation-button" onmousedown="changeBand(-1)"><i class="fa fa-arrow-left rainbow-text-blue hidden-xs"></i></button>
+                </div>
+                 <div class="col-sm-2 music-name-font">
+                    <img src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" class="band-image band-image-active" id="band-image-1" onmousedown="changeBand(1)" alt="Daydream Believer">
+                    <span class="music-name-font rainbow-text-blue">Daydream Believer</span>
+                </div>
+                <div class="col-sm-2 ">
+                    <img src="assets/images/album1.jpg" class="band-image band-image-inactive" id="band-image-2" onmousedown="changeBand(2)" alt="Clarksville">
+                    <span class="music-name-font rainbow-text-blue">Clarksville</span>
+                </div>
+                <div class="col-sm-2">
+                    <img src="assets/images/album2.jpg" class="band-image band-image-inactive" id="band-image-3" onmousedown="changeBand(3)" alt="I'm A Believer">
+                    <span class="music-name-font rainbow-text-blue">I'm A Believer</span>
+                </div>
+                <div class="col-sm-2 ">
+                    <img src="assets/images/album3.jpg" class="band-image band-image-inactive" id="band-image-4" onmousedown="changeBand(4)" alt="Stepping Stone">
+                    <span class="music-name-font rainbow-text-blue">Stepping Stone</span>
+                </div>
+                <div class="col-sm-2 band-navigation-container hidden-xs">
+                    <button class="band-navigation-button" onmousedown="changeBand(6)"><i class="fa fa-arrow-right rainbow-text-blue hidden-xs"></i></button>
+                </div>
+            </div>
+
+        </section>
+        <section class="bottom-section-container rainbow-background-blue">
+            <div class="row">
+                <!--tag line-->
+                <div class="col-xs-12 general-font">
+                    <p>Step back in time!<br>Book a live performance!</p>
+                </div>
+            </div>            
+            <div class="row">
+                <div class="action-container col-md-12 button-container">
+                    <button type="button" class="btn btn-small button-book">Book Us!</button>
+                </div>
+            </div>
+
+            <!--- social links container on xs --->
+            <div class="row hidden-sm hidden-md hidden-lg">
+                <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
+                    <ul class="social-list">
+                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row container-footer rainbow-background-green">
+                <div class="col-xs-7 hidden-xs">
+                    <ul class="footer-text footer-links">
+                        <li><i class="fa fa-copyright fa-sm"></i>
+                            <span class="footer-text">The Monkees</span></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/band.html">Band</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Bookings</a></li>
+                            <li><a href="#">Fans</a></li>
+                            </ul>
+                    </div>
+
+                    <div class="col-xs-12 visible-xs">
+                        <ul class="footer-text footer-links">
+                            <li><i class="fa fa-copyright fa-sm"></i>
+                                <span class="footer-text">The Monkees</span></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/band.html">Band</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Bookings</a></li>
+                            <li><a href="#">Fans</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- on sm screens show social media links in the footer -->
+                    <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
+                        <ul class="social-list">
+                            <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                            <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                            <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                            <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </footer>
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <!--   <script type="text/javascript" src="../assets/js/script.js"></script>-->
+            <script>
+                var currentMember = 1;
+
+                function changeBand(member) {
+                    var bandNameElement = document.getElementById("band-name");
+                    var bandNameXSElement = document.getElementById("band-name-xs");
+                    var bandInfoElement = document.getElementById("band-info");
+                    var bandInfoXSElement = document.getElementById("band-info-xs");
+                    var bandImage = document.getElementById("band-name-image");
+                    var bandImageElement;
+                    var bandName;
+                    var bandInfo;
+                    var i = 1;
+                    if (member == -1 && currentMember > 1) {
+                        member = currentMember - 1;
+                    }
+                    else if (member == -1) {
+                        member = 1;
+                    }
+
+                    if (member == 6 && currentMember < 4) {
+                        member = currentMember + 1;
+                    }
+                    else if (member == 6) {
+                        i = 1;
+                        bandImageElement = document.getElementById("band-image-" + i);
+                        while (bandImageElement != null) {
+                            i++;
+                            bandImageElement = document.getElementById("band-image-" + i);
+                        }
+                        member = i - 1;
+                        currentMember = i - 1;
+                    }
+                    var clickedImage = "band-image-" + member;
+                    var clickedBandImage = document.getElementById(clickedImage);
+                    clickedBandImage.className = "band-image rainbow-border-blue";
+
+                    currentMember = member;
+                    switch (member) {
+                        case 1:
+                            bandName = "Daydream Believer";
+                            bandInfo = "Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?<br>You once thought of me<br>As a white knight on his steed<br>Now you know how happy I can be<br>Oh, our good time starts and ends<br>Without all I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…";
+                            bandImage.src = "https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg";
+                            break;
+                        case 2:
+                            bandName = "Clarksville";
+                            bandInfo = "Take the last train to Clarksville<br>And I'll meet you at the station<br>You can be there by four-thirty<br>'Cause I've made your reservation, don't be slow<br>Oh, no, no, no<br>Oh, no, no, no<br>'Cause I'm leaving in the morning<br>And I must see you again<br>We'll have one more night together<br>Till the morning brings my train and I must go<br>Oh, no, no, no<br>Oh, no, no, no<br>And I don't know if I'm ever coming home<br>Take the last train to Clarksville<br>I'll be waiting at the station<br>We'll have time for coffee-flavored kisses<br>And a bit of conversation<br>Oh, no, no, no<br>Oh, no, no, no<br>Take the last train to Clarksville<br>Now I must hang up the phone<br>I can't hear you in this noisy railroad station all alone<br>I'm feeling low<br>Oh, no, no, no<br>Oh, no, no, no<br>And I don't know if I'm ever coming home<br>Oh<br>Take the…";
+                            bandImage.src = "assets/images/album1.jpg";
+                            break;
+                        case 3:
+                            bandName = "I'm A Believer";
+                            bandInfo = "I thought love was only true in fairy tales<br>Meant for someone else but not for me<br>Love was out to get me<br>That's the way it seemed<br>Disappointment haunted all of my dreams<br>Then I saw her face, now I'm a believer<br>Not a trace, of doubt in my mind<br>I'm in love, and I'm a believer<br>I couldn't leave her if I tried<br>I thought love was more or less a giving thing<br>The more I gave the less I got oh yeah<br>What's the use in tryin'<br>All you get is pain<br>When I wanted sunshine I got rain<br>Then I saw her face, now I'm a believer<br>Not a trace, of doubt in my mind<br>I'm in love, I'm a believer<br>I couldn't leave her if I tried<br>What's the use of trying<br>All you get is pain<br>When I wanted sunshine I got rain<br>Then I…";
+                            bandImage.src = "assets/images/album2.jpg";
+                            break;
+                        case 4:
+                            bandName = "Stepping Stone";
+                            bandInfo = "I-I-I-I-I'm not your steppin' stone<br>I-I-I-I-I'm not your steppin' stone<br>You're trying to make your mark in society<br>You're using all the tricks that you used on me<br>You're reading all them high-fashion magazines<br>The clothes you're wearing, girl, they're causing public scenes<br>I said, I-I-I-I-I'm not your steppin' stone<br>I-I-I-I-I'm not your steppin' stone<br>Not your steppin' stone<br>Not your steppin' stone<br>When I first met you, girl, you didn't have no shoes<br>But, now you're walking around like you're front-page news<br>You've been awful careful 'bout the friends you choose<br>But, you won't find my name in your book of 'who's-who?'<br>I said, I-I-I-I-I'm not your steppin' stone<br>(No, girl, not me!)<br>I-I-I-I-I'm not your steppin' stone<br>Not your steppin' stone<br>I'm not…";
+                            bandImage.src = "assets/images/album3.jpg";
+                            break;
+                    }
+                    bandNameElement.innerHTML = bandName;
+                    bandNameXSElement.innerHTML = bandName;
+                    bandInfoElement.innerHTML = bandInfo;
+                    bandInfoXSElement.innerHTML = bandInfo;
+
+                    var i = 1;
+                    var bandImageElement = document.getElementById("band-image-" + i);
+                    while (bandImageElement != null) {
+                        if (i != member) {
+                            bandImageElement.classList = "band-image rainbow-border-red";
+                        }
+                        i++;
+                        bandImageElement = document.getElementById("band-image-" + i);
+                    }
+                    if(document.getElementById("song")!=null) {
+                        document.getElementById("song").pause();
+                        document.getElementById("playButton").classList = "fa fa-play-circle rainbow-text-red";
+                        document.getElementById("playButton-xs").classList = "fa fa-play-circle rainbow-text-red"; 
+                        playing=0;
+                    }                        
+                    window.scrollTo(0, 0);
+                }
+
+                var playing=0;
+                function playPause(track) {
+                    var playButton=document.getElementById("playButton");
+                    var playButtonXS=document.getElementById("playButton-xs");
+                    /* on the music page 0 is passed to the function and the source is determined by the current song selected */
+                    if (track==0)
+                    {
+                        track = currentMember;
+                    }
+                    var songElement = document.getElementById("song");
+                    var i = 0;
+                    /*check if the current track is already playing, if it is stop it, and change the source */
+                    if (playing==0) {
+                        var song;
+                        switch (track) {
+                            case 1:
+                                song="assets/audio/daydreambeliever.mp3";
+                            break;
+                            case 2:
+                                song="assets/audio/clarksville.mp3";
+                            break;
+                            case 3:
+                                song="assets/audio/imabeliever.mp3";    
+                            break;
+                            case 4:
+                                song="assets/audio/steppingstone.mp3";    
+                            break;                            
+                        }
+                        songElement.src=song;
+                        songElement.play();
+                        playButton.classList = "fa fa-stop-circle rainbow-text-red";
+                        playButtonXS.classList = "fa fa-stop-circle rainbow-text-red";
+                        playing=1;
+                    }
+                    else {
+                        /* pause the track and change the button icon */
+                        this.classList = "fa fa-play-circle rainbow-text-red";
+                        playButtonXS.classList = "fa fa-play-circle rainbow-text-red";
+                        songElement.pause();
+                        playing=0;
+                    }
+                }
+            </script>
+
+</body>
+
+</html>

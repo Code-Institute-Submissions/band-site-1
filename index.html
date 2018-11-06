@@ -43,9 +43,8 @@
                     <ul class="nav navbar-nav social-links">
                         <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
                         <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-instagram rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-orange"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-blue"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -53,13 +52,13 @@
     </nav>
 
     <div class="container-fluid">
-        <section class="top-section-container">
+        <section class="top-section">
             <div class="row">
 
                 <!-- video background - hide on xs screen - replace with image -->
-                <div class="col-xs-12 hidden-xs nopadding">
+                <div class="col-xs-12 hidden-xs nopadding" style="text-align:center">
 
-                    <video controls="volume" controlslist="nofullscreen nodownload noremoteplayback" id="video-background" plays-inline poster="assets/images/band-colour.jpg" style="object-fit:cover;" class="nopadding">
+                    <video controls="volume" style="object-fit: fill;" controlslist="nofullscreen nodownload noremoteplayback" id="video-background" plays-inline poster="assets/images/band-colour.jpg" style="object-fit:cover;" class="nopadding">
                         <source src="assets/videos/daydream.webm" type="video/webm">
                     </video>
                     <a href="booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="blue flower"></img></a>
@@ -98,9 +97,8 @@
                     <ul class="social-list">
                         <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
                         <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-instagram rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-orange"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-blue"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -121,7 +119,7 @@
             <!-- remove album artwork on xs screens -->
             <div class="row album-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
-                    <img src="assets/images/album1.jpg" class="album-thumbnail" alt="Song - Clarksville">
+                    <img src="assets/images/album1.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - Clarksville">
                 </div>
                 <div class="col-xs-4 visible-xs">
                     <!--- to provide spacing on xs screens -->
@@ -131,12 +129,11 @@
                 </div>
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(1)"><i id="playButton1" class="fa fa-play-circle rainbow-text-red"></i></button>
-                    <audio id="album1" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
             <div class="row album-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
-                    <img src="assets/images/album2.jpg" class="album-thumbnail" alt="Song - I'm A Believer">
+                    <img src="assets/images/album2.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - I'm A Believer">
                 </div>
                 <div class="col-xs-4 visible-xs">
                     <!--- to provide spacing on xs screens -->
@@ -146,12 +143,11 @@
                 </div>
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(2)"><i id="playButton2" class="fa fa-play-circle rainbow-text-red"></i></button>
-                    <audio id="album2" src=assets/audio/imabeliever.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
             <div class="row album-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
-                    <img src="assets/images/album3.jpg" class="album-thumbnail" alt="Song - Stepping Stone">
+                    <img src="assets/images/album3.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - Stepping Stone">
                 </div>
                 <div class="col-xs-4 visible-xs">
                     <!--- to provide spacing on xs screens -->
@@ -161,7 +157,6 @@
                 </div>
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(3)"><i id="playButton3" class="fa fa-play-circle rainbow-text-red"></i></button>
-                    <audio id="album3" src=assets/audio/steppingstone.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
             <div class="row album-container visible-xs">
@@ -173,13 +168,16 @@
                 </div>
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(4)"><i id="playButton4" class="fa fa-play-circle rainbow-text-red"></i></button>
-                    <audio id="album4" src=assets/audio/daydreambeliever.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
             <div class="row visible-xs">
                 <div class="col-xs-12">
                     <p><span class="glyphicon glyphicon-music rainbow-text-orange"></span></p>
                 </div>
+            </div>
+            <!-- hidden audio elements -->
+            <div>
+                <audio id="song" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
             </div>
         </section>
     </div>
@@ -198,7 +196,7 @@
                         <li><a href="#">Fans</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="col-xs-12 visible-xs">
                     <ul class="footer-text footer-links">
                         <li><i class="fa fa-copyright fa-sm"></i>
@@ -210,15 +208,14 @@
                         <li><a href="#">Fans</a></li>
                     </ul>
                 </div>
-                
-    <!-- on sm screens show social media links in the footer -->
+
+                <!-- on sm screens show social media links in the footer -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
                         <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
                         <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-instagram rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-orange"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-blue"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -231,11 +228,12 @@
         var currentTrack = 0;
 
         function playPause(track) {
-            var song = document.getElementById("album" + track);
+            var songElement = document.getElementById("song");
             var i = 0;
+            var song;
             /*check if the current track is already playing, if it is pause it, and reset currentTrack */
             if (currentTrack == track) {
-                song.pause();
+                songElement.pause();
                 document.getElementById("playButton" + track).classList = "fa fa-play-circle rainbow-text-red";
                 currentTrack = 0;
             }
@@ -245,13 +243,27 @@
                 /* stop any other track playing and change the button icons*/
                 for (i = 1; i <= 4; i++) {
                     if (i != track) {
-                        document.getElementById("album" + i).pause();
                         document.getElementById("playButton" + i).classList = "fa fa-play-circle rainbow-text-red";
                     }
                 }
                 /* play the selected track and change the button icon */
                 document.getElementById("playButton" + track).classList = "fa fa-pause-circle rainbow-text-red";
-                song.play();
+                switch (track) {
+                    case 4:
+                        song = "assets/audio/daydreambeliever.mp3";
+                        break;
+                    case 1:
+                        song = "assets/audio/clarksville.mp3";
+                        break;
+                    case 2:
+                        song = "assets/audio/imabeliever.mp3";
+                        break;
+                    case 3:
+                        song = "assets/audio/steppingstone.mp3";
+                        break;
+                }
+                songElement.src = song;
+                songElement.play();
                 currentTrack = track;
                 /* set the current track to the one selected */
             }
