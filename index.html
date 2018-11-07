@@ -128,7 +128,7 @@
                     <span>Clarksville</span>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(1)"><i id="playButton1" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="button-audio" onclick="playPause(1,'index')"><i id="playButton1" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
             </div>
             <div class="row album-container">
@@ -142,7 +142,7 @@
                     <span>I'm A Believer</span>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(2)"><i id="playButton2" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="button-audio" onclick="playPause(2,'index')"><i id="playButton2" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
             </div>
             <div class="row album-container">
@@ -156,7 +156,7 @@
                     <span>Stepping Stone</span>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(3)"><i id="playButton3" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="button-audio" onclick="playPause(3,'index')"><i id="playButton3" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
             </div>
             <div class="row album-container visible-xs">
@@ -167,7 +167,7 @@
                     <span>Daydream Believer</span>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(4)"><i id="playButton4" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="button-audio" onclick="playPause(4,'index')"><i id="playButton4" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
             </div>
             <div class="row visible-xs">
@@ -224,51 +224,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>
-        var currentTrack = 0;
-
-        function playPause(track) {
-            var songElement = document.getElementById("song");
-            var i = 0;
-            var song;
-            /*check if the current track is already playing, if it is pause it, and reset currentTrack */
-            if (currentTrack == track) {
-                songElement.pause();
-                document.getElementById("playButton" + track).classList = "fa fa-play-circle rainbow-text-red";
-                currentTrack = 0;
-            }
-            else {
-                /* stop the video, if playing */
-                document.getElementById('video-background').pause();
-                /* stop any other track playing and change the button icons*/
-                for (i = 1; i <= 4; i++) {
-                    if (i != track) {
-                        document.getElementById("playButton" + i).classList = "fa fa-play-circle rainbow-text-red";
-                    }
-                }
-                /* play the selected track and change the button icon */
-                document.getElementById("playButton" + track).classList = "fa fa-pause-circle rainbow-text-red";
-                switch (track) {
-                    case 4:
-                        song = "assets/audio/daydreambeliever.mp3";
-                        break;
-                    case 1:
-                        song = "assets/audio/clarksville.mp3";
-                        break;
-                    case 2:
-                        song = "assets/audio/imabeliever.mp3";
-                        break;
-                    case 3:
-                        song = "assets/audio/steppingstone.mp3";
-                        break;
-                }
-                songElement.src = song;
-                songElement.play();
-                currentTrack = track;
-                /* set the current track to the one selected */
-            }
-        }
-    </script>
+    <script type="text/javascript" src="../assets/js/script.js"></script>
 
 </body>
 

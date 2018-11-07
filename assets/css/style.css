@@ -195,9 +195,9 @@ body {
     justify-content: center;
 }
 
-
-.middle-section-container {
-    padding-bottom: 25px;
+.main-image-container {
+    /* used in xs screen */
+    height: 15vh;
 }
 
 .main-image {
@@ -216,10 +216,11 @@ body {
     height: 40vh;
 }
 
-    .main-textbox {
-        height: 27vh;
-        overflow: auto;
-    }
+.main-textbox {
+    /* used in xs screen */
+    height: 27vh;
+    overflow: auto;
+}
 
 .scrollbar-container {
     overflow: auto;
@@ -361,7 +362,7 @@ body {
 
 /*    Main - Band */
 
-#band-info {
+#main-info {
     font-family: "Roboto", sans-serif;
     font-size: 1.25em;
     padding-top: 0px;
@@ -686,10 +687,6 @@ video {
         border: none;
     }
 
-    .main-image-container {
-        height: 15vh;
-    }
-
     .main-image {
         height: 15vh;
         width: 15vh;
@@ -709,7 +706,7 @@ video {
         padding-top: 5px;
     }
 
-    #band-info-xs {
+    #main-info-xs {
         font-family: "Roboto", sans-serif;
         font-size: 1.25em;
         padding-top: 0px;
@@ -717,6 +714,17 @@ video {
         height: 29vh;
     }
 
+    .floating-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.7;
+    }
+
+    .middle-section-container {
+        padding-bottom: 25px;
+    }
 
     .bottom-section-container {
         padding-bottom: 0px;
@@ -773,7 +781,7 @@ video {
         padding-top: 5px;
     }
 
-    #band-info-xs {
+    #main-info-xs {
         font-family: "Roboto", sans-serif;
         font-size: 1.15em;
         padding-top: 0px;
