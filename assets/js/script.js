@@ -7,27 +7,66 @@ function changeMainImage(newSelection, totalSelections, page) {
     var infoXSElement = document.getElementById("main-info-xs");
     var imageElement = document.getElementById("main-image-element");
     var imageElementXS = document.getElementById("main-image-element-xs");
+    var navButtonRight=document.getElementById("navbutton-right1");
+    var navButtonLeft=document.getElementById("navbutton-left1");
     var thumbnailElement;
     var newImage;
     var newHeader;
     var newInfo;
     //left arrow clicked check if at the end of the row, if so set the selection to 1 (i.e first and current image)
     //else reduce by one
-    if (newSelection == -1 && currentSelection > 1) {
-        newSelection = currentSelection - 1;
-    }
-    else if (newSelection == -1) {
-        newSelection = 1;
+    if(newSelection==-1) {
+        if (currentSelection > 1) {
+            newSelection = currentSelection - 1;
+        }    
+        else {
+            newSelection = 1;
+        }
     }
 
     //right arrow clicked check if at right end of row, if so set selection to the maximum (i.e last and current image)
     //else increase by 1
-    if (newSelection == 6 && (currentSelection < totalSelections)) {
-        newSelection = currentSelection + 1;
+
+    if(newSelection==6) {
+        if (currentSelection <totalSelections) {
+            newSelection = currentSelection + 1;
+        }    
+        else {
+            newSelection = totalSelections;
+        }
     }
-    else if (newSelection == 6) {
-        newSelection = totalSelections;
+
+    //hide or show navigation buttons if selection is at end of row 
+    var i=1;
+    if(newSelection==1) {
+        while(navButtonLeft!=null) {
+            navButtonLeft.style.visibility="hidden";
+            i++;
+            navButtonLeft=document.getElementById("navbutton-left"+i)
+        }
     }
+    else if(newSelection==totalSelections) {
+        while(navButtonRight!=null) {
+            navButtonRight.style.visibility="hidden";
+            i++;
+            navButtonRight=document.getElementById("navbutton-right"+i)
+        }      
+    }
+    else {
+        while(navButtonLeft!=null) {
+            navButtonLeft.style.visibility="visible";
+            i++;
+            navButtonLeft=document.getElementById("navbutton-left"+i)
+        }
+        i=1;
+        while(navButtonRight!=null) {
+            navButtonRight.style.visibility="visible";
+            i++;
+            navButtonRight=document.getElementById("navbutton-right"+i)
+        }  
+    }
+
+    
     //determine new values for the image, header and text
     if (page == "band") {
         switch (newSelection) {

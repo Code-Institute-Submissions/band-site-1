@@ -1,9 +1,5 @@
 /*    BODY     */
 
-body {
-    background-color: #f5f5f5;
-}
-
 .row {
     padding: 0;
     margin: 0;
@@ -11,7 +7,7 @@ body {
 
 .container-fluid {
     padding: 0;
-    margin: 0;
+    margin: -1px 0 0 0;
 }
 
 .nopadding {
@@ -25,7 +21,7 @@ body {
 }
 
 .general-font li {
-    text-align:center;
+    text-align: center;
 }
 
 .btn {
@@ -110,7 +106,8 @@ body {
 /*    NAVBAR - Buttons - specific styling */
 
 #navbar-home {
-    color: rgba(120, 38, 38, 1);;
+    color: rgba(120, 38, 38, 1);
+    ;
 }
 
 #navbar-home:hover {
@@ -350,6 +347,16 @@ video {
     text-shadow: 0px 0px 15px #000000;
 }
 
+.middle-section-container img {
+    transition: ease-in-out 0.25s;
+}
+
+.middle-section-container img:hover {
+    transition: ease-in-out 0.25s;
+    border-color: #f5f5f5;
+
+}
+
 .middle-section-navbutton {
     font-size: 50px;
     margin-top: 25px;
@@ -418,6 +425,26 @@ video {
     font-family: "Roboto", sans-serif;
     color: #f5f5f5;
     font-size: 1.75em;
+}
+
+.bottom-section-musiccontainer a {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: 0.25s ease-in-out;
+}
+
+.bottom-section-musiccontainer a:hover {
+    color: rgba(69, 90, 186, 1);
+    transition: 0.25s ease-in-out;
+}
+
+.bottom-section-musiccontainer img {
+    transition: 0.25s ease-in-out;
+}
+
+.bottom-section-musiccontainer img:hover {
+    transition: 0.25s ease-in-out;
+    border-color: #f5f5f5;
 }
 
 /*    FOOTER     */
@@ -545,7 +572,6 @@ video {
 
 .booking-form {
     font-family: "Roboto", sans-serif;
-   /* text-shadow: 0px 0px 15px #000000;*/
 }
 
 .booking-form-backdrop {
@@ -603,7 +629,7 @@ video {
 }
 
 .rainbow-border-green {
-    border-color: rgba(115, 168, 52, 1) ;
+    border-color: rgba(115, 168, 52, 1);
 }
 
 .rainbow-text-orange {
@@ -642,10 +668,10 @@ video {
         background-color: transparent;
     }
 
-.navbar-main>li {
-    width: 110px;
-    text-align: center;
-}
+    .navbar-main>li {
+        width: 110px;
+        text-align: center;
+    }
 
     .navbar-toggle {
         padding: 10px 30px;
@@ -710,25 +736,17 @@ video {
         height: 29vh;
     }
 
-    .floating-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0.7;
-    }
-
+    /*    MIDDLE SECTION     */
     .middle-section-container {
         padding-bottom: 25px;
     }
 
+    /*    BOTTOM SECTION     */
     .bottom-section-container {
         padding-bottom: 0px;
         min-height: 0vh;
 
     }
-    
-    /*    BOTTOM SECTION     */
 
     .bottom-section-buttoncontainer {
         padding-bottom: 25px;
@@ -740,19 +758,24 @@ video {
     }
 
     /*    FOOTER     */
-
     .footer-text {
         font-size: 15px;
+    }
+
+    /*    BUTTONS     */
+    .floating-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.7;
     }
 
 }
 
 @media (max-width: 479px) {
-    
-    .container-fluid {
-        margin: -5px;
-    }
-    
+
+    /*    NAVBAR     */
     .navbar-default .navbar-nav {
         margin-top: 15px;
     }
@@ -760,24 +783,6 @@ video {
     .logo {
         max-width: 50%;
     }
-
-    .btn-small {
-        font-size: 1em;
-        width: 175px;
-    }
-
-    .bottom-section-buttoncontainer {
-        padding-top: 5px;
-    }
-
-    .button-container {
-        padding-top: 10px;
-    }
-
-    .bottom-section-musiccontainer {
-        font-size: 1.0em;
-    }
-
 
     /*    TOP SECTION    */
     #main-header-xs {
@@ -805,10 +810,13 @@ video {
     .bottom-section-musiccontainer {
         line-height: 50px;
         font-size: 0.85em;
-    }    
+    }
+
+    .bottom-section-buttoncontainer {
+        padding-top: 5px;
+    }
 
     /*    FOOTER    */
-
     .container-footer {
         height: 50px;
         padding-top: 15px;
@@ -818,4 +826,11 @@ video {
     .footer-text {
         font-size: 12px;
     }
+
+    /*    BUTTONS     */
+    .btn-small {
+        font-size: 1em;
+        width: 175px;
+    }
+
 }
