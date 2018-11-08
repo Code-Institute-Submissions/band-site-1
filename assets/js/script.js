@@ -148,14 +148,14 @@ function changeMainImage(newSelection, totalSelections, page) {
                 newImage = "https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d";
                 break;
             case 2:
-                newHeader = "Download";
-                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><span class='glyphicon glyphicon-picture rainbow-text-yellow'></span> Wallpaper <a target='_blank' href='#'><span class='glyphicon glyphicon-cloud-download rainbow-text-blue'></span></a><br><span class='glyphicon glyphicon-film rainbow-text-red'></span> Video <a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-cloud-download rainbow-text-blue'></span></a><br><span class='glyphicon glyphicon-music rainbow-text-green'></span> Music <a target='_blank' href='#'><span class='glyphicon glyphicon-cloud-download rainbow-text-blue'></span></a>";
+                newHeader = "Follow us";
+                newInfo = "<a target='_blank' href='#'><i class='fa fa-facebook-square rainbow-text-red'></i></a> Facebook<br><a target='_blank' href='#'><i class='fa fa-twitter-square rainbow-text-yellow'></i></a> Twitter<br><a target='_blank' href='#'><i class='fa fa-youtube-square rainbow-text-green'></i></a> YouTube<br><a target='_blank' href='#'><i class='fa fa-share-square rainbow-text-orange'></i></a> Share";
                 newImage = "assets/images/band-small.jpg";
                 break;
             case 3:
-                newHeader = "Christmas Parties";
-                newInfo = "Nothing is better than rocking around the Christmas tree, 60s style!<br>Contact us now for a quote.";
-                newImage = "https://c.pxhere.com/images/8d/a9/b1b8ea2f9f76ce0fa2b51ff48399-1418247.jpg!d";
+                newHeader = "Download";
+                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><a target='_blank' href='#'><span class='glyphicon glyphicon-picture rainbow-text-yellow'></span></a> Wallpaper<br><a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-film rainbow-text-red'></span></a> Video<br><a target='_blank' href='#'><span class='glyphicon glyphicon-music rainbow-text-green'></span></a> Music";
+                newImage = "assets/images/band-small.jpg";
                 break;
         }
     }
@@ -170,7 +170,7 @@ function changeMainImage(newSelection, totalSelections, page) {
     imageElementXS.src = newImage;
 
     //change the border of the selected element to blue - change the old to red
-    if (page != "booking") {
+    if (page != "booking" && page!= "fans") {
         document.getElementById("thumbnail-" + currentSelection).classList = "middle-section-thumbnail rainbow-border-red";
         document.getElementById("thumbnail-" + newSelection).classList = "middle-section-thumbnail rainbow-border-blue";
     }
