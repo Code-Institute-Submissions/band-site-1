@@ -30,21 +30,21 @@
             </div>
             <!-- collapse nav bar on xs screen and hide use burger button -->
             <div class="navbar-collapse collapse" id="navbar">
-                <ul class="nav navbar-nav general-font navbar-main">
-                    <li><a href="/" class="hvr-rectangle-out navbar-active" id="navbar-home">Home</a></li>
-                    <li><a href="band.html" class="hvr-rectangle-out navbar-inactive" id="navbar-band">Band</a></li>
-                    <li><a href="music.html" class="hvr-rectangle-out navbar-inactive" id="navbar-music">Music</a></li>
-                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive" id="navbar-booking">Booking</a></li>
-                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive" id="navbar-fans">Fans</a></li>
+                <ul class="nav navbar-nav navbar-main general-font">
+                    <li><a href="" class="hvr-rectangle-out navbar-active rainbow-text-red" id="navbar-home">Home</a></li>
+                    <li><a href="band.html" class="hvr-rectangle-out navbar-inactive rainbow-text-yellow" id="navbar-band">Band</a></li>
+                    <li><a href="music.html" class="hvr-rectangle-out navbar-inactive rainbow-text-green" id="navbar-music">Music</a></li>
+                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive rainbow-text-orange" id="navbar-booking">Booking</a></li>
+                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive rainbow-text-blue" id="navbar-fans">Fans</a></li>
                 </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,7 @@
 
     <div class="container-fluid">
         <section class="top-section">
-            <div class="row">
+            <div class="row ">
 
                 <!-- video background - hide on xs screen - replace with image -->
                 <div class="col-xs-12 hidden-xs nopadding" style="text-align:center">
@@ -61,12 +61,12 @@
                     <video controls="volume" style="object-fit: fill;" controlslist="nofullscreen nodownload noremoteplayback" id="video-background" plays-inline poster="assets/images/band-colour.jpg" style="object-fit:cover;" class="nopadding">
                         <source src="assets/videos/daydream.webm" type="video/webm">
                     </video>
-                    <a href="booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="blue flower"></img></a>
-                    <a href="booking.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="blue flower"></img></a>
+                    <a href="/booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="blue flower"></img></a>
+                    <a href="/music.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="blue flower"></img></a>
                     <!-- create custom video control? -->
                 </div>
                 <div class="col-xs-12 nopadding visible-xs">
-                    <img class="backdrop-small" src="assets/images/band-small.jpg" alt="The Monkees">
+                    <img class="top-section-backdrop-xs" src="assets/images/band-small.jpg" alt="The Monkees">
                 </div>
 
             </div>
@@ -83,11 +83,11 @@
 
             <!-- call to action buttons -->
             <div class="row">
-                <div class="action-container col-md-6 button-container">
-                    <button type="button" class="btn btn-small button-book">Book Us!</button>
+                <div class="bottom-section-buttoncontainer col-md-6">
+                    <a href="/booking.html"><button type="button" class="btn btn-small rainbow-background-orange rainbow-border-black">Book Us!</button></a>
                 </div>
-                <div class="action-container col-md-6 button-container">
-                    <button type="button" class="btn btn-small button-music">New Releases!</button>
+                <div class="bottom-section-buttoncontainer col-md-6">
+                    <a href="/music.html"><button type="button" class="btn btn-small rainbow-background-green rainbow-border-black">New Releases!</button></a>
                 </div>
             </div>
 
@@ -95,10 +95,10 @@
             <div class="row hidden-sm hidden-md hidden-lg">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -117,53 +117,50 @@
                 </div>
             </div>
             <!-- remove album artwork on xs screens -->
-            <div class="row album-container">
+            <div class="row bottom-section-musiccontainer">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
                     <img src="assets/images/album1.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - Clarksville">
                 </div>
-                <div class="col-xs-4 visible-xs">
-                    <!--- to provide spacing on xs screens -->
-                </div>
-                <div class="col-xs-4 album-container-songname">
+                <div class="col-xs-5 hidden-xs">
                     <span>Clarksville</span>
                 </div>
+                <div class="col-xs-5 col-xs-offset-3 visible-xs">
+                    <span>Clarksville</span>
+                </div>                
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(1,'index')"><i id="playButton1" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
             </div>
-            <div class="row album-container">
-                <div class="col-sm-2 col-sm-offset-2 hidden-xs">
-                    <img src="assets/images/album2.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - I'm A Believer">
+            <div class="row bottom-section-musiccontainer">
+                <div class="col-sm-2 col-sm-offset-2">
+                    <img src="assets/images/album2.jpg" class="middle-section-thumbnail rainbow-border-blue hidden-xs" alt="Song - I'm A Believer">
                 </div>
-                <div class="col-xs-4 visible-xs">
-                    <!--- to provide spacing on xs screens -->
+                <div class="col-xs-5 hidden-xs">
+                    <span>I'm A Believer</span>
                 </div>
-                <div class="col-xs-4 album-container-songname">
+                <div class="col-xs-5 col-xs-offset-3 visible-xs">
                     <span>I'm A Believer</span>
                 </div>
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(2,'index')"><i id="playButton2" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
             </div>
-            <div class="row album-container">
+            <div class="row bottom-section-musiccontainer">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
                     <img src="assets/images/album3.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - Stepping Stone">
                 </div>
-                <div class="col-xs-4 visible-xs">
-                    <!--- to provide spacing on xs screens -->
-                </div>
-                <div class="col-xs-4 album-container-songname">
+                <div class="col-xs-5 hidden-xs">
                     <span>Stepping Stone</span>
                 </div>
+                <div class="col-xs-5 col-xs-offset-3 visible-xs">
+                    <span>Stepping Stone</span>
+                </div>                
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(3,'index')"><i id="playButton3" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
             </div>
-            <div class="row album-container visible-xs">
-                <div class="col-xs-4 visible-xs">
-                    <!--- to provide spacing on xs screens -->
-                </div>
-                <div class="col-xs-4 album-container-songname">
+            <div class="row bottom-section-musiccontainer visible-xs">
+                <div class="col-xs-5 col-xs-offset-3">
                     <span>Daydream Believer</span>
                 </div>
                 <div class="col-xs-1">
@@ -189,10 +186,10 @@
                     <ul class="footer-text footer-links">
                         <li><i class="fa fa-copyright fa-sm"></i>
                             <span class="footer-text">The Monkees</span></li>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/band.html">Band</a></li>
-                        <li><a href="#">Music</a></li>
-                        <li><a href="#">Bookings</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="band.html">Band</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="booking.html">Bookings</a></li>
                         <li><a href="#">Fans</a></li>
                     </ul>
                 </div>
@@ -201,21 +198,21 @@
                     <ul class="footer-text footer-links">
                         <li><i class="fa fa-copyright fa-sm"></i>
                             <span class="footer-text">The Monkees</span></li>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/band.html">Band</a></li>
-                        <li><a href="#">Music</a></li>
-                        <li><a href="#">Bookings</a></li>
-                        <li><a href="#">Fans</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="band.html">Band</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="booking.html">Bookings</a></li>
+                        <li><a href="fans.html">Fans</a></li>
                     </ul>
                 </div>
 
                 <!-- on sm screens show social media links in the footer -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>

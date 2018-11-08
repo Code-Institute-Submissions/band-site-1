@@ -1,4 +1,4 @@
-/*    Body styles */
+/*    BODY     */
 
 body {
     background-color: #f5f5f5;
@@ -24,7 +24,15 @@ body {
     font-size: 1.75em;
 }
 
-/*    Navbar styles */
+.general-font li {
+    text-align:center;
+}
+
+.btn {
+    outline: none !important;
+}
+
+/*    NAVBAR    */
 
 .logo {
     margin-left: 15px;
@@ -42,14 +50,8 @@ body {
     width: 100%;
     z-index: 1;
     background-color: rgba(20, 20, 20, 0.7);
+    border: none;
     border-color: transparent;
-}
-
-.navbar-brand {}
-
-.navbar-main>li {
-    width: 110px;
-    text-align: center;
 }
 
 .navbar-inactive {
@@ -79,12 +81,10 @@ body {
 .navbar-default .navbar-toggle>i {
     color: rgba(120, 38, 38, 1);
     font-size: 2em;
-
 }
 
 .navbar-default .navbar-toggle:hover>i {
     color: rgba(115, 168, 52, 1);
-
 }
 
 .social-links li a {
@@ -107,10 +107,10 @@ body {
     background-color: #f5f5f5;
 }
 
-/*    Navbar - navbar buttons - specific styling */
+/*    NAVBAR - Buttons - specific styling */
 
 #navbar-home {
-    color: rgba(120, 38, 38, 1);
+    color: rgba(120, 38, 38, 1);;
 }
 
 #navbar-home:hover {
@@ -203,8 +203,8 @@ body {
 .main-image {
     border: 5px solid;
     border-radius: 10%;
-    height: 25vh;
-    width: 25vw;
+    height: 20vh;
+    width: 20vh;
 }
 
 .main-textbox-container {
@@ -222,16 +222,37 @@ body {
     overflow: auto;
 }
 
-.scrollbar-container {
-    overflow: auto;
-    height: 100%;
-}
-
 #main-header {
     margin-top: 5px;
     padding-left: 20px;
     padding-top: 15px;
 }
+
+.scrollbar-container {
+    overflow: auto;
+    height: 100%;
+}
+
+.top-section-backdrop-xs {
+    /* Index page on xs only */
+    width: 100%;
+    height: 60vh;
+}
+
+#main-info {
+    /*    not index page: */
+    ;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25em;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10%;
+}
+
+/*    TOP SECTION - BUTTONS    */
+
+/*    band, music and booking  */
 
 .top-section-navbutton {
     outline: none !important;
@@ -253,6 +274,62 @@ body {
     transition: 0.25s ease-in-out;
     background-color: #f5f5f5;
     color: #333333;
+}
+
+/*    TOP SECTION - BUTTONS    */
+
+/*    Index  */
+
+.button-flower-book {
+    position: absolute;
+    z-index: 1;
+    width: 12%;
+    bottom: 38%;
+    left: 1%;
+    transition: 0.5s ease-in-out;
+}
+
+.button-flower-book:hover {
+    width: 15%;
+    transition: 0.5s ease-in-out;
+}
+
+.button-flower-music {
+    position: absolute;
+    z-index: 1;
+    width: 15%;
+    bottom: 5%;
+    left: 5%;
+    transition: 0.5s ease-in-out;
+}
+
+.button-flower-music:hover {
+    width: 20%;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+
+/*    TOP SECTION - Video */
+
+#video-background {
+    /* Index page only */
+    padding: 0;
+    top: 0;
+    margin-top: 0px;
+    /* margin-bottom: 0px;*/
+    margin: auto;
+    border: 0;
+    height: 55vh !important;
+
+}
+
+video {
+    width: 100% !important;
+    max-height: 55vh !important;
+    padding: 0;
+    margin: auto;
+    border: 0;
+    z-index: -1;
 }
 
 /*    MIDDLE SECTION */
@@ -304,6 +381,8 @@ body {
     display: block;
 }
 
+/*    BOTTOM SECTION    */
+
 .bottom-section-container {
     min-height: 30vh;
     border-bottom-style: solid;
@@ -326,116 +405,87 @@ body {
     text-shadow: 0px 0px 15px #000000;
 }
 
-/*    Main - Index: */
-
-.backdrop-small {
-    width: 100%;
-}
-
-.action-container {
+.bottom-section-buttoncontainer {
     text-align: center;
-    padding-top: 5px;
-
-}
-
-.album-container {
-    padding-top: 5px;
-    font-family: "Roboto", sans-serif;
-    font-size: 2em;
-    color: #333333;
-    text-shadow: none;
-}
-
-.album-container-songname {
-    line-height: 150px;
-    vertical-align: middle;
-}
-
-.album-thumbnail {
-    padding: 0px 0 0px 0;
-    margin: 0;
-    width: 100px;
-    border: 5px solid;
-    border-radius: 10%;
-}
-
-
-/*    Main - Band */
-
-#main-info {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.25em;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10%;
-}
-
-/*    Video */
-
-#video-background {
-
-    padding: 0;
-    top: 0;
-    margin-top: 0px;
-    /* margin-bottom: 0px;*/
-    margin: auto;
-    border: 0;
-    height: 55vh !important;
-
-}
-
-video {
-    width: 100% !important;
-    max-height: 55vh !important;
-    padding: 0;
-    margin: auto;
-    border: 0;
-    z-index: -1;
-}
-
-/*    Main-Buttons: */
-
-.button-flower-book {
-    position: absolute;
-    z-index: 1;
-    width: 12%;
-    bottom: 35%;
-    left: 1%;
-    transition: 0.5s ease-in-out;
-}
-
-.button-flower-book:hover {
-    width: 15%;
-    transition: 0.5s ease-in-out;
-
-    /*transform: rotate(360deg);*/
-}
-
-.button-flower-music {
-    position: absolute;
-    z-index: 1;
-    width: 15%;
-    bottom: 10%;
-    left: 5%;
-    transition: 0.5s ease-in-out;
-}
-
-.button-flower-music:hover {
-    width: 20%;
-    z-index: 2;
-    transition: 0.5s ease-in-out;
-}
-
-.button-container {
     padding-top: 25px;
+
 }
+
+.bottom-section-musiccontainer {
+    line-height: 125px;
+    padding: 10px 0 10px 0;
+    vertical-align: middle;
+    font-family: "Roboto", sans-serif;
+    color: #f5f5f5;
+    font-size: 1.75em;
+}
+
+/*    FOOTER     */
+
+.container-footer {
+    max-height: 10vh;
+    min-height: 50px;
+    padding: 10px 0px 10px 10px;
+
+}
+
+.container-footer .col-sm-3 i {
+    font-size: 20px;
+}
+
+.social-middle {
+    text-align: center;
+}
+
+.social-right {
+    text-align: right;
+}
+
+.social-list {
+    margin: 0;
+    padding-top: 4px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.social-list li {
+    display: inline;
+    font-size: 14px;
+}
+
+.footer-text {
+    padding: 0px;
+    font-family: "Lobster", sans-serif;
+    font-size: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    display: inline;
+    padding-right: 5px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #333333;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links li a:hover {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: 0.3s ease-in-out;
+}
+
+/*    GENERAL BUTTONS     */
 
 .button-audio {
     outline: none;
     background-color: transparent;
     border-style: none;
-    height: 150px;
     transition: 0.3s ease-in-out;
     transform: scale(1.5, 1.5);
 }
@@ -467,16 +517,6 @@ video {
     color: #333333;
 }
 
-.button-book {
-    background-color: rgba(241, 108, 55, 1);
-    border-color: #333333;
-}
-
-.button-music {
-    background-color: rgba(115, 168, 52, 1);
-    border-color: #333333;
-}
-
 .floating-button {
     position: absolute;
     background-color: #f5f5f5;
@@ -500,67 +540,35 @@ video {
     margin: 0;
 }
 
-/*    Footer styles */
 
-.container-footer {
-    max-height: 10vh;
-    min-height: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+/*    BOOKING FORM    */
+
+.booking-form {
+    font-family: "Roboto", sans-serif;
+   /* text-shadow: 0px 0px 15px #000000;*/
 }
 
-.container-footer .col-sm-3 i {
-    font-size: 20px;
+.booking-form-backdrop {
+    background: url("/assets/images/background-flowers-b-and-w.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 0 20px 20px 20px;
+    border-width: 10px;
+    border-radius: 5%;
 }
 
-.social-middle {
-    text-align: center;
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 3%;
+    width: 100%;
+    background-color: rgba(145, 145, 145, 0.7);
 }
 
-.social-right {
-    text-align: right;
-}
-
-.social-list {
-    margin: 0;
-    padding-top: 4px;
-    padding-left: 0;
-    list-style: none;
-}
-
-.social-list li {
-    display: inline;
-    font-size: 14px;
-}
-
-.footer-text {
-    padding: 0px;
-    font-family: "Lobster", sans-serif;
-    font-size: 18px;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    display: inline;
-    padding-right: 5px;
-}
-
-.footer-links li a {
-    text-decoration: none;
-    color: #333333;
-    transition: 0.3s ease-in-out;
-}
-
-.footer-links li a:hover {
-    text-decoration: none;
-    color: #f5f5f5;
-    transition: 0.3s ease-in-out;
-}
-
-/*    Border, text and background colours */
+/*    GENERAL BORDER TEXT AND BACKGROUND COLOURS */
 
 .rainbow-text-red {
     color: rgba(120, 38, 38, 1);
@@ -595,7 +603,7 @@ video {
 }
 
 .rainbow-border-green {
-    border-color: rgba(115, 168, 52, 1);
+    border-color: rgba(115, 168, 52, 1) ;
 }
 
 .rainbow-text-orange {
@@ -622,12 +630,22 @@ video {
     border-color: rgba(69, 90, 186, 1);
 }
 
+.rainbow-border-black {
+    border-color: #333333;
+}
+
 /*    Media queries */
 
 @media (max-width: 767px) {
+    /*    NAVBAR     */
     .navbar {
         background-color: transparent;
     }
+
+.navbar-main>li {
+    width: 110px;
+    text-align: center;
+}
 
     .navbar-toggle {
         padding: 10px 30px;
@@ -641,7 +659,6 @@ video {
     }
 
     .navbar-default .navbar-nav>li {
-        /* color: #777; */
         font-size: 0.75em;
         max-width: 100;
         text-align: left;
@@ -649,27 +666,6 @@ video {
 
     .social-list {
         padding-bottom: 25px;
-    }
-
-    .action-container {
-        padding-bottom: 25px;
-    }
-
-    .album-container {
-        padding-top: 5px;
-        font-size: 3vw;
-        height: 50px;
-        line-height: 50px;
-        vertical-align: middle;
-    }
-
-    .album-container-songname {
-        line-height: 50px;
-        vertical-align: middle;
-    }
-
-    .button-audio {
-        height: 50px;
     }
 
     /*    TOP SECTION   */
@@ -731,6 +727,19 @@ video {
         min-height: 0vh;
 
     }
+    
+    /*    BOTTOM SECTION     */
+
+    .bottom-section-buttoncontainer {
+        padding-bottom: 25px;
+    }
+
+    .bottom-section-musiccontainer {
+        line-height: 50px;
+        font-size: 1.5em;
+    }
+
+    /*    FOOTER     */
 
     .footer-text {
         font-size: 15px;
@@ -739,26 +748,25 @@ video {
 }
 
 @media (max-width: 479px) {
+    
+    .container-fluid {
+        margin: -5px;
+    }
+    
     .navbar-default .navbar-nav {
-        /* color: #777; */
         margin-top: 15px;
     }
 
     .logo {
         max-width: 50%;
     }
-    .container-fluid {
-        padding-right: 5px;
-    }
 
     .btn-small {
         font-size: 1em;
         width: 175px;
-
     }
 
-    .action-container {
-        text-align: center;
+    .bottom-section-buttoncontainer {
         padding-top: 5px;
     }
 
@@ -766,11 +774,9 @@ video {
         padding-top: 10px;
     }
 
-    .album-container {
-        font-size: 2.9vw;
+    .bottom-section-musiccontainer {
+        font-size: 1.0em;
     }
-
-
 
 
     /*    TOP SECTION    */
@@ -795,4 +801,21 @@ video {
         height: 100px;
     }
 
+    /*    BOTTOM SECTION */
+    .bottom-section-musiccontainer {
+        line-height: 50px;
+        font-size: 0.85em;
+    }    
+
+    /*    FOOTER    */
+
+    .container-footer {
+        height: 50px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
 }

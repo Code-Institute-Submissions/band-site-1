@@ -11,7 +11,6 @@ function changeMainImage(newSelection, totalSelections, page) {
     var newImage;
     var newHeader;
     var newInfo;
-
     //left arrow clicked check if at the end of the row, if so set the selection to 1 (i.e first and current image)
     //else reduce by one
     if (newSelection == -1 && currentSelection > 1) {
@@ -23,13 +22,12 @@ function changeMainImage(newSelection, totalSelections, page) {
 
     //right arrow clicked check if at right end of row, if so set selection to the maximum (i.e last and current image)
     //else increase by 1
-    if (newSelection == 6 && currentSelection < totalSelections) {
+    if (newSelection == 6 && (currentSelection < totalSelections)) {
         newSelection = currentSelection + 1;
     }
     else if (newSelection == 6) {
         newSelection = totalSelections;
     }
-
     //determine new values for the image, header and text
     if (page == "band") {
         switch (newSelection) {
@@ -84,6 +82,45 @@ function changeMainImage(newSelection, totalSelections, page) {
                 break;
         }
     }
+    else if (page == "booking") {
+        switch (newSelection) {
+            case 1:
+                newHeader = "Weddings";
+                newInfo = "Give your wedding that 60s vibe. Get your guests out on the dance floor rocking to our greatest hits! 'I'm A Believer', 'Stepping Stone' and more.<br>Contact us now for a quote.";
+                newImage = "https://c.pxhere.com/photos/7a/cc/flower_wedding_rose_love_venue-143470.jpg!d";
+                break;
+            case 2:
+                newHeader = "Corporate Events";
+                newInfo = "Your clients and staff will love swinging 60s themed events. Reminiscing in retro style with our greatest hits!<br>Contact us now for a quote.";
+                newImage = "https://c.pxhere.com/photos/50/a1/table_table_setting_conference_meeting_corporate_meeting_business_meeting_conference_room_office_meeting-653215.jpg!d";
+                break;
+            case 3:
+                newHeader = "Christmas Parties";
+                newInfo = "Nothing is better than rocking around the Christmas tree, 60s style!<br>Contact us now for a quote.";
+                newImage = "https://c.pxhere.com/images/8d/a9/b1b8ea2f9f76ce0fa2b51ff48399-1418247.jpg!d";
+                break;
+        }
+    }
+    else if (page == "fans") {
+        switch (newSelection) {
+            case 1:
+                newHeader = "Tour Dates";
+                newInfo = "<strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre";
+                newImage = "https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d";
+                break;
+            case 2:
+                newHeader = "Download";
+                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><span class='glyphicon glyphicon-picture rainbow-text-yellow'></span> Wallpaper <a target='_blank' href='#'><span class='glyphicon glyphicon-cloud-download rainbow-text-blue'></span></a><br><span class='glyphicon glyphicon-film rainbow-text-red'></span> Video <a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-cloud-download rainbow-text-blue'></span></a><br><span class='glyphicon glyphicon-music rainbow-text-green'></span> Music <a target='_blank' href='#'><span class='glyphicon glyphicon-cloud-download rainbow-text-blue'></span></a>";
+                newImage = "assets/images/band-small.jpg";
+                break;
+            case 3:
+                newHeader = "Christmas Parties";
+                newInfo = "Nothing is better than rocking around the Christmas tree, 60s style!<br>Contact us now for a quote.";
+                newImage = "https://c.pxhere.com/images/8d/a9/b1b8ea2f9f76ce0fa2b51ff48399-1418247.jpg!d";
+                break;
+        }
+    }
+
 
     //update the page
     headerElement.innerHTML = newHeader;
@@ -94,16 +131,19 @@ function changeMainImage(newSelection, totalSelections, page) {
     imageElementXS.src = newImage;
 
     //change the border of the selected element to blue - change the old to red
-    document.getElementById("thumbnail-" + currentSelection).classList = "middle-section-thumbnail rainbow-border-red";
-    document.getElementById("thumbnail-" + newSelection).classList = "middle-section-thumbnail rainbow-border-blue";
+    if (page != "booking") {
+        document.getElementById("thumbnail-" + currentSelection).classList = "middle-section-thumbnail rainbow-border-red";
+        document.getElementById("thumbnail-" + newSelection).classList = "middle-section-thumbnail rainbow-border-blue";
+    }
+
+    //on the music page stop the current playing music when a different song is selected
+    if (page == "music" && (currentSelection!=newSelection)) {
+        playPause(10, page);
+    }
 
     //Update the current selection to new selection
     currentSelection = newSelection;
 
-    //on the music page stop the current playing music when a different song is selected
-    if (page == "music") {
-        playPause(10, page);
-    }
     //jump back to top of page (for mobile versions)
     window.scrollTo(0, 0);
 }
@@ -165,21 +205,20 @@ function playPause(track, page) {
         }
         songElement.src = song;
         songElement.play();
-        
-        if(page=="music") {
-        //change the playbutton
-        playButton.classList = "fa fa-stop-circle rainbow-text-red";
-        playButtonXS.classList = "fa fa-stop-circle rainbow-text-red";
+
+        if (page == "music") {
+            //change the playbutton
+            playButton.classList = "fa fa-stop-circle rainbow-text-red";
+            playButtonXS.classList = "fa fa-stop-circle rainbow-text-red";
         }
-        else if(page=="index")
-        {
+        else if (page == "index") {
             document.getElementById("playButton" + track).classList = "fa fa-stop-circle rainbow-text-red";
             //cycle through the 4 play buttons and change them to play
             for (i = 1; i <= 4; i++) {
                 if (i != track) {
                     document.getElementById("playButton" + i).classList = "fa fa-play-circle rainbow-text-red";
                 }
-            }            
+            }
         }
         playing = 1;
     }
@@ -187,14 +226,13 @@ function playPause(track, page) {
         /* pause the track and change the button icon */
         songElement.pause();
         playing = 0;
-        
-        if(page=="music") {
-        playButton.classList = "fa fa-play-circle rainbow-text-red";
-        playButtonXS.classList = "fa fa-play-circle rainbow-text-red";
+
+        if (page == "music") {
+            playButton.classList = "fa fa-play-circle rainbow-text-red";
+            playButtonXS.classList = "fa fa-play-circle rainbow-text-red";
         }
-        else if(page=="index")
-        {
+        else if (page == "index") {
             document.getElementById("playButton" + track).classList = "fa fa-play-circle rainbow-text-red";
-        }            
+        }
     }
 }

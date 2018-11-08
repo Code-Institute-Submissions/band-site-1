@@ -20,7 +20,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand " href="home.html">
+                <a class="navbar-brand " href="/ ">
                     <img alt="Logo" class="logo" src="assets/images/logo.png"></img> 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -28,27 +28,26 @@
                     <i class="fa fa-navicon"></i>
                 </button>
             </div>
-
+            <!-- collapse nav bar on xs screen and hide use burger button -->
             <div class="navbar-collapse collapse" id="navbar">
-                <ul class="nav navbar-nav general-font navbar-main">
-                    <li><a href="index.html" class="hvr-rectangle-out navbar-inactive" id="navbar-home">Home</a></li>
-                    <li><a href="/" class="hvr-rectangle-out navbar-active" id="navbar-band">Band</a></li>
-                    <li><a href="music.html" class="hvr-rectangle-out navbar-inactive" id="navbar-music">Music</a></li>
-                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive" id="navbar-booking">Booking</a></li>
-                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive" id="navbar-fans">Fans</a></li>
+                <ul class="nav navbar-nav navbar-main general-font">
+                    <li><a href="index.html" class="hvr-rectangle-out navbar-inactive rainbow-text-red" id="navbar-home">Home</a></li>
+                    <li><a href="" class="hvr-rectangle-out navbar-inactive rainbow-text-yellow" id="navbar-band">Band</a></li>
+                    <li><a href="music.html" class="hvr-rectangle-out navbar-inactive rainbow-text-green" id="navbar-music">Music</a></li>
+                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive rainbow-text-orange" id="navbar-booking">Booking</a></li>
+                    <li><a href="fans.html" class="hvr-rectangle-out navbar-active rainbow-text-blue" id="navbar-fans">Fans</a></li>
                 </ul>
 
-                <!--remove social links on small screens-->
+                <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>
-
         </div>
     </nav>
 
@@ -61,8 +60,8 @@
                 <div class="col-xs-1">
                     <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(-1,5,'band')"><i class="fa fa-arrow-circle-left rainbow-text-red rainbow-background-yellow"></i></button>
                 </div>
-                <div class="col-xs-4">
-                    <img class="main-image rainbow-border-yellow" src="assets/images/band2.jpg" id="main-image-element" alt="The band">
+                <div class="col-xs-4 text-center">
+                    <img class="main-image rainbow-border-yellow" src="assets/images/band2.jpg" id="main-image-element" alt="Band member image">
                 </div>
                 <div class="col-sm-5 main-textbox-container rainbow-border-yellow">
                     <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
@@ -107,7 +106,6 @@
                             <div class="col-xs-12 main-textbox">
                                 <p id="main-info-xs">The Monkees are an American rock and pop band originally active between 1966 and 1971, with reunion albums and tours in the decades that followed. They were formed in Los Angeles in 1965 by Bob Rafelson and Bert Schneider
                                     for the American television series The Monkees.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut sint eos molestias facere ipsam iste iure in obcaecati provident esse tempore reprehenderit similique earum magnam officia fugit quae veniam, debitis quod ipsum suscipit. Tempore amet, sequi libero numquam unde dicta velit. Deserunt commodi doloremque maxime nisi, debitis dolorem nam alias officiis. Id debitis, reprehenderit aut commodi tenetur fugiat est hic amet, voluptatem veritatis nulla nihil ad a ex placeat ea nemo nostrum illum laudantium. Repudiandae asperiores eveniet distinctio placeat, laudantium dicta quia molestiae officiis expedita, odio dolorum porro optio quas. Dolore sit explicabo unde repellendus quisquam laboriosam, itaque iste ipsam iusto officiis harum voluptates quibusdam, animi fuga error odio similique aliquid nobis sequi quis. Libero eos aliquam adipisci debitis laborum, eius atque cupiditate quibusdam harum aut perspiciatis qui quaerat quam nobis neque mollitia temporibus voluptatum pariatur quod? Eos voluptas adipisci alias iusto consequuntur est pariatur repellat voluptates sint labore facere praesentium mollitia illo aliquam amet quaerat cumque dolorem quae laborum, temporibus voluptate. Necessitatibus aliquam iusto tempora blanditiis quod quia voluptas possimus, nam? Cupiditate magnam, tempore labore beatae ab excepturi laudantium laborum nisi eligendi placeat maiores harum vero quia nemo, dolorum iusto. Alias facere ducimus, vel maiores, eaque nihil eveniet.
                                 </p>
                             </div>
                         </div>
@@ -165,11 +163,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="action-container col-md-6 button-container">
-                    <button type="button" class="btn btn-small button-book">Book Us!</button>
+                <div class="bottom-section-buttoncontainer col-md-6">
+                    <a href="/booking.html"><button type="button" class="btn btn-small rainbow-background-orange rainbow-border-black">Book Us!</button></a>
                 </div>
-                <div class="action-container col-md-6 button-container">
-                    <button type="button" class="btn btn-small button-music">New Releases!</button>
+                <div class="bottom-section-buttoncontainer col-md-6">
+                    <a href="/music.html"><button type="button" class="btn btn-small rainbow-background-green rainbow-border-black">Listen Now!</button></a>
                 </div>
             </div>
 
@@ -177,10 +175,10 @@
             <div class="row hidden-sm hidden-md hidden-lg">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -195,10 +193,10 @@
                     <ul class="footer-text footer-links">
                         <li><i class="fa fa-copyright fa-sm"></i>
                             <span class="footer-text">The Monkees</span></li>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/band.html">Band</a></li>
-                        <li><a href="#">Music</a></li>
-                        <li><a href="#">Bookings</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="">Band</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="booking.html">Bookings</a></li>
                         <li><a href="#">Fans</a></li>
                     </ul>
                 </div>
@@ -207,21 +205,21 @@
                     <ul class="footer-text footer-links">
                         <li><i class="fa fa-copyright fa-sm"></i>
                             <span class="footer-text">The Monkees</span></li>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/band.html">Band</a></li>
-                        <li><a href="#">Music</a></li>
-                        <li><a href="#">Bookings</a></li>
-                        <li><a href="#">Fans</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="">Band</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="booking.html">Bookings</a></li>
+                        <li><a href="fans.html">Fans</a></li>
                     </ul>
                 </div>
 
                 <!-- on sm screens show social media links in the footer -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
-                        <li><a target=".blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target=".blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
                     </ul>
                 </div>
             </div>

@@ -12,6 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/script.js"></script>
+
+
 </head>
 
 <body>
@@ -33,10 +39,10 @@
                 <ul class="nav navbar-nav navbar-main general-font">
                     <li><a href="index.html" class="hvr-rectangle-out navbar-inactive rainbow-text-red" id="navbar-home">Home</a></li>
                     <li><a href="band.html" class="hvr-rectangle-out navbar-inactive rainbow-text-yellow" id="navbar-band">Band</a></li>
-                    <li><a href="" class="hvr-rectangle-out navbar-active rainbow-text-green" id="navbar-music">Music</a></li>
+                    <li><a href="music.html" class="hvr-rectangle-out navbar-inactive rainbow-text-green" id="navbar-music">Music</a></li>
                     <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive rainbow-text-orange" id="navbar-booking">Booking</a></li>
-                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive rainbow-text-blue" id="navbar-fans">Fans</a></li>
-                        </ul>
+                    <li><a href="" class="hvr-rectangle-out navbar-active rainbow-text-blue" id="navbar-fans">Fans</a></li>
+                </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
@@ -58,27 +64,20 @@
 
             <div class="row top-section-container hidden-xs">
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-circle-left rainbow-text-red rainbow-background-green"></i></button>
+                    <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(-1,3,'fans')"><i class="fa fa-arrow-circle-left rainbow-text-red rainbow-background-blue"></i></button>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <img class="main-image rainbow-border-green" src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="main-image-element" alt="Album picture">
+                    <img class="main-image rainbow-border-blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element" alt="Main Image">
                 </div>
-                <div class="col-sm-5 main-textbox-container rainbow-border-green">
+                <div class="col-sm-5 main-textbox-container rainbow-border-blue">
                     <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
                     <div class="scrollbar-container">
-                        <h1 class="general-font" id="main-header">Daydream Believer</h1>
-                        <p id="main-info">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer up sleepy
-                            Jean
-                            <br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?<br>You once thought of me<br>As a white knight on his steed<br>Now you know how happy I can be<br>Oh, our good time starts and ends<br>Without all
-                            I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…"
-                        </p>
+                        <h1 class="general-font" id="main-header">Tour Dates</h1>
+                        <p id="main-info"><strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre</p>
                     </div>
-                    <div class="floating-button">
-                        <button class="button-audio" onclick="playPause(0,'music')"><i id="playButton" class="fa fa-play-circle rainbow-text-red"></i></button>
-                    </div>  
                 </div>
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-circle-right rainbow-text-red rainbow-background-green"></i></button>
+                    <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(6,3,'fans')"><i class="fa fa-arrow-circle-right rainbow-text-red rainbow-background-blue"></i></button>
                 </div>
             </div>
 
@@ -86,12 +85,9 @@
             <!-- only for xs screen size -->
             <div class="row top-section-container visible-xs">
                 <div class="col-xs-12 text-center main-image-container">
-                    <img class="main-image rainbow-border-green" src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="main-image-element-xs" alt="Daydream Believer">
-                    <div class="floating-button">
-                        <button class="button-audio" onclick="playPause(0,'music')"><i id="playButton-xs" class="fa fa-play-circle rainbow-text-red"></i></button>
-                    </div>
+                    <img class="main-image rainbow-border-blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element-xs" alt="Main Image">
                 </div>
-                  
+
                 <!-- empty spacer row -->
                 <div class="row">
                     <div class="col-xs-12 top-section-spacer">
@@ -99,84 +95,56 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 main-textbox-container rainbow-border-green">
+                    <div class="col-xs-12 main-textbox-container rainbow-border-blue">
                         <div class="row">
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-left rainbow-text-red"></i></button>
+                                <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(-1,3,'fans')"><i class="fa fa-arrow-left rainbow-text-red"></i></button>
                             </div>
 
                             <div class="col-xs-8 text-center">
-                                <h1 class="general-font" id="main-header-xs">Daydream Believer</h1>
+                                <h1 class="general-font" id="main-header-xs">Tour Dates</h1>
                             </div>
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-right rainbow-text-red"></i></button>
+                                <button class="btn btn-block top-section-navbutton" onmousedown="changeMainImage(6,3,'fans')"><i class="fa fa-arrow-right rainbow-text-red"></i></button>
                             </div>
                         </div>
                         <div class="row ">
                             <div class="col-sm-12 main-textbox">
-                                <p id="main-info-xs">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer
-                                    up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?<br>You once thought of me<br>As a white knight on his steed<br>Now you know how happy I can be<br>Oh, our good time starts
-                                    and ends<br>Without all I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…"
-                                </p>
+                                <p id="main-info-xs">5 March 2019 Red Bank, NJ - Count Basie Centre for the Arts<br>8 March 2019 Huntington, NY - The Paramount<br>9 March 2019 New York, NY Beacon Theatre</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- hidden audio elements -->
-                <div>
-                    <audio id="song" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
-                </div>
             </div>
         </section>
 
-        <section class="middle-section-container rainbow-background-green">
+        <section class="middle-section-container rainbow-background-blue">
             <div class="row">
                 <!--title-->
                 <div class="col-xs-12 general-font">
-                    <p>All the sounds of the 60s<br>Songs:</p>
+                    <p>Love the Monkees?<br>Tell someone!</p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="mailto:?Subject=The Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20 https://shilldon.github.io/band-site/">
+                            <button type="button" class="btn btn-small rainbow-background-red rainbow-border-black">Share</button>
+                        </a>
+                        <p class="general-font">Follow us on Facebook <a target="_blank" href="#"><i class="fa fa-facebook-square"></i></a></p>
+                    </div>
                 </div>
             </div>
-
-            <!-- selectable music icons - displays icon and info in top-section -->
-
-            <div class="row">
-                <div class="col-sm-2 hidden-xs">
-                    <button class="btn middle-section-navbutton rainbow-text-red" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-left hidden-xs"></i></button>
-                </div>
-                <div class="col-sm-2">
-                    <img src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" class="middle-section-thumbnail rainbow-border-blue" id="thumbnail-1" onmousedown="changeMainImage(1,4,'music')" alt="Daydream Believer">
-                    <span class="middle-section-font rainbow-text-red">Daydream Believer</span>
-                </div>
-                <div class="col-sm-2 ">
-                    <img src="assets/images/album1.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-2" onmousedown="changeMainImage(2,4,'music')" alt="Clarksville">
-                    <span class="middle-section-font rainbow-text-red">Clarksville</span>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/images/album2.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-3" onmousedown="changeMainImage(3,4,'music')" alt="I'm A Believer">
-                    <span class="middle-section-font rainbow-text-red">I'm A Believer</span>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/images/album3.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-4" onmousedown="changeMainImage(4,4,'music')" alt="Stepping Stone">
-                    <span class="middle-section-font rainbow-text-red">Stepping Stone</span>
-                </div>
-                <div class="col-sm-2 hidden-xs">
-                    <button class="btn middle-section-navbutton rainbow-text-red" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-right hidden-xs"></i></button>
-                </div>
-            </div>
-
         </section>
 
-        <section class="bottom-section-container rainbow-background-blue">
+        <section class="bottom-section-container rainbow-background-orange">
             <div class="row">
                 <!--tag line-->
                 <div class="col-xs-12 general-font">
-                    <p>Step back in time!<br>Book a live performance!</p>
+                    <p>...or...<br>Tell us!</p>
                 </div>
             </div>
             <div class="row">
                 <div class="bottom-section-buttoncontainer col-md-12">
-                    <a href="/booking.html"><button type="button" class="btn btn-small rainbow-background-orange rainbow-border-black">Book Us!</button></a>
+                    <button type="button" class="btn btn-small rainbow-background-green rainbow-border-black" data-toggle='modal' data-target='#feedbackForm'>Contact</button>
                 </div>
             </div>
 
@@ -197,16 +165,16 @@
 
     <footer>
         <div class="container-fluid">
-            <div class="row container-footer rainbow-background-green">
+            <div class="row container-footer rainbow-background-blue">
                 <div class="col-xs-7 hidden-xs">
                     <ul class="footer-text footer-links">
                         <li><i class="fa fa-copyright fa-sm"></i>
                             <span class="footer-text">The Monkees</span></li>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="band.html">Band</a></li>
-                        <li><a href="">Music</a></li>
+                        <li><a href="music.html">Music</a></li>
                         <li><a href="booking.html">Bookings</a></li>
-                        <li><a href="#">Fans</a></li>
+                        <li><a href="">Fans</a></li>
                     </ul>
                 </div>
 
@@ -216,9 +184,9 @@
                             <span class="footer-text">The Monkees</span></li>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="band.html">Band</a></li>
-                        <li><a href="">Music</a></li>
+                        <li><a href="music.html">Music</a></li>
                         <li><a href="booking.html">Bookings</a></li>
-                        <li><a href="fans.html">Fans</a></li>
+                        <li><a href="">Fans</a></li>
                     </ul>
                 </div>
 
@@ -235,11 +203,56 @@
         </div>
     </footer>
 
+    <!-- booking form -->
+    <div class="modal fade" id="feedbackForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog booking-form">
+            <div class="modal-content rainbow-border-blue rainbow-text-blue booking-form-backdrop">
+                <div class="opaque-overlay">&nbsp;</div>
+                <header class="row">
+                    <div class="col-xs-12 modal-header general-font">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" style="font-size:1.15em">Book your event</h4>
+                    </div>
+                </header>
+                <div class="modal-body ">
 
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                <div class="col-xs-4 form-group rainbow-text-blue">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" class="form-control" id="first-name" placeholder="First Name - not required">
+                                </div>
+                                <div class="col-xs-7 col-xs-offset-1 form-group rainbow-text-blue">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" class="form-control" id="last-name" placeholder="Last Name - not required">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12 rainbow-text-blue">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email - not required">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12 rainbow-text-blue">
+                                    <label for="event-details">Tell us what you think</label>
+                                    <textarea class="form-control" id="event-details" placeholder="Did you see us perform live? What's your first memory of listening to the Monkees? What's your favourite song?" required></textarea>
+                                </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../assets/js/script.js"></script>
+                                <div class="row">
+                                    <div class="col-xs-12 text-center">
+                                        <button type="submit" style="z-index:3" class="btn btn-small rainbow-background-green rainbow-border-black">Tell us</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
