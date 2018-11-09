@@ -53,22 +53,24 @@
 
     <div class="container-fluid">
         <section class="top-section">
-            <div class="row ">
-
-                <!-- video background - hide on xs screen - replace with image -->
-                <div class="col-xs-12 hidden-xs nopadding" style="text-align:center">
-
-                    <video controls="volume" style="object-fit: fill;" controlslist="nofullscreen nodownload noremoteplayback" id="video-background" plays-inline poster="assets/images/band-colour.jpg" style="object-fit:cover;" class="nopadding">
+            <div class="row">
+                <div class="col-xs-12 video-container  hidden-xs">
+                    <!-- video background - hide on xs screen - replace with image style="object-fit: fill;" -->
+                    <div>
+                        <video class="rainbow-border-blue" id="video-background" plays-inline poster="assets/images/band-colour.jpg">
                         <source src="assets/videos/daydream.webm" type="video/webm">
                     </video>
-                    <a href="/booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="blue flower"></img></a>
-                    <a href="/music.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="blue flower"></img></a>
+                        <a href="/booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="blue flower"></img></a>
+                        <a href="/music.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="blue flower"></img></a>
+
+                    </div>
                     <!-- create custom video control? -->
+
+
                 </div>
                 <div class="col-xs-12 nopadding visible-xs">
                     <img class="top-section-backdrop-xs" src="assets/images/band-small.jpg" alt="The Monkees">
                 </div>
-
             </div>
         </section>
 
@@ -132,7 +134,7 @@
                     <a href="music.html">
                         <span>Clarksville</span>
                     </a>
-                </div>                
+                </div>
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(1,'index')"><i id="playButton1" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
@@ -172,7 +174,7 @@
                     <a href="music.html">
                         <span>Stepping Stone</span>
                     </a>
-                </div>                
+                </div>
                 <div class="col-xs-1">
                     <button class="button-audio" onclick="playPause(3,'index')"><i id="playButton3" class="fa fa-play-circle rainbow-text-red"></i></button>
                 </div>
