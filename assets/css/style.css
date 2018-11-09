@@ -1,5 +1,9 @@
 /*    BODY     */
 
+.body {
+    background-color:red;
+}
+
 .row {
     padding: 0;
     margin: 0;
@@ -7,9 +11,14 @@
 
 .container-fluid {
     padding: 0;
-    margin: -1px 0 0 0;
+    margin: -1px 0px -0px 0;
+    background-color:red;
 }
 
+.col-xs-12 {
+    padding:0;
+    margin:0;
+}
 .nopadding {
     padding: 0;
     margin: 0;
@@ -834,3 +843,18 @@ video {
     }
 
 }
+
+
+@media (max-width: 411px) { /*Pixel 2 margin required for full width*/
+    .container-fluid {
+        margin-right:5px;
+    }
+}
+
+
+@media (max-width: 360px) { /*Galaxy margin required for full width*/
+    .container-fluid {
+        margin-right:-5px;
+    }
+}
+
