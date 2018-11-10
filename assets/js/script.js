@@ -124,16 +124,21 @@ function changeMainImage(newSelection, totalSelections, page) {
     else if (page == "booking") {
         switch (newSelection) {
             case 1:
+                newHeader = "Events";
+                newInfo = "We are available to perform at a variety of events including weddings, corporate events and Christmas parties.<br>Click right for more information, or contact us now for a quote.";
+                newImage = "assets/images/events.jpg";
+                break;
+            case 2:
                 newHeader = "Weddings";
                 newInfo = "Give your wedding that 60s vibe. Get your guests out on the dance floor rocking to our greatest hits! 'I'm A Believer', 'Stepping Stone' and more.<br>Contact us now for a quote.";
                 newImage = "https://c.pxhere.com/photos/7a/cc/flower_wedding_rose_love_venue-143470.jpg!d";
                 break;
-            case 2:
+            case 3:
                 newHeader = "Corporate Events";
                 newInfo = "Your clients and staff will love swinging 60s themed events. Reminiscing in retro style with our greatest hits!<br>Contact us now for a quote.";
                 newImage = "https://c.pxhere.com/photos/50/a1/table_table_setting_conference_meeting_corporate_meeting_business_meeting_conference_room_office_meeting-653215.jpg!d";
                 break;
-            case 3:
+            case 4:
                 newHeader = "Christmas Parties";
                 newInfo = "Nothing is better than rocking around the Christmas tree, 60s style!<br>Contact us now for a quote.";
                 newImage = "https://c.pxhere.com/images/8d/a9/b1b8ea2f9f76ce0fa2b51ff48399-1418247.jpg!d";
@@ -144,17 +149,17 @@ function changeMainImage(newSelection, totalSelections, page) {
         switch (newSelection) {
             case 1:
                 newHeader = "Tour Dates";
-                newInfo = "<strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre";
+                newInfo = "<strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre<br><br>Find more fan material <i class='fa fa-arrow-right rainbow-text-red'></i>";
                 newImage = "https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d";
                 break;
             case 2:
                 newHeader = "Follow us";
-                newInfo = "<a target='_blank' href='#'><i class='fa fa-facebook-square rainbow-text-red'></i></a> Facebook<br><a target='_blank' href='#'><i class='fa fa-twitter-square rainbow-text-yellow'></i></a> Twitter<br><a target='_blank' href='#'><i class='fa fa-youtube-square rainbow-text-green'></i></a> YouTube<br><a target='_blank' href='#'><i class='fa fa-share-square rainbow-text-orange'></i></a> Share";
+                newInfo = "<a target='_blank' href='#'><i class='fa fa-facebook-square rainbow-text-red'></i></a> Facebook<br><a target='_blank' href='#'><i class='fa fa-twitter-square rainbow-text-yellow'></i></a> Twitter<br><a target='_blank' href='#'><i class='fa fa-youtube-square rainbow-text-green'></i></a> YouTube<br><a target='_blank' href='#'><i class='fa fa-share-square rainbow-text-orange'></i></a> Share<br><br><i class='fa fa-arrow-left rainbow-text-red'></i> Find more fan material <i class='fa fa-arrow-right rainbow-text-red'></i>";
                 newImage = "assets/images/band-small.jpg";
                 break;
             case 3:
                 newHeader = "Download";
-                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><a target='_blank' href='#'><span class='glyphicon glyphicon-picture rainbow-text-yellow'></span></a> Wallpaper<br><a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-film rainbow-text-red'></span></a> Video<br><a target='_blank' href='#'><span class='glyphicon glyphicon-music rainbow-text-green'></span></a> Music";
+                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><a target='_blank' href='#'><span class='glyphicon glyphicon-picture rainbow-text-yellow'></span></a> Wallpaper<br><a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-film rainbow-text-red'></span></a> Video<br><a target='_blank' href='#'><span class='glyphicon glyphicon-music rainbow-text-green'></span></a> Music<br><br><i class='fa fa-arrow-left rainbow-text-red'></i> Find more fan material";
                 newImage = "assets/images/band-small.jpg";
                 break;
         }
@@ -174,15 +179,13 @@ function changeMainImage(newSelection, totalSelections, page) {
         document.getElementById("thumbnail-" + currentSelection).classList = "middle-section-thumbnail rainbow-border-red";
         document.getElementById("thumbnail-" + newSelection).classList = "middle-section-thumbnail rainbow-border-blue";
     }
-
     //on the music page stop the current playing music when a different song is selected
     if (page == "music" && (currentSelection!=newSelection)) {
-        playPause(10, page);
+        playPause(newSelection, page);
     }
 
     //Update the current selection to new selection
     currentSelection = newSelection;
-
     //jump back to top of page (for mobile versions)
     window.scrollTo(0, 0);
 }
@@ -194,19 +197,16 @@ function playPause(track, page) {
     var playButton = document.getElementById("playButton");
     var playButtonXS = document.getElementById("playButton-xs");
 
-    /* on the music page 0 is passed to the function and the source is determined by the current song selected */
-    /* on index page the track is determined by the play button pressed */
-    if (track == 0) {
-        track = currentSelection;
-    }
-
     var songElement = document.getElementById("song");
     var i = 0;
+    
+    /* play button passes 0 to playpause so set playing track to current selection */
+    if(track==0) {
+        track=currentSelection;
+    }
 
     /*check if the current track is already playing, if it is stop it, and change the source */
-    /*10 is passed as the track number on navigation/thumbnail click indicates change the source and play immediately*/
-    if (playing == 0 || (playing == 1 && track == 10)) {
-        if (track == 10) { track = currentSelection; }
+    if (playing == 0 || (track!=currentSelection)) {
         var song;
         if (page == "music") {
             switch (track) {
@@ -242,6 +242,8 @@ function playPause(track, page) {
                     break;
             }
         }
+        
+        currentSelection=track;
         songElement.src = song;
         songElement.play();
 
