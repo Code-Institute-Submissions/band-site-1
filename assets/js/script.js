@@ -41,14 +41,18 @@ function changeMainImage(newSelection, totalSelections, page) {
     if(newSelection==1) {
         while(navButtonLeft!=null) {
             navButtonLeft.style.visibility="hidden";
+            navButtonRight.style.visibility="visible";
             i++;
             navButtonLeft=document.getElementById("navbutton-left"+i)
+            navButtonRight=document.getElementById("navbutton-right"+i)
         }
     }
     else if(newSelection==totalSelections) {
         while(navButtonRight!=null) {
             navButtonRight.style.visibility="hidden";
+            navButtonLeft.style.visibility="visible";
             i++;
+            navButtonLeft=document.getElementById("navbutton-left"+i)
             navButtonRight=document.getElementById("navbutton-right"+i)
         }      
     }
@@ -179,11 +183,13 @@ function changeMainImage(newSelection, totalSelections, page) {
         document.getElementById("thumbnail-" + currentSelection).classList = "middle-section-thumbnail rainbow-border-red";
         document.getElementById("thumbnail-" + newSelection).classList = "middle-section-thumbnail rainbow-border-blue";
     }
+
     //on the music page stop the current playing music when a different song is selected
     if (page == "music" && (currentSelection!=newSelection)) {
-        playPause(newSelection, page);
+        playing=1;
+        playPause(0, page);
     }
-
+    
     //Update the current selection to new selection
     currentSelection = newSelection;
     //jump back to top of page (for mobile versions)

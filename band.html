@@ -32,10 +32,10 @@
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-main general-font">
                     <li><a href="index.html" class="hvr-rectangle-out navbar-inactive rainbow-text-red" id="navbar-home">Home</a></li>
-                    <li><a href="" class="hvr-rectangle-out navbar-inactive rainbow-text-yellow" id="navbar-band">Band</a></li>
+                    <li><a href="" class="hvr-rectangle-out navbar-active rainbow-text-yellow" id="navbar-band">Band</a></li>
                     <li><a href="music.html" class="hvr-rectangle-out navbar-inactive rainbow-text-green" id="navbar-music">Music</a></li>
                     <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive rainbow-text-orange" id="navbar-booking">Booking</a></li>
-                    <li><a href="fans.html" class="hvr-rectangle-out navbar-active rainbow-text-blue" id="navbar-fans">Fans</a></li>
+                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive rainbow-text-blue" id="navbar-fans">Fans</a></li>
                 </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
@@ -82,12 +82,6 @@
                 <div class="col-xs-12 text-center main-image-container">
                     <img class="main-image rainbow-border-yellow" src="assets/images/band2.jpg" id="main-image-element-xs" onmousedown="changeMainImage(1)" alt="The Band">
                 </div>
-                <!-- empty spacer row -->
-                <div class="row">
-                    <div class="col-xs-12 top-section-spacer">
-                        <p></p>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-xs-12 main-textbox-container rainbow-border-yellow">
                         <div class="row">
@@ -129,23 +123,23 @@
                 <div class="col-sm-1 hidden-xs">
                     <button class="btn middle-section-navbutton rainbow-text-red" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')"><i class="fa fa-arrow-left hidden-xs"></i></button>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-4">
                     <img src="assets/images/band2.jpg" class="middle-section-thumbnail rainbow-border-blue" id="thumbnail-1" onmousedown="changeMainImage(1,5,'band')" alt="The Band">
                     <span class="middle-section-font rainbow-text-red">The Band</span>
                 </div>
-                <div class="col-sm-2 ">
+                <div class="col-sm-2 col-xs-4">
                     <img src="assets/images/dj.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-2" onmousedown="changeMainImage(2,5,'band')" alt="Davy Jones">
                     <span class="middle-section-font rainbow-text-red">Davy Jones</span>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-4">
                     <img src="assets/images/md.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-3" onmousedown="changeMainImage(3,5,'band')" alt="Mickey Dolenz">
                     <span class="middle-section-font rainbow-text-red">Micky Dolenz</span>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-xs-6">
                     <img src="assets/images/mn.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-4" onmousedown="changeMainImage(4,5,'band')" alt="Michael Nesmith">
                     <span class="middle-section-font rainbow-text-red">Michael Nesmith</span>
                 </div>
-                <div class="col-sm-2 ">
+                <div class="col-sm-2 col-xs-6">
                     <img src="assets/images/pt.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-5" onmousedown="changeMainImage(5,5,'band')" alt="Peter Tork">
                     <span class="middle-section-font rainbow-text-red">Peter Tork</span>
                 </div>
@@ -156,7 +150,7 @@
 
         </section>
         <section class="bottom-section-container rainbow-background-red">
-            <div class="row">
+            <div class="row" >
                 <!--tag line-->
                 <div class="col-xs-12 general-font">
                     <p>Bring the 60s home!<br>Enjoy classic hits live</p>
