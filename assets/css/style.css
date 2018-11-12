@@ -32,14 +32,6 @@
 
 /*    NAVBAR    */
 
-.logo {
-    margin-left: 15px;
-    padding: 0px;
-    width: 125px;
-    vertical-align: top;
-    text-align: left;
-}
-
 .navbar {
     position: absolute;
     margin: 0px;
@@ -56,8 +48,8 @@
     box-shadow: none;
 }
 
-.navbar-default .navbar-main li{
-    width:115px;
+.navbar-default .navbar-main li {
+    width: 115px;
 }
 
 .container-fluid .navbar-header {
@@ -65,11 +57,11 @@
     margin-right: 0;
 }
 
-.navbar-inactive {
+.navbar__inactive {
     background-color: transparent;
 }
 
-.navbar-active {
+.navbar__active {
     background-color: rgba(100, 100, 100, 0.7);
 }
 
@@ -92,23 +84,30 @@
 
 .navbar-default .navbar-toggle>i {
     color: rgba(69, 90, 186, 1);
-    background-color:#333333;
-    border:4px solid;
-    border-color:rgba(69, 90, 186, 1); 
-    padding:5px;
-    border-radius:25%;
+    background-color: #333333;
+    border: 4px solid;
+    border-color: rgba(69, 90, 186, 1);
+    padding: 5px;
+    border-radius: 25%;
     font-size: 2em;
 }
 
 .navbar-default .navbar-toggle:hover>i {
     color: #333333;
-    background-color:#f5f5f5;
-    border:4px solid;
-    border-color:rgba(69, 90, 186, 1);
-    padding:5px;
-    border-radius:25%;    
+    background-color: #f5f5f5;
+    border: 4px solid;
+    border-color: rgba(69, 90, 186, 1);
+    padding: 5px;
+    border-radius: 25%;
 }
 
+.navbar__logo {
+    margin-left: 15px;
+    padding: 0px;
+    width: 125px;
+    vertical-align: top;
+    text-align: left;
+}
 
 .social-links li a {
     padding: 8px 5px 0px 5px;
@@ -132,64 +131,63 @@
 
 /*    NAVBAR - Buttons - specific styling */
 
-#navbar-home {
+#navbar__home-tab {
     color: rgba(120, 38, 38, 1);
-    ;
 }
 
-#navbar-home:hover {
+#navbar__home-tab:hover {
     color: #333333;
 }
 
-#navbar-home.hvr-rectangle-out:before {
+#navbar__home-tab.hvr-rectangle-out:before {
     background-color: rgba(120, 38, 38, 1);
 }
 
-#navbar-band {
+#navbar__band-tab {
     color: rgba(244, 216, 78, 1);
 }
 
-#navbar-band:hover {
+#navbar__band-tab:hover {
     color: #333333;
 }
 
-#navbar-band.hvr-rectangle-out:before {
+#navbar__band-tab.hvr-rectangle-out:before {
     background-color: rgba(244, 216, 78, 1);
 }
 
-#navbar-music {
+#navbar__music-tab {
     color: rgba(115, 168, 52, 1);
 }
 
-#navbar-music:hover {
+#navbar__music-tab:hover {
     color: #333333;
 }
 
-#navbar-music.hvr-rectangle-out:before {
+#navbar__music-tab.hvr-rectangle-out:before {
     background-color: rgba(115, 168, 52, 1);
 }
 
-#navbar-booking {
+#navbar__booking-tab {
     color: rgba(241, 108, 55, 1);
 }
 
-#navbar-booking:hover {
+#navbar__booking-tab:hover {
     color: #333333;
 }
 
-#navbar-booking.hvr-rectangle-out:before {
+#navbar__booking-tab.hvr-rectangle-out:before {
     background-color: rgba(241, 108, 55, 1);
 }
 
-#navbar-fans {
+#navbar__fans-tab {
     color: rgba(69, 90, 186, 1);
 }
 
-#navbar-fans:hover {
+#navbar__fans-tab:hover {
     color: #333333;
 }
 
-#navbar-fans.hvr-rectangle-out:before {
+#navbar__fans-tab.hvr-rectangle-out:before {
     background-color: rgba(69, 90, 186, 1);
 }
 
@@ -212,32 +210,32 @@
     min-height: 340px;
 }
 
-.top-section-container {
+.top-section__container {
     display: flex;
     align-items: center;
     position: relative;
     justify-content: center;
     padding-top: 10vh;
-    min-height:340px;
+    min-height: 340px;
 }
 
-.main-image-container {
+.top-section__image-container {
     /* used in xs screen */
     height: 15vh;
 }
 
-.main-image {
+.top-section__image {
     border: 5px solid;
     border-radius: 10%;
     height: 20vw;
     width: 20vw;
-    max-height:250px;
-    max-width:250px;
+    max-height: 250px;
+    max-width: 250px;
     min-height: 175px;
     min-width: 175px;
 }
 
-.main-textbox-container {
+.top-section__textbox-container {
     background-color: #f5f5f5;
     border: solid 5px;
     overflow: hidden;
@@ -247,35 +245,30 @@
     min-height: 260px;
 }
 
-.main-textbox {
+.top-section__textbox {
     /* used in xs screen */
     height: 27vh;
     overflow: auto;
 }
 
-#main-header {
-    margin-top: 5px;
-    padding-left: 20px;
-    padding-top: 15px;
-}
-
-.scrollbar-container {
+.top-section__textbox-scrollbar-container {
     overflow: auto;
     height: 100%;
 }
 
-.top-section-backdrop-xs {
+.top-section__backdrop-xs {
     /* Index page on xs only */
-    height: 60vh;
-    border: 5px solid;
-    height: 50vh;
+    border-width: 5px;
+    border-style: solid;
     border-radius: 10%;
-
+    height: 45vh;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    max-width:100%;
 }
 
-#main-info {
+#top-section__text {
     /*    not index page: */
-    ;
     font-family: "Roboto", sans-serif;
     font-size: 1.25em;
     padding-top: 0px;
@@ -284,11 +277,18 @@
     border-radius: 10%;
 }
 
+#top-section__textbox-header {
+    /*    not index page: */
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
 /*    TOP SECTION - BUTTONS    */
 
-/*    band, music and booking  */
+/*    band, music. booking and fans pages */
 
-.top-section-navbutton {
+.top-section__nav-button {
     outline: none !important;
     background-color: transparent;
     padding: 0;
@@ -297,13 +297,13 @@
     font-size: 5vw;
 }
 
-.top-section-navbutton i {
+.top-section__nav-button i {
     padding: 5px;
     border: 5px solid;
     border-radius: 20%;
 }
 
-.top-section-navbutton :hover {
+.top-section__nav-button :hover {
     outline: none;
     transition: 0.25s ease-in-out;
     background-color: #f5f5f5;
@@ -314,7 +314,7 @@
 
 /*    Index  */
 
-.button-flower-book {
+.top-section__booking-button {
     position: absolute;
     z-index: 1;
     width: 150px;
@@ -323,12 +323,12 @@
     transition: 0.5s ease-in-out;
 }
 
-.button-flower-book:hover {
+.top-section__booking-button:hover {
     width: 200px;
     transition: 0.5s ease-in-out;
 }
 
-.button-flower-music {
+.top-section__music-button {
     position: absolute;
     z-index: 1;
     width: 200px;
@@ -337,7 +337,7 @@
     transition: 0.5s ease-in-out;
 }
 
-.button-flower-music:hover {
+.top-section__music-button:hover {
     width: 250px;
     z-index: 2;
     transition: 0.5s ease-in-out;
@@ -345,21 +345,10 @@
 
 /*    TOP SECTION - Video */
 
-.video-container {
-    height: 55vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: center;
-
-}
-
 video {
     max-width: 100% !important;
-    max-height: 45vh !important;
-    min-height:260px;
-   /* margin-left: 5%;*/
+    max-height: 40vh !important;
+    min-height: 260px;
     z-index: -1;
     border: 10px solid;
     border-radius: 10%;
@@ -367,7 +356,7 @@ video {
 
 /*    MIDDLE SECTION */
 
-.middle-section-container {
+.middle-section__container {
     min-height: 30vw;
     border-bottom-style: solid;
     border-width: 5px;
@@ -376,24 +365,24 @@ video {
     padding-bottom: 30px;
 }
 
-.middle-section-container p {
+.middle-section__container p {
     font-size: 4.25vw;
     color: #f5f5f5;
     padding-top: 15px;
     text-shadow: 0px 0px 15px #000000;
 }
 
-.middle-section-container img {
+.middle-section__container img {
     transition: ease-in-out 0.25s;
 }
 
-.middle-section-container img:hover {
+.middle-section__container img:hover {
     transition: ease-in-out 0.25s;
     border-color: #f5f5f5;
 
 }
 
-.middle-section-navbutton {
+.middle-section__navbutton {
     font-size: 50px;
     margin-top: 25px;
     background-color: transparent;
@@ -403,28 +392,29 @@ video {
     padding: 0 5px 0 5px;
 }
 
-.middle-section-thumbnail {
+.middle-section__thumbnail {
     width: 125px;
     height: 125px;
     border: solid 5px;
     border-radius: 20%;
 }
 
-.middle-section-thumbnail-active {
+/*
+.middle-section__thumbnail__active {
     border-color: rgba(69, 90, 186, 1);
 }
 
-.middle-section-thumbnail-inactive {
+.middle-section__thumbnail__inactive {
     border-color: rgba(120, 38, 38, 1);
-}
+}*/
 
-.middle-section-font {
+.middle-section__font {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
     display: block;
 }
 
-.new-release {
+.middle-section__new-release-text {
     width: 125px;
     line-height: 125px;
     font-size: 40px;
@@ -436,7 +426,7 @@ video {
 
 /*    BOTTOM SECTION    */
 
-.bottom-section-container {
+.bottom-section__container {
     min-height: 30vh;
     border-bottom-style: solid;
     border-width: 5px;
@@ -445,26 +435,26 @@ video {
     padding-bottom: 25px;
 }
 
-.bottom-section-container h1 {
+.bottom-section__container h1 {
     font-size: 4.25vw;
     color: #f5f5f5;
     text-shadow: 0px 0px 15px #000000;
 }
 
-.bottom-section-container p {
+.bottom-section__container p {
     font-size: 4.25vw;
     color: #f5f5f5;
     padding-top: 15px;
     text-shadow: 0px 0px 15px #000000;
 }
 
-.bottom-section-buttoncontainer {
+.bottom-section__buttons-container {
     text-align: center;
     padding-top: 25px;
 
 }
 
-.bottom-section-musiccontainer {
+.bottom-section__thumbnail-container {
     line-height: 125px;
     padding: 10px 0 10px 0;
     vertical-align: middle;
@@ -473,36 +463,36 @@ video {
     font-size: 1.75em;
 }
 
-.bottom-section-musiccontainer a {
+.bottom-section__thumbnail-container a {
     text-decoration: none;
     color: #f5f5f5;
     transition: 0.25s ease-in-out;
 }
 
-.bottom-section-musiccontainer a:hover {
+.bottom-section__thumbnail-container a:hover {
     color: rgba(69, 90, 186, 1);
     transition: 0.25s ease-in-out;
 }
 
-.bottom-section-musiccontainer img {
+.bottom-section__thumbnail-container img {
     transition: 0.25s ease-in-out;
 }
 
-.bottom-section-musiccontainer img:hover {
+.bottom-section__thumbnail-container img:hover {
     transition: 0.25s ease-in-out;
     border-color: #f5f5f5;
 }
 
 /*    FOOTER     */
 
-.container-footer {
+.footer__container {
     max-height: 10vh;
     min-height: 50px;
     padding: 10px 0px 10px 10px;
 
 }
 
-.container-footer .col-sm-3 i {
+.footer__container .col-sm-3 i {
     font-size: 20px;
 }
 
@@ -526,28 +516,28 @@ video {
     font-size: 14px;
 }
 
-.footer-text {
+.footer__text {
     padding: 0px;
     font-family: "Lobster", sans-serif;
     font-size: 20px;
 }
 
-.footer-links {
+.footer__links {
     list-style: none;
 }
 
-.footer-links li {
+.footer__links li {
     display: inline;
     padding-right: 5px;
 }
 
-.footer-links li a {
+.footer__links li a {
     text-decoration: none;
     color: #333333;
     transition: 0.3s ease-in-out;
 }
 
-.footer-links li a:hover {
+.footer__links li a:hover {
     text-decoration: none;
     color: #f5f5f5;
     transition: 0.3s ease-in-out;
@@ -555,7 +545,7 @@ video {
 
 /*    GENERAL BUTTONS     */
 
-.button-audio {
+.general__audio-play-pause-button {
     outline: none;
     background-color: transparent;
     border-style: none;
@@ -563,12 +553,12 @@ video {
     transform: scale(1.25, 1.25);
 }
 
-.button-audio:hover {
+.general__audio-play-pause-button:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.5, 1.5);
 }
 
-.button-audio:active {
+.general__audio-play-pause-button:active {
     transition: 0.05s linear;
     transform: scale(1.25, 1.25);
 }
@@ -596,7 +586,7 @@ video {
     text-shadow: 0 2px 0 black;
 }
 
-.floating-button {
+.general__floating-button {
     position: absolute;
     background-color: #f5f5f5;
     width: 40px;
@@ -614,24 +604,24 @@ video {
     transition: 0.3s ease-in-out;
 }
 
-.floating-button .button-audio {
+.general__floating-button .general__audio-play-pause-button {
     height: 30px;
     margin-top: -5px;
     margin-left: -5px;
 }
 
-.floating-button .button-audio i {
+.general__floating-button .general__audio-play-pause-button i {
     font-size: 1.2em;
     margin-top: -5px;
 }
 
 /*    BOOKING FORM    */
 
-.booking-form {
+.contact-form {
     font-family: "Roboto", sans-serif;
 }
 
-.booking-form-backdrop {
+.contact-form__backdrop {
     background: url(../images/background-flowers-b-and-w.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -641,11 +631,11 @@ video {
     border-radius: 5%;
 }
 
-.booking-form-button {
+.contact-form__button {
     font-size: 1.5em;
 }
 
-.opaque-overlay {
+.contact-form__opaque-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -657,67 +647,67 @@ video {
 
 /*    GENERAL BORDER TEXT AND BACKGROUND COLOURS */
 
-.rainbow-text-red {
+.general__text__red {
     color: rgba(120, 38, 38, 1);
 }
 
-.rainbow-background-red {
+.general__background__red {
     background-color: rgba(120, 38, 38, 1);
 }
 
-.rainbow-border-red {
+.general__border__red {
     border-color: rgba(120, 38, 38, 1);
 }
 
-.rainbow-text-yellow {
+.general__text__yellow {
     color: rgba(244, 216, 78, 1);
 }
 
-.rainbow-background-yellow {
+.general__background__yellow {
     background-color: rgba(244, 216, 78, 1);
 }
 
-.rainbow-border-yellow {
+.general__border__yellow {
     border-color: rgba(244, 216, 78, 1);
 }
 
-.rainbow-text-green {
+.general__text__green {
     color: rgba(115, 168, 52, 1);
 }
 
-.rainbow-background-green {
+.general__background__green {
     background-color: rgba(115, 168, 52, 1);
 }
 
-.rainbow-border-green {
+.general__border__green {
     border-color: rgba(115, 168, 52, 1);
 }
 
-.rainbow-text-orange {
+.general__text__orange {
     color: rgba(241, 108, 55, 1);
 }
 
-.rainbow-background-orange {
+.general__background__orange {
     background-color: rgba(241, 108, 55, 1);
 }
 
-.rainbow-border-orange {
+.general__border__orange {
     border-color: rgba(241, 108, 55, 1);
 }
 
-.rainbow-text-blue {
+.general__text__blue {
     color: rgba(69, 90, 186, 1);
 }
 
-.rainbow-background-blue {
+.general__background__blue {
     background-color: rgba(69, 90, 186, 1);
 }
 
-.rainbow-border-blue {
+.general__border__blue {
     border-color: rgba(69, 90, 186, 1);
 }
 
-.rainbow-border-black {
+.general__border__black {
     border-color: #333333;
 }
 
@@ -776,16 +766,16 @@ video {
         min-height: 0px;
     }
 
-    .top-section-container {
+    .top-section__container {
         padding-top: 0px;
-        min-height:0px;
+        min-height: 0px;
     }
 
-    .top-section-navbutton i {
+    .top-section__nav-button i {
         border: none;
     }
 
-    .main-image {
+    .top-section__image {
         height: 125px;
         width: 125px;
         min-width: 125px;
@@ -793,29 +783,29 @@ video {
 
     }
 
-    .main-image-container {
+    .top-section__image-container {
         height: 125px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
 
-    .main-textbox-container {
+    .top-section__textbox-container {
         min-height: 0px;
         height: 100%;
         border-radius: 0;
     }
 
-    .main-textbox {
+    .top-section__textbox {
         height: 100%;
     }
 
-    #main-header-xs {
+    #top-section__textbox-header-xs {
         margin-top: 5px;
         padding-top: 5px;
         height: 35px;
     }
 
-    #main-info-xs {
+    #top-section__text-xs {
         font-family: "Roboto", sans-serif;
         font-size: 1.25em;
         padding-top: 0px;
@@ -824,42 +814,48 @@ video {
     }
 
     /*    MIDDLE SECTION     */
-    .middle-section-container {
+    .middle-section__container {
         padding-bottom: 25px;
     }
 
-    .middle-section-thumbnail {
+    .middle-section__thumbnail {
         width: 90px;
         height: 90px;
     }
 
-    .middle-section-font {
+    .middle-section__new-release-text {
+        width: 90px;
+        line-height: 90px;
+        font-size: 25px;
+    }
+
+    .middle-section__font {
         font-size: 15px;
     }
 
     /*    BOTTOM SECTION     */
-    .bottom-section-container {
+    .bottom-section__container {
         padding-bottom: 0px;
         min-height: 0vh;
 
     }
 
-    .bottom-section-buttoncontainer {
+    .bottom-section__buttons-container {
         padding-bottom: 25px;
     }
 
-    .bottom-section-musiccontainer {
+    .bottom-section__thumbnail-container {
         line-height: 50px;
         font-size: 1.5em;
     }
 
     /*    FOOTER     */
-    .footer-text {
+    .footer__text {
         font-size: 15px;
     }
 
     /*    BUTTONS     */
-    .floating-button {
+    .general__floating-button {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -872,11 +868,6 @@ video {
 @media (max-width: 479px) {
 
     /*    NAVBAR     */
-    .logo {
-        width: 75px;
-        margin-left: 0;
-    }
-
     .navbar-default .navbar-nav {
         margin-top: 15px;
         border: 5px solid;
@@ -896,15 +887,21 @@ video {
         padding-bottom: 5px;
     }
 
+    .navbar__logo {
+        width: 75px;
+        margin-left: 0;
+    }
+
+
     /*    TOP SECTION    */
-    #main-header-xs {
+    #top-section__textbox-header-xs {
         font-size: 1.25em;
         margin-top: 5px;
         padding-left: 10px;
         padding-top: 5px;
     }
 
-    #main-info-xs {
+    #top-section__text-xs {
         font-family: "Roboto", sans-serif;
         font-size: 1.15em;
         padding-top: 0px;
@@ -913,35 +910,35 @@ video {
     }
 
     /*    MIDDLE SECTION    */
-    .middle-section-thumbnail {
+    .middle-section__thumbnail {
         width: 75px;
         height: 75px;
     }
 
-    .new-release {
-        width: 100px;
-        line-height: 100px;
-        font-size: 30px;
+    .middle-section__new-release-text {
+        width: 75px;
+        line-height: 75px;
+        font-size: 20px;
     }
 
     /*    BOTTOM SECTION */
-    .bottom-section-musiccontainer {
+    .bottom-section__thumbnail-container {
         line-height: 50px;
         font-size: 0.85em;
     }
 
-    .bottom-section-buttoncontainer {
+    .bottom-section__buttons-container {
         padding-top: 5px;
     }
 
     /*    FOOTER    */
-    .container-footer {
+    .footer__container {
         height: 50px;
         padding-top: 15px;
         padding-bottom: 20px;
     }
 
-    .footer-text {
+    .footer__text {
         font-size: 12px;
     }
 
@@ -954,22 +951,34 @@ video {
 }
 
 @media (max-height: 800px) {
-    .button-flower-book {
+
+    .top-section__booking-button {
         position: absolute;
-        z-index: 0;
+        z-index: 1;
+        width: 100px;
+        bottom: 38%;
+        left: 1%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .top-section__booking-button:hover {
+        width: 150px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .top-section__music-button {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
         bottom: 5%;
         left: 5%;
         transition: 0.5s ease-in-out;
+
+
     }
 
-    .button-flower-music {
-        position: absolute;
-        z-index: 0;
-        bottom: 5%;
-        left: 80%;
+    .top-section__music-button:hover {
+        width: 200px;
         transition: 0.5s ease-in-out;
     }
-
-
-
 }

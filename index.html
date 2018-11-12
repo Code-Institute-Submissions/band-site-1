@@ -21,7 +21,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand " href="index.html">
-                    <img alt="Logo" class="logo" src="assets/images/logo.png"></img> 
+                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"></img> 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only ">Toggle navigation</span>
@@ -31,20 +31,20 @@
             <!-- collapse nav bar on xs screen and hide use burger button -->
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-main general-font">
-                    <li><a href="" class="hvr-rectangle-out navbar-active rainbow-text-red" id="navbar-home">Home</a></li>
-                    <li><a href="band.html" class="hvr-rectangle-out navbar-inactive rainbow-text-yellow" id="navbar-band">Band</a></li>
-                    <li><a href="music.html" class="hvr-rectangle-out navbar-inactive rainbow-text-green" id="navbar-music">Music</a></li>
-                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive rainbow-text-orange" id="navbar-booking">Booking</a></li>
-                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive rainbow-text-blue" id="navbar-fans">Fans</a></li>
+                    <li><a href="" class="hvr-rectangle-out navbar__active general__text__red" id="navbar__home-tab">Home</a></li>
+                    <li><a href="band.html" class="hvr-rectangle-out navbar__inactive general__text__yellow" id="navbar__band-tab">Band</a></li>
+                    <li><a href="music.html" class="hvr-rectangle-out navbar__inactive general__text__green" id="navbar__music-tab">Music</a></li>
+                    <li><a href="booking.html" class="hvr-rectangle-out navbar__inactive general__text__orange" id="navbar__booking-tab">Booking</a></li>
+                    <li><a href="fans.html" class="hvr-rectangle-out navbar__inactive general__text__blue" id="navbar__fans-tab">Fans</a></li>
                 </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -54,29 +54,29 @@
     <div class="container-fluid">
         <section class="top-section">
             <div class="row">
-                <div class="col-xs-12 top-section-container  hidden-xs">
-                    <!-- video background - hide on xs screen - replace with image style="object-fit: fill;" -->
+                <div class="col-xs-12 top-section__container  hidden-xs">
+                    <!-- video background - hide on xs screen - replace with image -->
                     <div>
-                        <video class="rainbow-border-blue" id="video-background" plays-inline poster="assets/images/band-colour.jpg">
+                        <video class="general__border__blue" controls plays-inline poster="assets/images/band-colour.jpg">
                         <source src="assets/videos/daydream.webm" type="video/webm">
                     </video>
-                        <a href="/booking.html"><img src="assets/images/button-book.png" class="button-flower-book" alt="blue flower"></img></a>
-                        <a href="/music.html"><img src="assets/images/button-music.png" class="button-flower-music" alt="blue flower"></img></a>
+                        <a href="/booking.html"><img src="assets/images/button-book.png" class="top-section__booking-button" alt="blue flower"></img></a>
+                        <a href="/music.html"><img src="assets/images/button-music.png" class="top-section__music-button" alt="blue flower"></img></a>
 
                     </div>
                     <!-- create custom video control? -->
 
 
                 </div>
-                <div class="col-xs-12 nopadding visible-xs text-center" style="padding-top:5vh;">
-                    <img class="top-section-backdrop-xs rainbow-border-blue" src="assets/images/band-small.jpg" alt="The Monkees">
+                <div class="col-xs-12 nopadding visible-xs text-center">
+                    <img class="top-section__backdrop-xs general__border__blue" src="assets/images/band-small.jpg" alt="The Monkees">
                 </div>
             </div>
         </section>
 
         <!--tag line and call to action-->
 
-        <section class="middle-section-container rainbow-background-red">
+        <section class="middle-section__container general__background__red">
             <div class="row">
                 <div class="col-xs-12 general-font">
                     <p>Hey, hey! We're the Monkees!<br> Hit 1960s rock and pop</p>
@@ -85,11 +85,11 @@
 
             <!-- call to action buttons -->
             <div class="row">
-                <div class="bottom-section-buttoncontainer col-xs-6 col-xs-offset-3">
-                    <a href="booking.html"><button type="button" class="btn btn-small rainbow-background-orange rainbow-border-black">Book Us</button></a>
+                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                    <a href="booking.html"><button type="button" class="btn btn-small general__background__orange general__border__black">Book Us</button></a>
                 </div>
-                <div class="bottom-section-buttoncontainer col-xs-6 col-xs-offset-3">
-                    <a href="music.html"><button type="button" class="btn btn-small rainbow-background-green rainbow-border-black">New Releases</button></a>
+                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                    <a href="music.html"><button type="button" class="btn btn-small general__background__green general__border__black">New Releases</button></a>
                 </div>
             </div>
 
@@ -97,17 +97,17 @@
             <div class="row hidden-sm hidden-md hidden-lg">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- taster music section -->
-        <section class="bottom-section-container rainbow-background-green">
+        <section class="bottom-section__container general__background__green">
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="general-font">Enjoy the sounds of the 60s</h1>
@@ -115,14 +115,14 @@
             </div>
             <div class="row visible-xs">
                 <div class="col-xs-12 nopadding">
-                    <p><span class="glyphicon glyphicon-heart rainbow-text-orange"></span></p>
+                    <p><span class="glyphicon glyphicon-heart general__text__orange"></span></p>
                 </div>
             </div>
             <!-- remove album artwork on xs screens -->
-            <div class="row bottom-section-musiccontainer">
+            <div class="row bottom-section__thumbnail-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
                     <a href="music.html">
-                        <img src="assets/images/album1.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - Clarksville">
+                        <img src="assets/images/album1.jpg" class="middle-section__thumbnail general__border__blue" alt="Song - Clarksville">
                     </a>
                 </div>
                 <div class="col-xs-5 hidden-xs">
@@ -136,13 +136,13 @@
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(1,'index')"><i id="playButton1" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(1,'index')"><i id="audio-play-pause-button1" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
-            <div class="row bottom-section-musiccontainer">
+            <div class="row bottom-section__thumbnail-container">
                 <div class="col-sm-2 col-sm-offset-2">
                     <a href="music.html">
-                        <img src="assets/images/album2.jpg" class="middle-section-thumbnail rainbow-border-blue hidden-xs" alt="Song - I'm A Believer">
+                        <img src="assets/images/album2.jpg" class="middle-section__thumbnail general__border__blue hidden-xs" alt="Song - I'm A Believer">
                     </a>
                 </div>
                 <div class="col-xs-5 hidden-xs">
@@ -156,13 +156,13 @@
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(2,'index')"><i id="playButton2" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(2,'index')"><i id="audio-play-pause-button2" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
-            <div class="row bottom-section-musiccontainer">
+            <div class="row bottom-section__thumbnail-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
                     <a href="music.html">
-                        <img src="assets/images/album3.jpg" class="middle-section-thumbnail rainbow-border-blue" alt="Song - Stepping Stone">
+                        <img src="assets/images/album3.jpg" class="middle-section__thumbnail general__border__blue" alt="Song - Stepping Stone">
                     </a>
                 </div>
                 <div class="col-xs-5 hidden-xs">
@@ -176,38 +176,38 @@
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(3,'index')"><i id="playButton3" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(3,'index')"><i id="audio-play-pause-button3" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
-            <div class="row bottom-section-musiccontainer visible-xs">
+            <div class="row bottom-section__thumbnail-container visible-xs">
                 <div class="col-xs-5 col-xs-offset-3">
                     <a href="music.html">
                         <span>Daydream Believer</span>
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="button-audio" onclick="playPause(4,'index')"><i id="playButton4" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(4,'index')"><i id="audio-play-pause-button4" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
             <div class="row visible-xs">
                 <div class="col-xs-12">
-                    <p><span class="glyphicon glyphicon-music rainbow-text-orange"></span></p>
+                    <p><span class="glyphicon glyphicon-music general__text__orange"></span></p>
                 </div>
             </div>
             <!-- hidden audio elements -->
             <div>
-                <audio id="song" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
+                <audio id="audio-music" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
             </div>
         </section>
     </div>
 
     <footer>
         <div class="container-fluid">
-            <div class="row container-footer rainbow-background-red">
+            <div class="row footer__container general__background__red">
                 <div class="col-xs-7 hidden-xs">
-                    <ul class="footer-text footer-links">
+                    <ul class="footer__text footer__links">
                         <li><i class="fa fa-copyright fa-sm"></i>
-                            <span class="footer-text">The Monkees</span></li>
+                            <span class="footer__text">The Monkees</span></li>
                         <li><a href="">Home</a></li>
                         <li><a href="band.html">Band</a></li>
                         <li><a href="music.html">Music</a></li>
@@ -217,9 +217,9 @@
                 </div>
 
                 <div class="col-xs-12 visible-xs">
-                    <ul class="footer-text footer-links">
+                    <ul class="footer__text footer__links">
                         <li><i class="fa fa-copyright fa-sm"></i>
-                            <span class="footer-text">The Monkees</span></li>
+                            <span class="footer__text">The Monkees</span></li>
                         <li><a href="">Home</a></li>
                         <li><a href="band.html">Band</a></li>
                         <li><a href="music.html">Music</a></li>
@@ -231,10 +231,10 @@
                 <!-- on sm screens show social media links in the footer -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>

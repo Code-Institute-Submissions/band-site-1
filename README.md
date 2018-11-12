@@ -83,6 +83,10 @@ The site is styled using **Bootstrap 3.3.7**.<br>
 Code was written through the Cloud9 IDE.
 The website has been tested on IE, Google Chrome and Safari browsers.
 
+## Initial Wireframes
+Wireframes were designed using MarvelApp and can be located here:
+https://marvelapp.com/project/3472661/
+
 ## Credits
 
 ### Media
@@ -107,6 +111,9 @@ Menu hover effects - Hover CSS http://ianlunn.github.io/Hover/
 
 ### Framework
 Bootstrap v3.3.7 - https://getbootstrap.com/
+
+### Navbar design
+Based on CodeInstitute Whiskey Drop Webpage - https://codeinstitute.net/
 
 
 

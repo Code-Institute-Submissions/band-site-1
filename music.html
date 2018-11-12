@@ -21,7 +21,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand " href="index.html">
-                    <img alt="Logo" class="logo" src="assets/images/logo.png"></img> 
+                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"></img> 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only ">Toggle navigation</span>
@@ -31,20 +31,20 @@
             <!-- collapse nav bar on xs screen and hide use burger button -->
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-main general-font">
-                    <li><a href="index.html" class="hvr-rectangle-out navbar-inactive rainbow-text-red" id="navbar-home">Home</a></li>
-                    <li><a href="band.html" class="hvr-rectangle-out navbar-inactive rainbow-text-yellow" id="navbar-band">Band</a></li>
-                    <li><a href="" class="hvr-rectangle-out navbar-active rainbow-text-green" id="navbar-music">Music</a></li>
-                    <li><a href="booking.html" class="hvr-rectangle-out navbar-inactive rainbow-text-orange" id="navbar-booking">Booking</a></li>
-                    <li><a href="fans.html" class="hvr-rectangle-out navbar-inactive rainbow-text-blue" id="navbar-fans">Fans</a></li>
+                    <li><a href="index.html" class="hvr-rectangle-out navbar__inactive general__text__red" id="navbar__home-tab">Home</a></li>
+                    <li><a href="band.html" class="hvr-rectangle-out navbar__inactive general__text__yellow" id="navbar__band-tab">Band</a></li>
+                    <li><a href="" class="hvr-rectangle-out navbar__active general__text__green" id="navbar__music-tab">Music</a></li>
+                    <li><a href="booking.html" class="hvr-rectangle-out navbar__inactive general__text__orange" id="navbar__booking-tab">Booking</a></li>
+                    <li><a href="fans.html" class="hvr-rectangle-out navbar__inactive general__text__blue" id="navbar__fans-tab">Fans</a></li>
                         </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -56,59 +56,59 @@
 
             <!-- visible on all screens above xs-->
 
-            <div class="row top-section-container hidden-xs">
+            <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section-navbutton" id="navbutton-left1" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-circle-left rainbow-text-red rainbow-background-green"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-circle-left general__text__red general__background__green"></i></button>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <img class="main-image rainbow-border-green" src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="main-image-element" alt="Album picture">
+                    <img class="top-section__image general__border__green" src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="main-image-element" alt="Album picture">
                 </div>
-                <div class="col-sm-5 main-textbox-container rainbow-border-green">
+                <div class="col-sm-5 top-section__textbox-container general__border__green">
                     <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
-                    <div class="scrollbar-container">
-                        <h1 class="general-font" id="main-header">Daydream Believer</h1>
-                        <p id="main-info">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer up sleepy
+                    <div class="top-section__textbox-scrollbar-container">
+                        <h1 class="general-font" id="top-section__textbox-header">Daydream Believer</h1>
+                        <p id="top-section__text">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer up sleepy
                             Jean
                             <br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?<br>You once thought of me<br>As a white knight on his steed<br>Now you know how happy I can be<br>Oh, our good time starts and ends<br>Without all
                             I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…"
                         </p>
                     </div>
-                    <div class="floating-button">
-                        <button class="button-audio" onclick="playPause(0,'music')"><i id="playButton" class="fa fa-play-circle rainbow-text-red"></i></button>
+                    <div class="general__floating-button">
+                        <button class="general__audio-play-pause-button" onclick="playPause(0,'music')"><i id="audio-play-pause-button" class="fa fa-play-circle general__text__red"></i></button>
                     </div>  
                 </div>
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section-navbutton" id="navbutton-right1" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-circle-right rainbow-text-red rainbow-background-green"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-right1" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-circle-right general__text__red general__background__green"></i></button>
                 </div>
             </div>
 
 
             <!-- only for xs screen size -->
-            <div class="row top-section-container visible-xs">
-                <div class="col-xs-12 text-center main-image-container">
-                    <img class="main-image rainbow-border-green" src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="main-image-element-xs" alt="Daydream Believer">
-                    <div class="floating-button">
-                        <button class="button-audio" onclick="playPause(0,'music')"><i id="playButton-xs" class="fa fa-play-circle rainbow-text-red"></i></button>
+            <div class="row top-section__container visible-xs">
+                <div class="col-xs-12 text-center top-section__image-container">
+                    <img class="top-section__image general__border__green" src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="main-image-element-xs" alt="Daydream Believer">
+                    <div class="general__floating-button">
+                        <button class="general__audio-play-pause-button" onclick="playPause(0,'music')"><i id="audio-play-pause-button-xs" class="fa fa-play-circle general__text__red"></i></button>
                     </div>
                 </div>
                   
                <div class="row">
-                    <div class="col-xs-12 main-textbox-container rainbow-border-green">
+                    <div class="col-xs-12 top-section__textbox-container general__border__green">
                         <div class="row">
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section-navbutton" id="navbutton-left2" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-left rainbow-text-red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-left2" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-left general__text__red"></i></button>
                             </div>
 
                             <div class="col-xs-8 text-center">
-                                <h1 class="general-font" id="main-header-xs">Daydream Believer</h1>
+                                <h1 class="general-font" id="top-section__textbox-header-xs">Daydream Believer</h1>
                             </div>
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section-navbutton" id="navbutton-right2" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-right rainbow-text-red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-right general__text__red"></i></button>
                             </div>
                         </div>
                         <div class="row ">
-                            <div class="col-sm-12 main-textbox">
-                                <p id="main-info-xs">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer
+                            <div class="col-sm-12 top-section__textbox">
+                                <p id="top-section__text-xs">Oh, I could hide 'neath the wings<br>Of the bluebird as she sings<br>The six-o'clock alarm would never ring<br>But six rings and I rise<br>Wipe the sleep out of my eyes<br>The shaving razor's cold and it stings<br>Cheer
                                     up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?<br>You once thought of me<br>As a white knight on his steed<br>Now you know how happy I can be<br>Oh, our good time starts
                                     and ends<br>Without all I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…"
                                 </p>
@@ -119,12 +119,12 @@
 
                 <!-- hidden audio elements -->
                 <div>
-                    <audio id="song" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
+                    <audio id="audio-music" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
                 </div>
             </div>
         </section>
 
-        <section class="middle-section-container rainbow-background-green">
+        <section class="middle-section__container general__background__green">
             <div class="row">
                 <!--title-->
                 <div class="col-xs-12 general-font">
@@ -136,32 +136,33 @@
 
             <div class="row">
                 <div class="col-sm-2 hidden-xs">
-                    <button class="btn middle-section-navbutton rainbow-text-red" id="navbutton-left3" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-left hidden-xs"></i></button>
+                    <button class="btn middle-section__navbutton general__text__red" id="navbutton-left3" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-left hidden-xs"></i></button>
                 </div>
                 <div class="col-sm-2 col-xs-6">
-                     <img src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" class="middle-section-thumbnail rainbow-border-blue" id="thumbnail-1" onmousedown="changeMainImage(1,4,'music')" alt="Daydream Believer">
-                    <span class="middle-section-font rainbow-text-red">Daydream Believer</span>
+                     <span class="middle-section__new-release-text general__text__yellow">NEW!</span>
+                     <img src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" class="middle-section__thumbnail general__border__blue" id="thumbnail-1" onmousedown="changeMainImage(1,4,'music')" alt="Daydream Believer">
+                     <span class="middle-section__font general__text__red">Daydream Believer</span>
                 </div>
                 <div class="col-sm-2 col-xs-6 ">
-                    <img src="assets/images/album1.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-2" onmousedown="changeMainImage(2,4,'music')" alt="Clarksville">
-                    <span class="middle-section-font rainbow-text-red">Clarksville</span>
+                    <img src="assets/images/album1.jpg" class="middle-section__thumbnail general__border__red" id="thumbnail-2" onmousedown="changeMainImage(2,4,'music')" alt="Clarksville">
+                    <span class="middle-section__font general__text__red">Clarksville</span>
                 </div>
                 <div class="col-sm-2 col-xs-6">
-                    <img src="assets/images/album2.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-3" onmousedown="changeMainImage(3,4,'music')" alt="I'm A Believer">
-                    <span class="middle-section-font rainbow-text-red">I'm A Believer</span>
+                    <img src="assets/images/album2.jpg" class="middle-section__thumbnail general__border__red" id="thumbnail-3" onmousedown="changeMainImage(3,4,'music')" alt="I'm A Believer">
+                    <span class="middle-section__font general__text__red">I'm A Believer</span>
                 </div>
                 <div class="col-sm-2 col-xs-6">
-                    <img src="assets/images/album3.jpg" class="middle-section-thumbnail rainbow-border-red" id="thumbnail-4" onmousedown="changeMainImage(4,4,'music')" alt="Stepping Stone">
-                    <span class="middle-section-font rainbow-text-red">Stepping Stone</span>
+                    <img src="assets/images/album3.jpg" class="middle-section__thumbnail general__border__red" id="thumbnail-4" onmousedown="changeMainImage(4,4,'music')" alt="Stepping Stone">
+                    <span class="middle-section__font general__text__red">Stepping Stone</span>
                 </div>
                 <div class="col-sm-2 hidden-xs">
-                    <button class="btn middle-section-navbutton rainbow-text-red" id="navbutton-right3" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-right hidden-xs"></i></button>
+                    <button class="btn middle-section__navbutton general__text__red" id="navbutton-right3" onmousedown="changeMainImage(6,4,'music')"><i class="fa fa-arrow-right hidden-xs"></i></button>
                 </div>
             </div>
 
         </section>
 
-        <section class="bottom-section-container rainbow-background-blue">
+        <section class="bottom-section__container general__background__blue">
             <div class="row">
                 <!--tag line-->
                 <div class="col-xs-12 general-font">
@@ -169,8 +170,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="bottom-section-buttoncontainer col-xs-6 col-xs-offset-3">
-                    <a href="booking.html"><button type="button" class="btn btn-small rainbow-background-orange rainbow-border-black">Book Us!</button></a>
+                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                    <a href="booking.html"><button type="button" class="btn btn-small general__background__orange general__border__black">Book Us!</button></a>
                 </div>
             </div>
 
@@ -178,10 +179,10 @@
             <div class="row hidden-sm hidden-md hidden-lg">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -191,11 +192,11 @@
 
     <footer>
         <div class="container-fluid">
-            <div class="row container-footer rainbow-background-green">
+            <div class="row footer__container general__background__green">
                 <div class="col-xs-7 hidden-xs">
-                    <ul class="footer-text footer-links">
+                    <ul class="footer__text footer__links">
                         <li><i class="fa fa-copyright fa-sm"></i>
-                            <span class="footer-text">The Monkees</span></li>
+                            <span class="footer__text">The Monkees</span></li>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="band.html">Band</a></li>
                         <li><a href="">Music</a></li>
@@ -205,9 +206,9 @@
                 </div>
 
                 <div class="col-xs-12 visible-xs">
-                    <ul class="footer-text footer-links">
+                    <ul class="footer__text footer__links">
                         <li><i class="fa fa-copyright fa-sm"></i>
-                            <span class="footer-text">The Monkees</span></li>
+                            <span class="footer__text">The Monkees</span></li>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="band.html">Band</a></li>
                         <li><a href="">Music</a></li>
@@ -219,10 +220,10 @@
                 <!-- on sm screens show social media links in the footer -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook rainbow-text-red"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter rainbow-text-yellow"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-youtube rainbow-text-green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share rainbow-text-orange"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
+                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>

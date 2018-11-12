@@ -1,10 +1,10 @@
 var currentSelection = 1;
 
 function changeMainImage(newSelection, totalSelections, page) {
-    var headerElement = document.getElementById("main-header");
-    var headerXSElement = document.getElementById("main-header-xs");
-    var infoElement = document.getElementById("main-info");
-    var infoXSElement = document.getElementById("main-info-xs");
+    var headerElement = document.getElementById("top-section__textbox-header");
+    var headerXSElement = document.getElementById("top-section__textbox-header-xs");
+    var infoElement = document.getElementById("top-section__text");
+    var infoXSElement = document.getElementById("top-section__text-xs");
     var imageElement = document.getElementById("main-image-element");
     var imageElementXS = document.getElementById("main-image-element-xs");
     var navButtonRight=document.getElementById("navbutton-right1");
@@ -153,17 +153,17 @@ function changeMainImage(newSelection, totalSelections, page) {
         switch (newSelection) {
             case 1:
                 newHeader = "Tour Dates";
-                newInfo = "<strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre<br><br>Find more fan material <i class='fa fa-arrow-right rainbow-text-red'></i>";
+                newInfo = "<strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre<br><br>Find more fan material <i class='fa fa-arrow-right general__text__red'></i>";
                 newImage = "https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d";
                 break;
             case 2:
                 newHeader = "Follow us";
-                newInfo = "<a target='_blank' href='#'><i class='fa fa-facebook-square rainbow-text-red'></i></a> Facebook<br><a target='_blank' href='#'><i class='fa fa-twitter-square rainbow-text-yellow'></i></a> Twitter<br><a target='_blank' href='#'><i class='fa fa-youtube-square rainbow-text-green'></i></a> YouTube<br><a target='_blank' href='#'><i class='fa fa-share-square rainbow-text-orange'></i></a> Share<br><br><i class='fa fa-arrow-left rainbow-text-red'></i> Find more fan material <i class='fa fa-arrow-right rainbow-text-red'></i>";
+                newInfo = "<a target='_blank' href='#'><i class='fa fa-facebook-square general__text__red'></i></a> Facebook<br><a target='_blank' href='#'><i class='fa fa-twitter-square general__text__yellow'></i></a> Twitter<br><a target='_blank' href='#'><i class='fa fa-youtube-square general__text__green'></i></a> YouTube<br><a target='_blank' href='#'><i class='fa fa-share-square general__text__orange'></i></a> Share<br><br><i class='fa fa-arrow-left general__text__red'></i> Find more fan material <i class='fa fa-arrow-right general__text__red'></i>";
                 newImage = "assets/images/band-small.jpg";
                 break;
             case 3:
                 newHeader = "Download";
-                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><a target='_blank' href='#'><span class='glyphicon glyphicon-picture rainbow-text-yellow'></span></a> Wallpaper<br><a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-film rainbow-text-red'></span></a> Video<br><a target='_blank' href='#'><span class='glyphicon glyphicon-music rainbow-text-green'></span></a> Music<br><br><i class='fa fa-arrow-left rainbow-text-red'></i> Find more fan material";
+                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><a target='_blank' href='#'><span class='glyphicon glyphicon-picture general__text__yellow'></span></a> Wallpaper<br><a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-film general__text__red'></span></a> Video<br><a target='_blank' href='#'><span class='glyphicon glyphicon-music general__text__green'></span></a> Music<br><br><i class='fa fa-arrow-left general__text__red'></i> Find more fan material";
                 newImage = "assets/images/band-small.jpg";
                 break;
         }
@@ -180,8 +180,8 @@ function changeMainImage(newSelection, totalSelections, page) {
 
     //change the border of the selected element to blue - change the old to red
     if (page != "booking" && page!= "fans") {
-        document.getElementById("thumbnail-" + currentSelection).classList = "middle-section-thumbnail rainbow-border-red";
-        document.getElementById("thumbnail-" + newSelection).classList = "middle-section-thumbnail rainbow-border-blue";
+        document.getElementById("thumbnail-" + currentSelection).classList = "middle-section__thumbnail general__border__red";
+        document.getElementById("thumbnail-" + newSelection).classList = "middle-section__thumbnail general__border__blue";
     }
 
     //on the music page stop the current playing music when a different song is selected
@@ -200,8 +200,8 @@ function changeMainImage(newSelection, totalSelections, page) {
 var playing = 0;
 
 function playPause(track, page) {
-    var playButton = document.getElementById("playButton");
-    var playButtonXS = document.getElementById("playButton-xs");
+    var playButton = document.getElementById("audio-play-pause-button");
+    var playButtonXS = document.getElementById("audio-play-pause-button-xs");
 
     var songElement = document.getElementById("song");
     var i = 0;
@@ -255,15 +255,15 @@ function playPause(track, page) {
 
         if (page == "music") {
             //change the playbutton
-            playButton.classList = "fa fa-stop-circle rainbow-text-red";
-            playButtonXS.classList = "fa fa-stop-circle rainbow-text-red";
+            playButton.classList = "fa fa-stop-circle general__text__red";
+            playButtonXS.classList = "fa fa-stop-circle general__text__red";
         }
         else if (page == "index") {
-            document.getElementById("playButton" + track).classList = "fa fa-stop-circle rainbow-text-red";
+            document.getElementById("audio-play-pause-button" + track).classList = "fa fa-stop-circle general__text__red";
             //cycle through the 4 play buttons and change them to play
             for (i = 1; i <= 4; i++) {
                 if (i != track) {
-                    document.getElementById("playButton" + i).classList = "fa fa-play-circle rainbow-text-red";
+                    document.getElementById("audio-play-pause-button" + i).classList = "fa fa-play-circle general__text__red";
                 }
             }
         }
@@ -275,11 +275,11 @@ function playPause(track, page) {
         playing = 0;
 
         if (page == "music") {
-            playButton.classList = "fa fa-play-circle rainbow-text-red";
-            playButtonXS.classList = "fa fa-play-circle rainbow-text-red";
+            playButton.classList = "fa fa-play-circle general__text__red";
+            playButtonXS.classList = "fa fa-play-circle general__text__red";
         }
         else if (page == "index") {
-            document.getElementById("playButton" + track).classList = "fa fa-play-circle rainbow-text-red";
+            document.getElementById("audio-play-pause-button" + track).classList = "fa fa-play-circle general__text__red";
         }
     }
 }
