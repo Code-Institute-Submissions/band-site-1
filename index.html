@@ -52,21 +52,19 @@
     </nav>
 
     <div class="container-fluid">
+        <!--top section - video, music and booking buttons -->
         <section class="top-section">
             <div class="row">
                 <div class="col-xs-12 top-section__container  hidden-xs">
                     <!-- video background - hide on xs screen - replace with image -->
                     <div>
-                        <video class="general__border__blue" controls plays-inline poster="assets/images/band-colour.jpg">
+                        <video class="general__border__blue" id="video-element" controls plays-inline poster="assets/images/band-colour.jpg">
                         <source src="assets/videos/daydream.webm" type="video/webm">
+                        Sorry, your browser doesn't support embedded videos.
                     </video>
                         <a href="/booking.html"><img src="assets/images/button-book.png" class="top-section__booking-button" alt="blue flower"></img></a>
                         <a href="/music.html"><img src="assets/images/button-music.png" class="top-section__music-button" alt="blue flower"></img></a>
-
                     </div>
-                    <!-- create custom video control? -->
-
-
                 </div>
                 <div class="col-xs-12 nopadding visible-xs text-center">
                     <img class="top-section__backdrop-xs general__border__blue" src="assets/images/band-small.jpg" alt="The Monkees">
@@ -74,7 +72,7 @@
             </div>
         </section>
 
-        <!--tag line and call to action-->
+        <!--middle section - tag line and call to action-->
 
         <section class="middle-section__container general__background__red">
             <div class="row">
@@ -85,16 +83,22 @@
 
             <!-- call to action buttons -->
             <div class="row">
-                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                <div class="bottom-section__buttons-container col-sm-6">
                     <a href="booking.html"><button type="button" class="btn btn-small general__background__orange general__border__black">Book Us</button></a>
                 </div>
-                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                <div class="bottom-section__buttons-container col-sm-6">
                     <a href="music.html"><button type="button" class="btn btn-small general__background__green general__border__black">New Releases</button></a>
                 </div>
             </div>
-
-            <!--- social media links container on xs screens --->
-            <div class="row hidden-sm hidden-md hidden-lg">
+            
+            <div class="row">
+                <div class="bottom-section__buttons-container col-sm-12">
+                    <a href="fans.html"><button type="button" class="btn btn-small general__background__blue general__border__black">Tour Dates</button></a>
+                </div>
+            </div>
+            
+            <!--- social media links container only visible xs screens --->
+            <div class="row visible-xs">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
@@ -106,7 +110,7 @@
             </div>
         </section>
 
-        <!-- taster music section -->
+        <!-- bottom section taster music -->
         <section class="bottom-section__container general__background__green">
             <div class="row">
                 <div class="col-xs-12">
@@ -118,7 +122,8 @@
                     <p><span class="glyphicon glyphicon-heart general__text__orange"></span></p>
                 </div>
             </div>
-            <!-- remove album artwork on xs screens -->
+            
+            <!-- album artwork (not visible on xs screens) -->
             <div class="row bottom-section__thumbnail-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
                     <a href="music.html">
@@ -228,7 +233,7 @@
                     </ul>
                 </div>
 
-                <!-- on sm screens show social media links in the footer -->
+                <!-- on tablet screens show social media links in the footer -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>

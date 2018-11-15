@@ -47,11 +47,11 @@ This website is designed as a static front-end only website to achieve the above
 ### Style
 Research shows that the Monkees are a 1960's rock/pop band whose brand style is colourful and fun.<br>
 Rainbow colouring based on the band's hit video Daydream Believer (featured on the site) has been used throughout the site styling to capture the essence of the Monkees' music and personal style.
+This coloured theme is coupled with black and white imagery to reflect the band's retro style.
 
 ### How does it work?
 The site is styled using **Bootstrap 3.3.7**.<br>
 **Javascript** has been used to provide some minor animation and interaction for the site.
-
 
 ## Features
 
@@ -65,15 +65,13 @@ The site is styled using **Bootstrap 3.3.7**.<br>
 - Accessible music clips with song lyrics
 
 ### Features Left To Implement
-- Date selection function on booking page
-- Downloadable content (e.g. wallpapers, music and band images)
+- More downloadable content (e.g. wallpapers, music and band images)
 
 ### Potential Features
 - Band blog page
 - Ticket booking for tour dates
 
 ## Tech Information
-
 - Languages used:
     - HTML
     - Javascript
@@ -81,7 +79,7 @@ The site is styled using **Bootstrap 3.3.7**.<br>
 
 ## Testing
 Code was written through the Cloud9 IDE.
-The website has been tested on IE, Google Chrome and Safari browsers.
+The website has been tested on IE, Google Chrome, Safari and Opera browsers.
 
 ## Initial Wireframes
 Wireframes were designed using MarvelApp and can be located here:
@@ -91,29 +89,33 @@ https://marvelapp.com/project/3472661/
 
 ### Media
 Video, sample band images and music provided by the band.<br>
-Video sample was compressed due to large size to speed loading times of pages.
+Video sample was compressed due to large size to speed loading times of pages.<br>
 Additional images:<br>
 Wedding, Concert, Christmas, Corporate event - PxHere https://c.pxhere.com<br>
 Monkees Album cover - https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg<br>
-Flowers Backdrop (modified) - Pixabay - https://pixabay.com/en/flowers-ornament-decoration-455591/ 
-Monkees performing - Flickr - https://www.flickr.com/photos/56832361@N00/16689772341/
+Flowers Backdrop (modified) - Pixabay - https://pixabay.com/en/flowers-ornament-decoration-455591/<br>
+Monkees performing - Flickr - https://www.flickr.com/photos/56832361@N00/16689772341/<br>
+Michael Nesmith winking - Flickr - https://www.flickr.com/photos/56832361@N00/16501499360<br>
 
 ### Fonts/Icons
 Google Fonts - [fonts.google.com](fonts.google.com)<br>
-Font Awesome - https://fontawesome.com/v4.7.0/icons/
+Font Awesome - https://fontawesome.com/v4.7.0/icons/<br>
 
 ### Information
-Wikipedia - History of the band and band members - https://en.wikipedia.org/wiki/The_Monkees
-Ticketmaster - Monkees tour dates - https://www.ticketmaster.com/The-Monkees-tickets/artist/735678
+Wikipedia - History of the band and band members - https://en.wikipedia.org/wiki/The_Monkees<br>
+Ticketmaster - Monkees tour dates - https://www.ticketmaster.com/The-Monkees-tickets/artist/735678<br>
 
 ### Animation
-Menu hover effects - Hover CSS http://ianlunn.github.io/Hover/
+Menu hover effects - Hover CSS http://ianlunn.github.io/Hover/<br>
 
 ### Framework
-Bootstrap v3.3.7 - https://getbootstrap.com/
+Bootstrap v3.3.7 - https://getbootstrap.com/<br>
 
 ### Navbar design
-Based on CodeInstitute Whiskey Drop Webpage - https://codeinstitute.net/
+Based on CodeInstitute Whiskey Drop Webpage - https://codeinstitute.net/<br>
+
+### Calendar Date picker
+Bootstrap-datepicker - https://bootstrap-datepicker.readthedocs.io/en/latest/ <br>
 
 
 

@@ -12,12 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
-
-
 </head>
 
 <body>
@@ -58,10 +52,10 @@
     </nav>
 
     <div class="container-fluid">
+        <!-- top section - picture and information about fan material -->
         <section class="top-section">
 
-            <!-- visible on all screens above xs-->
-
+            <!-- hide on xs screens and readjust display of picture and fan material -->
             <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
                     <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')"><i class="fa fa-arrow-circle-left general__text__red general__background__blue"></i></button>
@@ -70,10 +64,23 @@
                     <img class="top-section__image general__border__blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element" alt="Main Image">
                 </div>
                 <div class="col-sm-5 top-section__textbox-container general__border__blue">
-                    <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
-                    <div class="top-section__textbox-scrollbar-container">
-                        <h1 class="general-font" id="top-section__textbox-header">Tour Dates</h1>
-                        <p id="top-section__text"><strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre<br><br>Find more fan material <i class="fa fa-arrow-right general__text__red"></i></p>
+                    <div class="row">
+                        <!-- additional navigation arrows within text box to highlight further information available -->
+                        <div class="col-xs-2">
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')"><i class="fa fa-arrow-left general__text__red"></i></button>
+                        </div>
+                        <div class="col-xs-8 text-center">
+                            <h1 class="general-font" id="top-section__textbox-header">Tour Dates</h1>
+                        </div>
+                        <div class="col-xs-2 ">
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-right3" onmousedown="changeMainImage(6,3,'fans')"><i class="fa fa-arrow-right general__text__red"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
+                        <div class="col-xs-12 top-section__textbox-scrollbar-container text-center">
+                            <p id="top-section__text"><strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-1">
@@ -81,18 +88,10 @@
                 </div>
             </div>
 
-
-            <!-- only for xs screen size -->
+            <!-- restructured fan material and picture layout only for xs screen size -->
             <div class="row top-section__container visible-xs">
                 <div class="col-xs-12 text-center top-section__image-container">
                     <img class="top-section__image general__border__blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element-xs" alt="Main Image">
-                </div>
-
-                <!-- empty spacer row -->
-                <div class="row">
-                    <div class="col-xs-12 top-section-spacer">
-                        <p></p>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 top-section__textbox-container general__border__blue">
@@ -104,13 +103,14 @@
                             <div class="col-xs-8 text-center">
                                 <h1 class="general-font" id="top-section__textbox-header-xs">Tour Dates</h1>
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-2 ">
                                 <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,3,'fans')"><i class="fa fa-arrow-right general__text__red"></i></button>
                             </div>
                         </div>
                         <div class="row ">
-                            <div class="col-sm-12 top-section__textbox">
+                            <div class="col-sm-12 top-section__textbox text-center">
                                 <p id="top-section__text-xs">5 March 2019 Red Bank, NJ - Count Basie Centre for the Arts<br>8 March 2019 Huntington, NY - The Paramount<br>9 March 2019 New York, NY Beacon Theatre</p>
+                                <p id="top-section__text-xs" class="hidden-xs">Find more fan material <i class='fa fa-arrow-right general__text__red'></i></p>
                             </div>
                         </div>
                     </div>
@@ -118,14 +118,15 @@
             </div>
         </section>
 
-        <section class="middle-section__container general__background__blue">
+         <!--middle section - tag line and call to action-->
+       <section class="middle-section__container general__background__blue">
             <div class="row">
                 <!--title-->
                 <div class="col-xs-12 general-font">
                     <p>Love the Monkees?<br>Tell someone!</p>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6 col-xs-offset-3">
+                    <div class="col-xs-12">
                         <a href="mailto:?Subject=The Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20 https://shilldon.github.io/band-site/">
                             <button type="button" class="btn btn-small general__background__red general__border__black">Email a friend</button>
                         </a>
@@ -135,6 +136,7 @@
             </div>
         </section>
 
+        <!--bottom section - further call to action-->
         <section class="bottom-section__container general__background__orange">
             <div class="row">
                 <!--tag line-->
@@ -143,9 +145,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                <div class="bottom-section__buttons-container col-xs-12">
                     <button type="button" class="btn btn-small general__background__green general__border__black" data-toggle='modal' data-target='#feedbackForm'>Contact</button>
                 </div>
+            </div>
+            <div class="row">
+                <p><span class="glyphicon glyphicon-heart general__text__red hidden-xs" style="padding-top:15px; font-size:4em"></span></p>
             </div>
 
             <!--- social links container on xs --->
@@ -203,7 +208,7 @@
         </div>
     </footer>
 
-    <!-- booking form -->
+    <!-- contact form -->
     <div class="modal fade" id="feedbackForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog contact-form">
             <div class="modal-content general__border__blue general__text__blue contact-form__backdrop">
@@ -215,7 +220,6 @@
                     </div>
                 </header>
                 <div class="modal-body ">
-
                     <div class="container-fluid">
                         <form>
                             <div class="row">
@@ -240,14 +244,14 @@
                                     <textarea class="form-control" id="event-details" placeholder="Did you see us perform live? What's your first memory of listening to the Monkees? What's your favourite song?" required></textarea>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-xs-5 text-center">
-                                        <button type="submit" style="z-index:3" class="btn btn-small contact-form__button general__background__green general__border__black">Tell us</button>
-                                    </div>
-                                    <div class="col-xs-5 col-xs-offset-2 text-center">
-                                        <button type="submit" style="z-index:3" data-dismiss="modal" class="btn btn-small contact-form__button general__background__red general__border__black">Cancel</button>
-                                    </div>
+                            <div class="row ">
+                                <div class="col-sm-5 col-sm-offset-1 text-center ">
+                                    <button type="submit " style="z-index:3 " class="btn btn-small contact-form__button general__background__green general__border__black ">Tell Us</button>
                                 </div>
+                                <div class="col-sm-5 text-center ">
+                                    <button type="submit " style="z-index:3 " data-dismiss="modal " class="btn btn-small contact-form__button general__background__red general__border__black ">Cancel</button>
+                                </div>
+                            </div>
                             </div>
                         </form>
 
@@ -256,6 +260,11 @@
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
 
 </body>
 

@@ -52,10 +52,10 @@
     </nav>
 
     <div class="container-fluid">
+        <!-- top section - band/members pictures and information -->
         <section class="top-section">
             
-            <!-- visible on all screens above xs-->
-            
+            <!-- hide on xs screens and readjust display of picture and information -->
             <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
                     <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')"><i class="fa fa-arrow-circle-left general__text__red general__background__yellow"></i></button>
@@ -77,7 +77,7 @@
                 </div>
             </div>
 
-            <!-- only for xs screen size -->
+            <!-- restructured information and picture layout only for xs screen size -->
             <div class="row top-section__container visible-xs">
                 <div class="col-xs-12 text-center top-section__image-container">
                     <img class="top-section__image general__border__yellow" src="assets/images/band2.jpg" id="main-image-element-xs" onmousedown="changeMainImage(1)" alt="The Band">
@@ -108,18 +108,16 @@
             </div>
 
         </section>
-
+        
+        <!-- middle section - contains band/member images to select and display in top section -->
         <section class="middle-section__container general__background__yellow">
             <div class="row">
-                <!--title-->
                 <div class="col-xs-12 general-font">
                     <p>The Monkees:<br>The legends and their history</p>
                 </div>
             </div>
 
-            <!-- selectable band icons - displays icon and info in top-section -->
-
-            <div class="row">
+           <div class="row">
                 <div class="col-sm-1 hidden-xs">
                     <button class="btn middle-section__navbutton general__text__red" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')"><i class="fa fa-arrow-left hidden-xs"></i></button>
                 </div>
@@ -149,24 +147,26 @@
             </div>
 
         </section>
+        
+        <!--bottom section - tag line and call to action-->
+        
         <section class="bottom-section__container general__background__red">
             <div class="row" >
-                <!--tag line-->
                 <div class="col-xs-12 general-font">
                     <p>Bring the 60s home!<br>Enjoy classic hits live</p>
                 </div>
             </div>
             <div class="row">
-                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                <div class="bottom-section__buttons-container col-sm-6">
                     <a href="booking.html"><button type="button" class="btn btn-small general__background__orange general__border__black">Book Us</button></a>
                 </div>
-                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                <div class="bottom-section__buttons-container col-sm-6">
                     <a href="music.html"><button type="button" class="btn btn-small general__background__green general__border__black">Listen Now</button></a>
                 </div>
             </div>
 
             <!--- social links container on xs --->
-            <div class="row hidden-sm hidden-md hidden-lg">
+            <div class="row visible-xs">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>

@@ -129,7 +129,7 @@ function changeMainImage(newSelection, totalSelections, page) {
         switch (newSelection) {
             case 1:
                 newHeader = "Events";
-                newInfo = "We are available to perform at a variety of events including weddings, corporate events and Christmas parties.<br>Click right for more information, or contact us now for a quote.";
+                newInfo = "We are available to perform at a variety of events including weddings, corporate events and Christmas parties.<br>Contact us now for a quote.";
                 newImage = "assets/images/events.jpg";
                 break;
             case 2:
@@ -153,18 +153,18 @@ function changeMainImage(newSelection, totalSelections, page) {
         switch (newSelection) {
             case 1:
                 newHeader = "Tour Dates";
-                newInfo = "<strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre<br><br>Find more fan material <i class='fa fa-arrow-right general__text__red'></i>";
+                newInfo = "<strong>5 March 2019</strong> Red Bank, NJ - Count Basie Centre for the Arts<br><strong>8 March 2019</strong> Huntington, NY - The Paramount<br><strong>9 March 2019</strong> New York, NY Beacon Theatre";
                 newImage = "https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d";
                 break;
             case 2:
                 newHeader = "Follow us";
-                newInfo = "<a target='_blank' href='#'><i class='fa fa-facebook-square general__text__red'></i></a> Facebook<br><a target='_blank' href='#'><i class='fa fa-twitter-square general__text__yellow'></i></a> Twitter<br><a target='_blank' href='#'><i class='fa fa-youtube-square general__text__green'></i></a> YouTube<br><a target='_blank' href='#'><i class='fa fa-share-square general__text__orange'></i></a> Share<br><br><i class='fa fa-arrow-left general__text__red'></i> Find more fan material <i class='fa fa-arrow-right general__text__red'></i>";
-                newImage = "assets/images/band-small.jpg";
+                newInfo = "<a target='_blank' href='#'><i class='fa fa-facebook-square general__text__red'></i></a> Facebook<br><a target='_blank' href='#'><i class='fa fa-twitter-square general__text__yellow'></i></a> Twitter<br><a target='_blank' href='#'><i class='fa fa-youtube-square general__text__green'></i></a> YouTube<br><a target='_blank' href='#'><i class='fa fa-share-square general__text__orange'></i></a> Share";
+                newImage = "assets/images/follow.jpg";
                 break;
             case 3:
                 newHeader = "Download";
-                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><a target='_blank' href='#'><span class='glyphicon glyphicon-picture general__text__yellow'></span></a> Wallpaper<br><a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-film general__text__red'></span></a> Video<br><a target='_blank' href='#'><span class='glyphicon glyphicon-music general__text__green'></span></a> Music<br><br><i class='fa fa-arrow-left general__text__red'></i> Find more fan material";
-                newImage = "assets/images/band-small.jpg";
+                newInfo = "Download 'The Monkees' wallpaper, artwork, videos and more:<br><a target='_blank' href='#'><span class='glyphicon glyphicon-picture general__text__yellow'></span></a> Wallpaper<br><a target='_blank' href='assets/videos/daydream.webm'><span class='glyphicon glyphicon-film general__text__red'></span></a> Video<br><a target='_blank' href='#'><span class='glyphicon glyphicon-music general__text__green'></span></a> Music";
+                newImage = "https://c.pxhere.com/photos/f4/17/peter_tork_micky_dolenz_davy_jones_michael_nesmith_the_monkees_band_rock_pop-1097283.jpg!d";
                 break;
         }
     }
@@ -202,8 +202,7 @@ var playing = 0;
 function playPause(track, page) {
     var playButton = document.getElementById("audio-play-pause-button");
     var playButtonXS = document.getElementById("audio-play-pause-button-xs");
-
-    var songElement = document.getElementById("song");
+    var songElement = document.getElementById("audio-music");
     var i = 0;
     
     /* play button passes 0 to playpause so set playing track to current selection */
@@ -231,8 +230,8 @@ function playPause(track, page) {
             }
         }
         else if (page == "index") {
-            //stop the video playing, if it is 
-            document.getElementById('video-background').pause();
+            //stop the video playing 
+            document.getElementById('video-element').pause();
             switch (track) {
                 case 1:
                     song = "assets/audio/clarksville.mp3";
@@ -249,6 +248,7 @@ function playPause(track, page) {
             }
         }
         
+        //set the appropriate track as the source of the audio element
         currentSelection=track;
         songElement.src = song;
         songElement.play();
@@ -283,3 +283,4 @@ function playPause(track, page) {
         }
     }
 }
+

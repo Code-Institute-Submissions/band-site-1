@@ -52,10 +52,10 @@
     </nav>
 
     <div class="container-fluid">
+        <!-- top section - album pictures, song lyrics and play button -->
         <section class="top-section">
 
-            <!-- visible on all screens above xs-->
-
+            <!-- hide on xs screens and readjust display of picture and song lyics -->
             <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
                     <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'music')"><i class="fa fa-arrow-circle-left general__text__red general__background__green"></i></button>
@@ -73,6 +73,8 @@
                             I want to spend<br>But how much, baby, do we really need?<br>Cheer up sleepy Jean<br>Oh, what can it mean to a<br>Daydream believer and a<br>Homecoming queen?…"
                         </p>
                     </div>
+                    
+                    <!-- play button for selected track -->
                     <div class="general__floating-button">
                         <button class="general__audio-play-pause-button" onclick="playPause(0,'music')"><i id="audio-play-pause-button" class="fa fa-play-circle general__text__red"></i></button>
                     </div>  
@@ -83,7 +85,7 @@
             </div>
 
 
-            <!-- only for xs screen size -->
+            <!-- restructured song lyrics and picture layout only for xs screen size -->
             <div class="row top-section__container visible-xs">
                 <div class="col-xs-12 text-center top-section__image-container">
                     <img class="top-section__image general__border__green" src="https://c1.staticflickr.com/3/2940/14584768909_a011486ce1_b.jpg" id="main-image-element-xs" alt="Daydream Believer">
@@ -124,6 +126,7 @@
             </div>
         </section>
 
+        <!-- middle section - contains album images to select, display lyrics in top section and change music track to play-->
         <section class="middle-section__container general__background__green">
             <div class="row">
                 <!--title-->
@@ -131,8 +134,6 @@
                     <p>All the sounds of the 60s<br>Songs:</p>
                 </div>
             </div>
-
-            <!-- selectable music icons - displays icon and info in top-section -->
 
             <div class="row">
                 <div class="col-sm-2 hidden-xs">
@@ -162,6 +163,7 @@
 
         </section>
 
+        <!--bottom section - tag line and call to action-->
         <section class="bottom-section__container general__background__blue">
             <div class="row">
                 <!--tag line-->
@@ -170,7 +172,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                <div class="bottom-section__buttons-container col-xs-12">
                     <a href="booking.html"><button type="button" class="btn btn-small general__background__orange general__border__black">Book Us!</button></a>
                 </div>
             </div>

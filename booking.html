@@ -13,10 +13,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--date picker css resources-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css">
+
+    <!-- NB scripts loaded first on booking page to enable functionality of datepicker-->
+    <!-- bootstrap and jquery script resources -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- date picker script resource -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- custom script -->
     <script type="text/javascript" src="assets/js/script.js"></script>
 
+    <!-- date picker script -->
+    <script>
+        $(document).ready(function() {
+            $.fn.datepicker.defaults.format = "dd/mm/yyyy";
+            $.fn.datepicker.defaults.autoclose = "true";
+            $('#datepicker').datepicker({
+                startDate: '+1d'
+            });
+        });
+    </script>
 
 </head>
 
@@ -58,10 +79,10 @@
     </nav>
 
     <div class="container-fluid">
+        <!-- top section - picture and information about events -->
         <section class="top-section">
 
-            <!-- visible on all screens above xs-->
-
+            <!-- hide on xs screens and readjust display of picture and event information -->
             <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
                     <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,4,'booking')"><i class="fa fa-arrow-circle-left general__text__red general__background__orange"></i></button>
@@ -70,11 +91,24 @@
                     <img class="top-section__image general__border__orange" src="assets/images/events.jpg" id="main-image-element" alt="Main Booking Image">
                 </div>
                 <div class="col-sm-5 top-section__textbox-container general__border__orange">
+                    <div class="row">
+                        <!-- additional navigation arrows within text box to highlight further information available -->
+                        <div class="col-xs-2">
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,4,'booking')"><i class="fa fa-arrow-left general__text__red"></i></button>
+                        </div>
+                        <div class="col-xs-8 text-center">
+                            <h1 class="general-font" id="top-section__textbox-header">Events</h1>
+                        </div>
+                        <div class="col-xs-2 ">
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-right3" onmousedown="changeMainImage(6,4,'booking')"><i class="fa fa-arrow-right general__text__red"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">                    
                     <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
                     <div class="top-section__textbox-scrollbar-container">
-                        <h1 class="general-font" id="top-section__textbox-header">Events</h1>
-                        <p id="top-section__text">We are available to perform at a variety of events including weddings, corporate events and Christmas parties.<br>Click right for more information, or contact us now for a quote.
+                        <p id="top-section__text">We are available to perform at a variety of events including weddings, corporate events and Christmas parties.<br>Contact us now for a quote.
                         </p>
+                    </div>
                     </div>
                 </div>
                 <div class="col-xs-1">
@@ -82,18 +116,10 @@
                 </div>
             </div>
 
-
-            <!-- only for xs screen size -->
+            <!-- restructured event information and picture layout only for xs screen size -->
             <div class="row top-section__container visible-xs">
                 <div class="col-xs-12 text-center top-section__image-container">
                     <img class="top-section__image general__border__orange" src="assets/images/events.jpg" id="main-image-element-xs" alt="Booking Main Image">
-                </div>
-
-                <!-- empty spacer row -->
-                <div class="row">
-                    <div class="col-xs-12 top-section-spacer">
-                        <p></p>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 top-section__textbox-container general__border__orange">
@@ -103,7 +129,7 @@
                             </div>
 
                             <div class="col-xs-8 text-center">
-                                <h1 class="general-font" id="top-section__textbox-header-xs">Weddings</h1>
+                                <h1 class="general-font" id="top-section__textbox-header-xs">Events</h1>
                             </div>
                             <div class="col-xs-2">
                                 <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,4,'booking')"><i class="fa fa-arrow-right general__text__red"></i></button>
@@ -111,7 +137,7 @@
                         </div>
                         <div class="row ">
                             <div class="col-sm-12 top-section__textbox">
-                                <p id="top-section__text-xs">Give your wedding that 60s vibe. Get your guests out on the dance floor rocking to our greatest hits! 'I'm A Believer', 'Stepping Stone' and more.<br>Contact us now for a quote.</p>
+                                <p id="top-section__text-xs">We are available to perform at a variety of events including weddings, corporate events and Christmas parties.<br>Click right for more information, or contact us now for a quote.</p>
                             </div>
                         </div>
                     </div>
@@ -119,6 +145,7 @@
             </div>
         </section>
 
+        <!--middle section - tag line and call to action-->
         <section class="middle-section__container general__background__orange">
             <div class="row">
                 <!--title-->
@@ -126,14 +153,15 @@
                     <p>Enjoy the sounds of the 60s - Live!<br>Book Now:</p>
                 </div>
                 <div class="row">
-                <div class="col-xs-6 col-xs-offset-3">
-                    <button type="button" class="btn btn-small general__background__red general__border__black" data-toggle='modal' data-target='#bookingForm'>Contact</button>
-                    <p class="general-font">...or call us on 01234 567891</p>
-                </div>
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-small general__background__red general__border__black" data-toggle='modal' data-target='#bookingForm'>Contact</button>
+                        <p class="general-font">...or call us on 01234 567891</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!--bottom section - further call to action-->
         <section class="bottom-section__container general__background__yellow">
             <div class="row">
                 <!--tag line-->
@@ -142,9 +170,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="bottom-section__buttons-container col-xs-6 col-xs-offset-3">
+                <div class="bottom-section__buttons-container col-xs-12">
                     <a href="music.html"><button type="button" class="btn btn-small general__background__green general__border__black">Listen!</button></a>
                 </div>
+            </div>
+            <div class="row">
+                <p><span class="glyphicon glyphicon-headphones general__text__red hidden-xs" style="padding-top:15px; font-size:4em"></span></p>
             </div>
 
             <!--- social links container on xs --->
@@ -158,7 +189,6 @@
                     </ul>
                 </div>
             </div>
-
         </section>
     </div>
 
@@ -205,64 +235,60 @@
     <!-- booking form -->
     <div class="modal fade" id="bookingForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog contact-form">
-            <div class="modal-content general__border__orange general__text__orange contact-form__backdrop">
+            <div class="modal-content general__border__orange general__text__orange contact-form__backdrop" style="text-shadow: 2px 2px 10px #000000;">
                 <div class="contact-form__opaque-overlay">&nbsp;</div>
                 <header class="row">
                     <div class="col-xs-12 modal-header general-font">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" style="opacity:1" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title text-center" style="font-size:1.15em">Book your event</h4>
                     </div>
                 </header>
                 <div class="modal-body ">
 
-                    <div class="container-fluid text-left" style="text-shadow: 2px 2px 10px #000000; ">
+                    <div class="container-fluid text-left">
                         <form>
-                            <div class="row">
-                                <div class="col-sm-4 col-xs-12 form-group general__text__orange">
-                                    <label for="first-name">First Name</label>
-                                    <input type="text" class="form-control" id="first-name" placeholder="First Name" required>
+                            <div class=" row ">
+                                <div class="col-sm-4 col-xs-12 form-group general__text__orange ">
+                                    <label for="first-name ">First Name</label>
+                                    <input type="text " class="form-control " id="first-name " placeholder="First Name " required>
                                 </div>
-                                <div class="col-sm-8 col-xs-12 form-group general__text__orange">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-xs-12 general__text__orange">
-                                    <label for="email">Email address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                <div class="col-sm-8 col-xs-12 form-group general__text__orange ">
+                                    <label for="last-name ">Last Name</label>
+                                    <input type="text " class="form-control " id="last-name " placeholder="Last Name " required>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="form-group col-xs-12 general__text__orange">
-                                    <label for="event-details">Details of your event</label>
-                                    <textarea class="form-control" id="event-details" placeholder="Wedding, Christmas Party, Corporate Hospitality..." required></textarea>
+                            <div class="row ">
+                                <div class="form-group col-xs-12 general__text__orange ">
+                                    <label for="email ">Email address</label>
+                                    <input type="email " class="form-control " id="email " placeholder="Email " required>
                                 </div>
-
-                                <div class="row">
-                                    <div class="form-group col-xs-11 general__text__orange">
-                                        <label for="event-details">Date of your event</label>
-                                        <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" required/>
-                                            <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                            <div class="row ">
+                                <div class="form-group col-xs-12 general__text__orange ">
+                                    <label for="event-details ">Details of your event</label>
+                                    <textarea class="form-control " id="event-details " placeholder="Wedding, Christmas Party, Corporate Hospitality... " required></textarea>
+                                </div>
+                            </div>
+                            <!--bootstrap datepicker -->
+                            <div class="row ">
+                                <div class='col-sm-6'>
+                                    <div class="form-group ">
+                                        <label for="datepicker ">Date of your event</label>
+                                        <div class='input-group date' id='datepicker'>
+                                            <input type='text' class="form-control " />
+                                            <span class="input-group-addon "><span class="glyphicon glyphicon-calendar " style="text-shadow:none "></span>
                                             </span>
                                         </div>
                                     </div>
-                                    <script type="text/javascript">
-                                        $(function() {
-                                            $('#datetimepicker1').datetimepicker();
-                                        });
-                                    </script>
-                                </div>
 
-                                <div class="row">
-                                    <div class="col-xs-5 text-center" >
-                                        <button type="submit" style="z-index:3" class="btn btn-small contact-form__button general__background__green general__border__black">Place Booking</button>
-                                    </div>
-                                    <div class="col-xs-5 col-xs-offset-2 text-center">
-                                        <button type="submit" style="z-index:3" data-dismiss="modal" class="btn btn-small contact-form__button general__background__red general__border__black">Cancel Booking</button>
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-sm-5 col-sm-offset-1 text-center ">
+                                    <button type="submit " style="z-index:3 " class="btn btn-small contact-form__button general__background__green general__border__black ">Book</button>
+                                </div>
+                                <div class="col-sm-5 text-center ">
+                                    <button type="submit " style="z-index:3 " data-dismiss="modal " class="btn btn-small contact-form__button general__background__red general__border__black ">Cancel</button>
                                 </div>
                             </div>
                         </form>
@@ -272,6 +298,7 @@
             </div>
         </div>
     </div>
+
 
 </body>
 
