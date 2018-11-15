@@ -16,19 +16,19 @@
 
 <body>
 
-    <!--Navbar visible on all above xs screen -->
+    <!--Navbar visible on all above xs screen - else, on smaller screens nav bar is too cluttered-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand " href="index.html">
-                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"></img> 
+                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"> 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only ">Toggle navigation</span>
                     <i class="fa fa-navicon"></i>
                 </button>
             </div>
-            <!-- collapse nav bar on xs screen and hide use burger button -->
+            <!-- collapse nav bar on xs screen and hide use burger button - else, on smaller screens nav bar is too cluttered -->
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-main general-font">
                     <li><a href="" class="hvr-rectangle-out navbar__active general__text__red" id="navbar__home-tab">Home</a></li>
@@ -39,12 +39,13 @@
                 </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
+                <!--improves layout and access to social media links on tablet and mobile screens -->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -56,18 +57,19 @@
         <section class="top-section">
             <div class="row">
                 <div class="col-xs-12 top-section__container  hidden-xs">
-                    <!-- video background - hide on xs screen - replace with image -->
+                    <!-- video background - hide on xs screen - likely xs screen is mobile/tablet and data charges will apply to large downloads -->
+                    <!-- video can be accessed from fans page -->
                     <div>
-                        <video class="general__border__blue" id="video-element" controls plays-inline poster="assets/images/band-colour.jpg">
+                        <video class="general__border__blue" id="video-element" controls playsinline poster="assets/images/band-colour.jpg">
                         <source src="assets/videos/daydream.webm" type="video/webm">
                         Sorry, your browser doesn't support embedded videos.
                     </video>
-                        <a href="/booking.html"><img src="assets/images/button-book.png" class="top-section__booking-button" alt="blue flower"></img></a>
-                        <a href="/music.html"><img src="assets/images/button-music.png" class="top-section__music-button" alt="blue flower"></img></a>
+                        <a href="booking.html"><img src="assets/images/button-book.png" class="top-section__booking-button" alt="Orange Flower - Booking button link"></a>
+                        <a href="music.html"><img src="assets/images/button-music.png" class="top-section__music-button" alt="Green Flower - Music button link"></a>
                     </div>
                 </div>
                 <div class="col-xs-12 nopadding visible-xs text-center">
-                    <img class="top-section__backdrop-xs general__border__blue" src="assets/images/band-small.jpg" alt="The Monkees">
+                    <img class="top-section__backdrop-xs general__border__blue" src="assets/images/band-small.jpg" alt="Image of the band">
                 </div>
             </div>
         </section>
@@ -84,27 +86,27 @@
             <!-- call to action buttons -->
             <div class="row">
                 <div class="bottom-section__buttons-container col-sm-6">
-                    <a href="booking.html"><button type="button" class="btn btn-small general__background__orange general__border__black">Book Us</button></a>
+                    <a href="booking.html" class="btn btn-small general__background__orange general__border__black">Book Us</a>
                 </div>
                 <div class="bottom-section__buttons-container col-sm-6">
-                    <a href="music.html"><button type="button" class="btn btn-small general__background__green general__border__black">New Releases</button></a>
+                    <a href="music.html" class="btn btn-small general__background__green general__border__black">New Releases</a>
                 </div>
             </div>
             
             <div class="row">
                 <div class="bottom-section__buttons-container col-sm-12">
-                    <a href="fans.html"><button type="button" class="btn btn-small general__background__blue general__border__black">Tour Dates</button></a>
+                    <a href="fans.html" class="btn btn-small general__background__blue general__border__black">Tour Dates</a>
                 </div>
             </div>
             
-            <!--- social media links container only visible xs screens --->
+            <!-- social media links container only visible xs screens - for better access and layout on xs screens-->
             <div class="row visible-xs">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -123,11 +125,11 @@
                 </div>
             </div>
             
-            <!-- album artwork (not visible on xs screens) -->
+            <!-- album artwork (not visible on xs screens) - otherwise screen content too cluttered -->
             <div class="row bottom-section__thumbnail-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
                     <a href="music.html">
-                        <img src="assets/images/album1.jpg" class="middle-section__thumbnail general__border__blue" alt="Song - Clarksville">
+                        <img src="assets/images/album1.jpg" class="middle-section__thumbnail general__border__blue" alt="Album image - Clarksville">
                     </a>
                 </div>
                 <div class="col-xs-5 hidden-xs">
@@ -141,13 +143,13 @@
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="general__audio-play-pause-button" onclick="playPause(1,'index')"><i id="audio-play-pause-button1" class="fa fa-play-circle general__text__red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(1,'index')" aria-label="Play/Pause Button"><i id="audio-play-pause-button1" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
             <div class="row bottom-section__thumbnail-container">
                 <div class="col-sm-2 col-sm-offset-2">
                     <a href="music.html">
-                        <img src="assets/images/album2.jpg" class="middle-section__thumbnail general__border__blue hidden-xs" alt="Song - I'm A Believer">
+                        <img src="assets/images/album2.jpg" class="middle-section__thumbnail general__border__blue hidden-xs" alt="Album image - I'm A Believer">
                     </a>
                 </div>
                 <div class="col-xs-5 hidden-xs">
@@ -161,13 +163,13 @@
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="general__audio-play-pause-button" onclick="playPause(2,'index')"><i id="audio-play-pause-button2" class="fa fa-play-circle general__text__red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(2,'index')" aria-label="Play/Pause Button"><i id="audio-play-pause-button2" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
             <div class="row bottom-section__thumbnail-container">
                 <div class="col-sm-2 col-sm-offset-2 hidden-xs">
                     <a href="music.html">
-                        <img src="assets/images/album3.jpg" class="middle-section__thumbnail general__border__blue" alt="Song - Stepping Stone">
+                        <img src="assets/images/album3.jpg" class="middle-section__thumbnail general__border__blue" alt="Album image - Stepping Stone">
                     </a>
                 </div>
                 <div class="col-xs-5 hidden-xs">
@@ -181,7 +183,7 @@
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="general__audio-play-pause-button" onclick="playPause(3,'index')"><i id="audio-play-pause-button3" class="fa fa-play-circle general__text__red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(3,'index')" aria-label="Play/Pause Button"><i id="audio-play-pause-button3" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
             <div class="row bottom-section__thumbnail-container visible-xs">
@@ -191,7 +193,7 @@
                     </a>
                 </div>
                 <div class="col-xs-1">
-                    <button class="general__audio-play-pause-button" onclick="playPause(4,'index')"><i id="audio-play-pause-button4" class="fa fa-play-circle general__text__red"></i></button>
+                    <button class="general__audio-play-pause-button" onclick="playPause(4,'index')" aria-label="Play/Pause Button"><i id="audio-play-pause-button4" class="fa fa-play-circle general__text__red"></i></button>
                 </div>
             </div>
             <div class="row visible-xs">
@@ -201,7 +203,7 @@
             </div>
             <!-- hidden audio elements -->
             <div>
-                <audio id="audio-music" src=assets/audio/clarksville.mp3>Your browser does not support the audio element</audio>
+                <audio id="audio-music" src="assets/audio/clarksville.mp3" aria-label="hidden">Your browser does not support the audio element</audio>
             </div>
         </section>
     </div>
@@ -233,13 +235,13 @@
                     </ul>
                 </div>
 
-                <!-- on tablet screens show social media links in the footer -->
+                <!-- on tablet screens show social media links in the footer - for better screen layout -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -248,7 +250,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 

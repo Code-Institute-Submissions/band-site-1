@@ -16,19 +16,19 @@
 
 <body>
 
-    <!--Navbar visible on desktop site -->
+    <!--Navbar visible on all above xs screen - else, on smaller screens nav bar is too cluttered-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand " href="index.html">
-                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"></img> 
+                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"> 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only ">Toggle navigation</span>
                     <i class="fa fa-navicon"></i>
                 </button>
             </div>
-            <!-- collapse nav bar on xs screen and hide use burger button -->
+            <!-- collapse nav bar on xs screen and hide use burger button - else, on smaller screens nav bar is too cluttered -->
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-main general-font">
                     <li><a href="index.html" class="hvr-rectangle-out navbar__inactive general__text__red" id="navbar__home-tab">Home</a></li>
@@ -39,12 +39,13 @@
                 </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
+                <!--improves layout and access to social media links on tablet and mobile screens -->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -55,13 +56,13 @@
         <!-- top section - band/members pictures and information -->
         <section class="top-section">
             
-            <!-- hide on xs screens and readjust display of picture and information -->
+            <!-- hide on xs screens and readjust display of picture and information for better display layout -->
             <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')"><i class="fa fa-arrow-circle-left general__text__red general__background__yellow"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')" aria-label="Scroll band member left"><i class="fa fa-arrow-circle-left general__text__red general__background__yellow"></i></button>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <img class="top-section__image general__border__yellow" src="assets/images/band2.jpg" id="main-image-element" alt="Band member image">
+                    <img class="top-section__image general__border__yellow" src="assets/images/band2.jpg" id="main-image-element" alt="Band/band member image">
                 </div>
                 <div class="col-sm-5 top-section__textbox-container general__border__yellow">
                     <!-- scrollbar container to ensure scrollbar does not fall outside rounded border -->
@@ -73,27 +74,27 @@
                     </div>
                 </div>
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section__nav-button" id="navbutton-right1" onmousedown="changeMainImage(6,5,'band')"><i class="fa fa-arrow-circle-right general__text__red general__background__yellow"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-right1" onmousedown="changeMainImage(6,5,'band')" aria-label="Scroll band member right"><i class="fa fa-arrow-circle-right general__text__red general__background__yellow"></i></button>
                 </div>
             </div>
 
             <!-- restructured information and picture layout only for xs screen size -->
             <div class="row top-section__container visible-xs">
                 <div class="col-xs-12 text-center top-section__image-container">
-                    <img class="top-section__image general__border__yellow" src="assets/images/band2.jpg" id="main-image-element-xs" onmousedown="changeMainImage(1)" alt="The Band">
+                    <img class="top-section__image general__border__yellow" src="assets/images/band2.jpg" id="main-image-element-xs" alt="Band/band member image">
                 </div>
                 <div class="row">
                     <div class="col-xs-12 top-section__textbox-container general__border__yellow">
                         <div class="row">
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section__nav-button" id="navbutton-left2" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')"><i class="fa fa-arrow-left general__text__red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-left2" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')" aria-label="Scroll band member left"><i class="fa fa-arrow-left general__text__red"></i></button>
                             </div>
 
                             <div class="col-xs-8 text-center">
                                 <h1 class="general-font" id="top-section__textbox-header-xs">The Band</h1>
                             </div>
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,5,'band')"><i class="fa fa-arrow-right general__text__red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,5,'band')" aria-label="Scroll band member right"><i class="fa fa-arrow-right general__text__red"></i></button>
                             </div>
                         </div>
                         <div class="row">
@@ -109,7 +110,7 @@
 
         </section>
         
-        <!-- middle section - contains band/member images to select and display in top section -->
+        <!-- middle section - contains band/member images to select and display in top section for interactive user experience-->
         <section class="middle-section__container general__background__yellow">
             <div class="row">
                 <div class="col-xs-12 general-font">
@@ -119,7 +120,7 @@
 
            <div class="row">
                 <div class="col-sm-1 hidden-xs">
-                    <button class="btn middle-section__navbutton general__text__red" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')"><i class="fa fa-arrow-left hidden-xs"></i></button>
+                    <button class="btn middle-section__navbutton general__text__red" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,5,'band')" aria-label="Scroll band member left"><i class="fa fa-arrow-left hidden-xs"></i></button>
                 </div>
                 <div class="col-sm-2 col-xs-4">
                     <img src="assets/images/band2.jpg" class="middle-section__thumbnail general__border__blue" id="thumbnail-1" onmousedown="changeMainImage(1,5,'band')" alt="The Band">
@@ -142,7 +143,7 @@
                     <span class="middle-section__font general__text__red">Peter Tork</span>
                 </div>
                 <div class="col-sm-1 hidden-xs">
-                    <button class="btn middle-section__navbutton general__text__red" id="navbutton-right3" onmousedown="changeMainImage(6,5,'band')"><i class="fa fa-arrow-right hidden-xs"></i></button>
+                    <button class="btn middle-section__navbutton general__text__red" id="navbutton-right3" onmousedown="changeMainImage(6,5,'band')" aria-label="Scroll band member right"><i class="fa fa-arrow-right hidden-xs"></i></button>
                 </div>
             </div>
 
@@ -158,24 +159,24 @@
             </div>
             <div class="row">
                 <div class="bottom-section__buttons-container col-sm-6">
-                    <a href="booking.html"><button type="button" class="btn btn-small general__background__orange general__border__black">Book Us</button></a>
+                    <a href="booking.html" class="btn btn-small general__background__orange general__border__black">Book Us</a>
                 </div>
                 <div class="bottom-section__buttons-container col-sm-6">
-                    <a href="music.html"><button type="button" class="btn btn-small general__background__green general__border__black">Listen Now</button></a>
+                    <a href="music.html" class="btn btn-small general__background__green general__border__black">Listen Now</a>
                 </div>
             </div>
             <div class="row  hidden-xs">
                 <p><span class="glyphicon glyphicon-music general__text__yellow" style="padding-top:15px; font-size:2.5em"></span></p>
             </div>
 
-            <!--- social links container on xs --->
+            <!-- social links container on xs -->
             <div class="row visible-xs">
                 <div class="col-xs-10 col-xs-offset-1 social-links social-middle">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -210,13 +211,13 @@
                     </ul>
                 </div>
 
-                <!-- on sm screens show social media links in the footer -->
+                <!-- on tablet screens show social media links in the footer - for better screen layout -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -227,7 +228,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 

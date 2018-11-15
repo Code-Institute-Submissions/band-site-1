@@ -16,19 +16,19 @@
 
 <body>
 
-    <!--Navbar visible on desktop site -->
+    <!--Navbar visible on all above xs screen - else, on smaller screens nav bar is too cluttered-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand " href="index.html">
-                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"></img> 
+                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"> 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only ">Toggle navigation</span>
                     <i class="fa fa-navicon"></i>
                 </button>
             </div>
-            <!-- collapse nav bar on xs screen and hide use burger button -->
+            <!-- collapse nav bar on xs screen and hide use burger button - else, on smaller screens nav bar is too cluttered -->
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-main general-font">
                     <li><a href="index.html" class="hvr-rectangle-out navbar__inactive general__text__red" id="navbar__home-tab">Home</a></li>
@@ -39,12 +39,13 @@
                 </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
+                <!--improves layout and access to social media links on tablet and mobile screens -->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -55,25 +56,25 @@
         <!-- top section - picture and information about fan material -->
         <section class="top-section">
 
-            <!-- hide on xs screens and readjust display of picture and fan material -->
+            <!-- hide on xs screens and readjust display of picture and fan material for better screen layout -->
             <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')"><i class="fa fa-arrow-circle-left general__text__red general__background__blue"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')" aria-label="Scroll fan information left"><i class="fa fa-arrow-circle-left general__text__red general__background__blue"></i></button>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <img class="top-section__image general__border__blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element" alt="Main Image">
+                    <img class="top-section__image general__border__blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element" alt="Fans image">
                 </div>
                 <div class="col-sm-5 top-section__textbox-container general__border__blue">
                     <div class="row">
                         <!-- additional navigation arrows within text box to highlight further information available -->
                         <div class="col-xs-2">
-                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')"><i class="fa fa-arrow-left general__text__red"></i></button>
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')" aria-label="Scroll fan information left"><i class="fa fa-arrow-left general__text__red"></i></button>
                         </div>
                         <div class="col-xs-8 text-center">
                             <h1 class="general-font" id="top-section__textbox-header">Tour Dates</h1>
                         </div>
                         <div class="col-xs-2 ">
-                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-right3" onmousedown="changeMainImage(6,3,'fans')"><i class="fa fa-arrow-right general__text__red"></i></button>
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-right3" onmousedown="changeMainImage(6,3,'fans')" aria-label="Scroll fan information right"><i class="fa fa-arrow-right general__text__red"></i></button>
                         </div>
                     </div>
                     <div class="row">
@@ -84,33 +85,32 @@
                     </div>
                 </div>
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section__nav-button" id="navbutton-right1" onmousedown="changeMainImage(6,3,'fans')"><i class="fa fa-arrow-circle-right general__text__red general__background__blue"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-right1" onmousedown="changeMainImage(6,3,'fans')" aria-label="Scroll fan information right"><i class="fa fa-arrow-circle-right general__text__red general__background__blue"></i></button>
                 </div>
             </div>
 
             <!-- restructured fan material and picture layout only for xs screen size -->
             <div class="row top-section__container visible-xs">
                 <div class="col-xs-12 text-center top-section__image-container">
-                    <img class="top-section__image general__border__blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element-xs" alt="Main Image">
+                    <img class="top-section__image general__border__blue" src="https://c.pxhere.com/photos/3a/fc/concert_person_hand_fan_party-8303.jpg!d" id="main-image-element-xs" alt="Fans image">
                 </div>
                 <div class="row">
                     <div class="col-xs-12 top-section__textbox-container general__border__blue">
                         <div class="row">
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section__nav-button" id="navbutton-left2" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')"><i class="fa fa-arrow-left general__text__red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-left2" style="visibility:hidden" onmousedown="changeMainImage(-1,3,'fans')" aria-label="Scroll fan information left"><i class="fa fa-arrow-left general__text__red"></i></button>
                             </div>
 
                             <div class="col-xs-8 text-center">
                                 <h1 class="general-font" id="top-section__textbox-header-xs">Tour Dates</h1>
                             </div>
                             <div class="col-xs-2 ">
-                                <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,3,'fans')"><i class="fa fa-arrow-right general__text__red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,3,'fans')" aria-label="Scroll fan information right"><i class="fa fa-arrow-right general__text__red"></i></button>
                             </div>
                         </div>
                         <div class="row ">
                             <div class="col-sm-12 top-section__textbox text-center">
                                 <p id="top-section__text-xs">5 March 2019 Red Bank, NJ - Count Basie Centre for the Arts<br>8 March 2019 Huntington, NY - The Paramount<br>9 March 2019 New York, NY Beacon Theatre</p>
-                                <p id="top-section__text-xs" class="hidden-xs">Find more fan material <i class='fa fa-arrow-right general__text__red'></i></p>
                             </div>
                         </div>
                     </div>
@@ -127,9 +127,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <a href="mailto:?Subject=The Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20 https://shilldon.github.io/band-site/">
-                            <button type="button" class="btn btn-small general__background__red general__border__black">Email a friend</button>
-                        </a>
+                        <a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/" class="btn btn-small general__background__red general__border__black">Email a friend</a>
                         <p class="general-font">Follow us on Facebook <a target="_blank" href="#"><i class="fa fa-facebook-square"></i></a></p>
                     </div>
                 </div>
@@ -160,7 +158,7 @@
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -195,13 +193,13 @@
                     </ul>
                 </div>
 
-                <!-- on sm screens show social media links in the footer -->
+                <!-- on tablet screens show social media links in the footer - for better screen layout -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -209,7 +207,7 @@
     </footer>
 
     <!-- contact form -->
-    <div class="modal fade" id="feedbackForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="feedbackForm" tabindex="-1" role="dialog">
         <div class="modal-dialog contact-form">
             <div class="modal-content general__border__blue general__text__blue contact-form__backdrop">
                 <div class="contact-form__opaque-overlay">&nbsp;</div>
@@ -219,7 +217,7 @@
                         <h4 class="modal-title text-center" style="font-size:1.15em">Tell us what you think</h4>
                     </div>
                 </header>
-                <div class="modal-body ">
+                <div class="modal-body">
                     <div class="container-fluid">
                         <form>
                             <div class="row">
@@ -244,12 +242,12 @@
                                     <textarea class="form-control" id="event-details" placeholder="Did you see us perform live? What's your first memory of listening to the Monkees? What's your favourite song?" required></textarea>
                                 </div>
 
-                            <div class="row ">
-                                <div class="col-sm-5 col-sm-offset-1 text-center ">
-                                    <button type="submit " style="z-index:3 " class="btn btn-small contact-form__button general__background__green general__border__black ">Tell Us</button>
+                            <div class="row">
+                                <div class="col-sm-5 col-sm-offset-1 text-center">
+                                    <button type="submit" style="z-index:3" class="btn btn-small contact-form__button general__background__green general__border__black">Tell Us</button>
                                 </div>
-                                <div class="col-sm-5 text-center ">
-                                    <button type="submit " style="z-index:3 " data-dismiss="modal" class="btn btn-small contact-form__button general__background__red general__border__black ">Cancel</button>
+                                <div class="col-sm-5 text-center">
+                                    <button type="submit" style="z-index:3" data-dismiss="modal" class="btn btn-small contact-form__button general__background__red general__border__black">Cancel</button>
                                 </div>
                             </div>
                             </div>

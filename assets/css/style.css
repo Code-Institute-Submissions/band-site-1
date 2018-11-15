@@ -407,15 +407,6 @@ video {
     border-radius: 20%;
 }
 
-/*
-.middle-section__thumbnail__active {
-    border-color: rgba(69, 90, 186, 1);
-}
-
-.middle-section__thumbnail__inactive {
-    border-color: rgba(120, 38, 38, 1);
-}*/
-
 .middle-section__font {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
@@ -746,7 +737,6 @@ video {
     }
 
     .navbar-default .navbar-nav {
-        /* color: #777; */
         margin-top: 55px;
         margin-left: 20px;
         width: 110px;

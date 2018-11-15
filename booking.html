@@ -26,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 
     <!-- custom script -->
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- date picker script -->
     <script>
@@ -43,19 +43,19 @@
 
 <body>
 
-    <!--Navbar visible on desktop site -->
+    <!--Navbar visible on all above xs screen - else, on smaller screens nav bar is too cluttered-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand " href="index.html">
-                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"></img> 
+                    <img alt="Logo" class="navbar__logo" src="assets/images/logo.png"> 
                 </a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only ">Toggle navigation</span>
                     <i class="fa fa-navicon"></i>
                 </button>
             </div>
-            <!-- collapse nav bar on xs screen and hide use burger button -->
+            <!-- collapse nav bar on xs screen and hide use burger button - else, on smaller screens nav bar is too cluttered -->
             <div class="navbar-collapse collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-main general-font">
                     <li><a href="index.html" class="hvr-rectangle-out navbar__inactive general__text__red" id="navbar__home-tab">Home</a></li>
@@ -66,12 +66,13 @@
                 </ul>
 
                 <!--remove social media links from navbar on sm and xs screens and put in footer (for sm) or move to bottom section on screens under 479-->
+                <!--improves layout and access to social media links on tablet and mobile screens -->
                 <div class="navbar-header navbar-right hidden-sm hidden-xs">
                     <ul class="nav navbar-nav social-links">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -82,25 +83,25 @@
         <!-- top section - picture and information about events -->
         <section class="top-section">
 
-            <!-- hide on xs screens and readjust display of picture and event information -->
+            <!-- hide on xs screens and readjust display of picture and event information for better screen layout -->
             <div class="row top-section__container hidden-xs">
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,4,'booking')"><i class="fa fa-arrow-circle-left general__text__red general__background__orange"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-left1" style="visibility:hidden" onmousedown="changeMainImage(-1,4,'booking')" aria-label="Scroll events left"><i class="fa fa-arrow-circle-left general__text__red general__background__orange"></i></button>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <img class="top-section__image general__border__orange" src="assets/images/events.jpg" id="main-image-element" alt="Main Booking Image">
+                    <img class="top-section__image general__border__orange" src="assets/images/events.jpg" id="main-image-element" alt="Events image">
                 </div>
                 <div class="col-sm-5 top-section__textbox-container general__border__orange">
                     <div class="row">
                         <!-- additional navigation arrows within text box to highlight further information available -->
                         <div class="col-xs-2">
-                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,4,'booking')"><i class="fa fa-arrow-left general__text__red"></i></button>
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-left3" style="visibility:hidden" onmousedown="changeMainImage(-1,4,'booking')" aria-label="Scroll events left"><i class="fa fa-arrow-left general__text__red"></i></button>
                         </div>
                         <div class="col-xs-8 text-center">
                             <h1 class="general-font" id="top-section__textbox-header">Events</h1>
                         </div>
                         <div class="col-xs-2 ">
-                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-right3" onmousedown="changeMainImage(6,4,'booking')"><i class="fa fa-arrow-right general__text__red"></i></button>
+                            <button class="btn btn-block top-section__nav-button-small" id="navbutton-right3" onmousedown="changeMainImage(6,4,'booking')" aria-label="Scroll events right"><i class="fa fa-arrow-right general__text__red"></i></button>
                         </div>
                     </div>
                     <div class="row">
@@ -112,27 +113,27 @@
                     </div>
                 </div>
                 <div class="col-xs-1">
-                    <button class="btn btn-block top-section__nav-button" id="navbutton-right1" onmousedown="changeMainImage(6,4,'booking')"><i class="fa fa-arrow-circle-right general__text__red general__background__orange"></i></button>
+                    <button class="btn btn-block top-section__nav-button" id="navbutton-right1" onmousedown="changeMainImage(6,4,'booking')" aria-label="Scroll events right"><i class="fa fa-arrow-circle-right general__text__red general__background__orange"></i></button>
                 </div>
             </div>
 
             <!-- restructured event information and picture layout only for xs screen size -->
             <div class="row top-section__container visible-xs">
                 <div class="col-xs-12 text-center top-section__image-container">
-                    <img class="top-section__image general__border__orange" src="assets/images/events.jpg" id="main-image-element-xs" alt="Booking Main Image">
+                    <img class="top-section__image general__border__orange" src="assets/images/events.jpg" id="main-image-element-xs" alt="Events image">
                 </div>
                 <div class="row">
                     <div class="col-xs-12 top-section__textbox-container general__border__orange">
                         <div class="row">
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section__nav-button" id="navbutton-left2" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'booking')"><i class="fa fa-arrow-left general__text__red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-left2" style="visibility:hidden;" onmousedown="changeMainImage(-1,4,'booking')" aria-label="Scroll events left"><i class="fa fa-arrow-left general__text__red"></i></button>
                             </div>
 
                             <div class="col-xs-8 text-center">
                                 <h1 class="general-font" id="top-section__textbox-header-xs">Events</h1>
                             </div>
                             <div class="col-xs-2">
-                                <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,4,'booking')"><i class="fa fa-arrow-right general__text__red"></i></button>
+                                <button class="btn btn-block top-section__nav-button" id="navbutton-right2" onmousedown="changeMainImage(6,4,'booking')" aria-label="Scroll events right"><i class="fa fa-arrow-right general__text__red"></i></button>
                             </div>
                         </div>
                         <div class="row ">
@@ -171,10 +172,10 @@
             </div>
             <div class="row">
                 <div class="bottom-section__buttons-container col-sm-6">
-                    <a href="music.html"><button type="button" class="btn btn-small general__background__green general__border__black">Listen!</button></a>
+                    <a href="music.html" class="btn btn-small general__background__green general__border__black">Listen!</a>
                 </div>
                 <div class="bottom-section__buttons-container col-sm-6">
-                    <a href="fans.html"><button type="button" class="btn btn-small general__background__blue general__border__black">Tour Dates</button></a>
+                    <a href="fans.html" class="btn btn-small general__background__blue general__border__black">Tour Dates</a>
                 </div>
             </div>
             <div class="row  hidden-xs" >
@@ -188,7 +189,7 @@
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -222,13 +223,13 @@
                     </ul>
                 </div>
 
-                <!-- on sm screens show social media links in the footer -->
+                <!-- on tablet screens show social media links in the footer - for better screen layout -->
                 <div class="col-sm-5 social-right social-links hidden-xs hidden-md hidden-lg">
                     <ul class="social-list">
                         <li><a target="_blank" href="#"><i class="fa fa-facebook general__text__red"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-twitter general__text__yellow"></i></a></li>
                         <li><a target="_blank" href="#"><i class="fa fa-youtube general__text__green"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-share general__text__orange"></i></a></li>
+                        <li><a href="mailto:?Subject=The%20Monkees&amp;Body=I%20think%20you%20will%20love%20the%20Monkees!%20https://shilldon.github.io/band-site/"><i class="fa fa-share general__text__orange"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -236,7 +237,7 @@
     </footer>
 
     <!-- booking form -->
-    <div class="modal fade" id="bookingForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="bookingForm" tabindex="-1" role="dialog">
         <div class="modal-dialog contact-form">
             <div class="modal-content general__border__orange general__text__orange contact-form__backdrop" style="text-shadow: 2px 2px 10px #000000;">
                 <div class="contact-form__opaque-overlay">&nbsp;</div>
@@ -246,52 +247,52 @@
                         <h4 class="modal-title text-center" style="font-size:1.15em">Book your event</h4>
                     </div>
                 </header>
-                <div class="modal-body ">
+                <div class="modal-body">
 
                     <div class="container-fluid text-left">
                         <form>
-                            <div class=" row ">
-                                <div class="col-sm-4 col-xs-12 form-group general__text__orange ">
-                                    <label for="first-name ">First Name</label>
-                                    <input type="text " class="form-control " id="first-name " placeholder="First Name " required>
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-12 form-group general__text__orange">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" class="form-control" id="first-name" placeholder="First Name" required>
                                 </div>
-                                <div class="col-sm-8 col-xs-12 form-group general__text__orange ">
-                                    <label for="last-name ">Last Name</label>
-                                    <input type="text " class="form-control " id="last-name " placeholder="Last Name " required>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="form-group col-xs-12 general__text__orange ">
-                                    <label for="email ">Email address</label>
-                                    <input type="email " class="form-control " id="email " placeholder="Email " required>
+                                <div class="col-sm-8 col-xs-12 form-group general__text__orange">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
                                 </div>
                             </div>
-                            <div class="row ">
+                            <div class="row">
+                                <div class="form-group col-xs-12 general__text__orange">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="form-group col-xs-12 general__text__orange ">
-                                    <label for="event-details ">Details of your event</label>
-                                    <textarea class="form-control " id="event-details " placeholder="Wedding, Christmas Party, Corporate Hospitality... " required></textarea>
+                                    <label for="event-details">Details of your event</label>
+                                    <textarea class="form-control" id="event-details" placeholder="Wedding, Christmas Party, Corporate Hospitality... " required></textarea>
                                 </div>
                             </div>
                             <!--bootstrap datepicker -->
-                            <div class="row ">
-                                <div class='col-sm-6'>
-                                    <div class="form-group ">
-                                        <label for="datepicker ">Date of your event</label>
-                                        <div class='input-group date' id='datepicker'>
-                                            <input type='text' class="form-control " />
-                                            <span class="input-group-addon "><span class="glyphicon glyphicon-calendar " style="text-shadow:none "></span>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="date-selection">Date of your event</label>
+                                        <div class="input-group date" id="datepicker">
+                                            <input type="text" class="form-control" id="date-selection"/>
+                                            <span class="input-group-addon "><span class="glyphicon glyphicon-calendar" style="text-shadow:none"></span>
                                             </span>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="row ">
-                                <div class="col-sm-5 col-sm-offset-1 text-center ">
-                                    <button type="submit " style="z-index:3 " class="btn btn-small contact-form__button general__background__green general__border__black ">Book</button>
+                            <div class="row">
+                                <div class="col-sm-5 col-sm-offset-1 text-center">
+                                    <button type="submit" style="z-index:3" class="btn btn-small contact-form__button general__background__green general__border__black">Book</button>
                                 </div>
-                                <div class="col-sm-5 text-center ">
-                                    <button type="submit " style="z-index:3 " data-dismiss="modal" class="btn btn-small contact-form__button general__background__red general__border__black ">Cancel</button>
+                                <div class="col-sm-5 text-center">
+                                    <button type="submit" style="z-index:3" data-dismiss="modal" class="btn btn-small contact-form__button general__background__red general__border__black">Cancel</button>
                                 </div>
                             </div>
                         </form>

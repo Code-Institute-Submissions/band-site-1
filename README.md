@@ -80,10 +80,16 @@ The site is styled using **Bootstrap 3.3.7**.<br>
 ## Testing
 Code was written through the Cloud9 IDE.
 The website has been tested on IE, Google Chrome, Safari and Opera browsers.
+See additional document for specific testing undertaken.
 
 ## Initial Wireframes
-Wireframes were designed using MarvelApp and can be located here:
+Wireframes were designed using MarvelApp and can be located here:<br>
 https://marvelapp.com/project/3472661/
+
+## Deployment
+This project was deployed to GitHub through the Cloud9 IDE using standard commit and push commands.<br>
+There are no differences between the development and deployed versions.<br>
+Other than a browser no further software or implementation is required and a link is provided on GitHub Pages.<br>
 
 ## Credits
 
@@ -116,6 +122,3 @@ Based on CodeInstitute Whiskey Drop Webpage - https://codeinstitute.net/<br>
 
 ### Calendar Date picker
 Bootstrap-datepicker - https://bootstrap-datepicker.readthedocs.io/en/latest/ <br>
-
-
-
