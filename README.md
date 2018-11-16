@@ -36,7 +36,7 @@ As well as accommodating the band's objectives consideration has been given to t
     - purchase songs/albums
 
 ### Purpose
-This website is designed as a static front-end only website to achieve the above, in a style unique to the Monkees. The site contains 5 pages:<br>
+This website is designed as a static front-end only website to achieve the above, in a style unique to the Monkees. The site contains 5 pages and each can be accessed from every page with emphasised links on pages to the band's major objectives (booking performances and showcasing music).<br>
 
 - Home page - video and music clips and emphasised links to event booking and music pages.
 - Band page - details and pictures of the band members, emphasised links to event booking and music pages.
@@ -88,13 +88,16 @@ https://marvelapp.com/1aajadjg
 
 ## Deployment
 This project was deployed to GitHub through the Cloud9 IDE using standard commit and push commands.<br>
+Commits were made at each major development stage or as issues were identified and fixed.<br>
+Several commits were made at one point due to an issue fixing a bug with background images not appearing on the GitHub page. This was resolved after several separate commits.<br>
 There are no differences between the development and deployed versions.<br>
-Other than a browser no further software or implementation is required and a link is provided on GitHub Pages.<br>
+Other than a standard browser no further software or implementation is required and a link is provided on GitHub Pages.<br>
 
 ## Credits
 
 ### Media
 Video, sample band images and music provided by the band.<br>
+Sample black and white band image (band-colour.jpg) was edited in GIMP 2.0 to introduce colour elements to fit in with the retro/colourful theme of the website.<br>
 Video sample was compressed due to large size to speed loading times of pages.<br>
 Additional images:<br>
 Wedding, Concert, Christmas, Corporate event - PxHere https://c.pxhere.com<br>
@@ -121,4 +124,4 @@ Bootstrap v3.3.7 - https://getbootstrap.com/<br>
 Based on CodeInstitute Whiskey Drop Webpage - https://codeinstitute.net/<br>
 
 ### Calendar Date picker
-Bootstrap-datepicker - https://bootstrap-datepicker.readthedocs.io/en/latest/ <br>
+Bootstrap-datepicker - https://bootstrap-datepicker.readthedocs.io/en/latest/<br>
